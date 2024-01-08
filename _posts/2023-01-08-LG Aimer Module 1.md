@@ -1,22 +1,22 @@
 ---
 layout: single
-title: "LG Amier Module1. AI 윤리" 
+title: "Module1. AI 윤리" 
 categories: LG_Amier
 ---
 
-# LG Amier : AI 전문가 과정 4차 교육
+LG Amier : AI 전문가 과정 4기 
 
-해당 내용은 LG에서 주관하는 LG Amier : AI 전문가 과정 4기 교육 과정이다.
+해당 내용은 LG에서 주관하는 LG Amier : AI 전문가 과정 4기 교육 과정입니다.
 
 [LG AI](https://www.lgaimers.ai/)
 
-2024.01.02 ~ 2024.01.29 까지 한달 동안 온라인 AI 교육을 받고,  2024.02.01~2024.02.26까지 온라인 해커톤을 참여하는 여정이다.
+2024.01.02 ~ 2024.01.29 까지 한달 동안 온라인 AI 교육을 받고,  2024.02.01~2024.02.26까지 온라인 해커톤을 참여하는 여정입니다.
 
 
 
 ![module1]({{site.url}}/images/2023-01-08-LG Aimer Module 1/module1.png)
 
-교육과정에 대하여 출처를 정확히 밝힌다면 블로그에 작성해도 된다는 답변을 받아 해당 과정을 블로그에 기록해보겠다.
+교육과정에 대하여 출처를 정확히 밝힌다면 블로그에 작성해도 된다는 답변을 받아 해당 과정을 블로그에 기록해보겠습니다.
 
 <img src="{{site.url}}/images/2023-01-08-LG Aimer Module 1/module1 1.png" alt="module1 1" style="zoom:100%;" />
 

@@ -1,8 +1,12 @@
 ---
 layout: single
-title: "LG Amier Module 2. Mathematics for ML" 
+title: "Module2. Mathematics for ML" 
 categories: LG_Amier
 ---
+
+LG Amier : AI 전문가 과정 4기 
+
+해당 내용은 LG에서 주관하는 LG Amier : AI 전문가 과정 4기 교육 과정입니다.
 
 # Module 2. Mathematics for ML
 
