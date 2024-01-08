@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "Sung Joon Moon의 개발 노트"
+title                    : "문성준의 개발노트"
 title_separator          : "|"
 subtitle                 : "💪🏻 Endure it!"
 name                     : "Dessert_Gomjelly"
-description              : "Sung Joon Moon의 개발 노트입니다."
+description              : "Joon's development notes."
 url                      : "https://dessertgomjelly.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -104,9 +104,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "문성준"
+  name             : "Dessert_gomjelly"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Sung Joon Moon의 개발 블로그입니다."
+  bio              : "Joon's development notes"
   location         : "South Korea/Seoul"
   email            :
   links:
