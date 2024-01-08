@@ -4,11 +4,11 @@
 
 [LG AI](https://www.lgaimers.ai/)
 
-2024.01.02~2024.01.29 까지 한달 동안 온라인 AI 교육을 받고,  2024.02.01~2024.02.26까지 온라인 해커톤을 참여하는 여정이다.![module1](/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LG Aimer Module 1/module1.png)
+2024.01.02~2024.01.29 까지 한달 동안 온라인 AI 교육을 받고,  2024.02.01~2024.02.26까지 온라인 해커톤을 참여하는 여정이다.
 
 
 
-
+![module1]({{site.url}}/images/2023-01-08-LG Aimer Module 1/module1.png)
 
 교육과정에 대하여 출처를 정확히 밝힌다면 블로그에 작성해도 된다는 답변을 받아 해당 과정을 블로그에 기록해보겠다.
 
