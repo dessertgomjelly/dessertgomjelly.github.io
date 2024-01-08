@@ -1,6 +1,6 @@
 ---
-layout : single
-title : "LG Amier Module 2. Mathematics for ML" 
+layout: single
+title: "LG Amier Module 2. Mathematics for ML" 
 categories: LG_Amier
 ---
 

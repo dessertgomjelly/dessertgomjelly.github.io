@@ -1,6 +1,6 @@
 ---
-layout : single
-title : "LG Amier Module1. AI 윤리" 
+layout: single
+title: "LG Amier Module1. AI 윤리" 
 categories: LG_Amier
 ---
 
