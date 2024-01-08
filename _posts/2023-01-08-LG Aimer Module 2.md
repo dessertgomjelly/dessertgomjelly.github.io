@@ -7,6 +7,7 @@ categories: LG_Amier
 LG Amier 4기 : AI 전문가 과정 
 
 해당 내용은 LG에서 주관하는 LG Amier : AI 전문가 과정 4기 교육 과정입니다.
+<br>
 
 # Section 2. Mathematics for ML
 
@@ -20,20 +21,21 @@ LG Amier 4기 : AI 전문가 과정
 
 CHAPTER 1은 Matrix Decomposition,  CHAPTER  2는 Convex Optimization, CHAPTER 3은 PCA로 구성되어있다.
 
-이 강의를 들으면서 이해한 내용을 보다 개념적인 접근에 집중하여 소개하도록 하겠다.
+이 강의를 들으면서 이해한 내용을 보다 개념적인 접근에 집중하여 소개하도록 하겠습니다.
 
+<br>
 
 # CHAPTER 1. ***Matrix Decomposition***
 
 
-
+<br>
 
 
 ## Matrix decomposition 행렬분해
 
 인공지능이나 Machine Learning model을 학습하다 보면 많은 Data가 Matrix 형태로 표현되어 있는 경우가 많다.
 
-
+<br>
 
 
 
@@ -46,7 +48,7 @@ CHAPTER 1은 Matrix Decomposition,  CHAPTER  2는 Convex Optimization, CHAPTER 3
 
 
 
-
+<br>
 
 
 
@@ -98,7 +100,7 @@ $$
 
 
 
-
+<br>
 
 
 
@@ -126,7 +128,7 @@ $$
 
 
 
-
+<br>
 
 
 
@@ -166,7 +168,7 @@ $$
 
 
 
-
+<br>
 
 
 
@@ -192,7 +194,7 @@ $$
 
 
 
-
+<br>
 
 
 
@@ -219,7 +221,7 @@ det(A) = det(L)det(L^T)=det(L)^2
 $$
 
 
-
+<br>
 
 
 
@@ -264,7 +266,7 @@ $$
 Singular Value Decomposition은 일반적인 Matrix에 적용할 수 있는 개념이다.
 
 
-
+<br>
 
 
 
@@ -284,14 +286,14 @@ $$
 
 
 
-
+<br>
 
 
 
 # CHAPTER  2. Convex Optimization
 
 
-
+<br>
 
 
 ## Convex Optimization(블록 최적화)
@@ -308,7 +310,7 @@ $$
 
 
 
-
+<br>
 
 
 
@@ -342,7 +344,7 @@ $$
 이 Gradient와 반대 방향으로 아무렇게나 잡기만 하면, 적절한 스텝 사이즈 *α* 를 선택한다면, 목적 함수를 최소화하는 방향으로 항상 이동할 수 있다는 것을 의미한다!!
 
 
-
+<br>
 
 
 
@@ -357,7 +359,7 @@ $$
 
 
 
-
+<br>
 
 
 ## Stochastic Gradient Descent(SGD)
@@ -383,7 +385,7 @@ $$
 
 
 
-
+<br>
 
 
 ## **Momentum for Better Convergence in Gradient Descent**
@@ -400,7 +402,7 @@ $$
 
 
 
-
+<br>
 
 
 
@@ -416,7 +418,7 @@ $$
     - 이러한 Constrained Optimization을 Unconstrained Optimization처럼 풀도록 한 것이 “Langrange Multipliers”이다.
     
 
-
+<br>
 
 
 
@@ -437,7 +439,7 @@ $$
 
 
 
-
+<br>
 
 - 여기서 주목해야 할 사실은 dual function D 는 Optimal value인 p*의 항상 lower bound가 된다는 것이다.
 
@@ -453,7 +455,7 @@ $$
     - Convex Optimization문제는 항상 풀리기 때문이다!!
 
 
-
+<br>
 
 
 ---
@@ -472,7 +474,7 @@ $$
 
 
 
-
+<br>
 
 
 ## Convex Optimization
@@ -489,7 +491,7 @@ $$
 
 
 
-
+<br>
 
 
 ## Convex Set
@@ -502,7 +504,7 @@ $$
 
 
 
-
+<br>
 
 
 
@@ -557,7 +559,7 @@ $$
 
 
 
-
+<br>
 
 
 ## Convex Optimization의 성질
@@ -574,13 +576,13 @@ $$
 <img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 15.png" alt="module2" style="zoom:50%;" />
 
 
-
+<br>
 
 
 # CHAPTER 3. ***PCA(Principal Component Analysis)***
 
 
-
+<br>
 
 
 ## PCA Motivation
@@ -604,7 +606,7 @@ $$
 | 5. Crime rate |  |
 
 
-
+<br>
 
 
 
@@ -625,7 +627,7 @@ $$
 <img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 17.png" alt="module2" style="zoom:80%;" />
 
 
-
+<br>
 
 
 
@@ -648,7 +650,7 @@ $$
 
 
 
-
+<br>
 
 
 

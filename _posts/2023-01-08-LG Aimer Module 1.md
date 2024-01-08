@@ -18,14 +18,13 @@ LG Amier 4기 : AI 전문가 과정
 
 교육과정에 대하여 출처를 정확히 밝힌다면 블로그에 작성해도 된다는 답변을 받아 해당 과정을 블로그에 기록해보겠습니다.
 
-<img src="{{site.url}}/images/2023-01-08-LG Aimer Module 1/module1 1.png" alt="module1 1" style="zoom:100%;" />
+<img src="{{site.url}}/images/2023-01-08-LG Aimer Module 1/module1 1.png" alt="module1 1" style="zoom:70%;" />
 
-<img src="{{site.url}}/images/2023-01-08-LG Aimer Module 1/module1 2.png" alt="module1 2" style="zoom:100%;" />
+<img src="{{site.url}}/images/2023-01-08-LG Aimer Module 1/module1 2.png" alt="module1 2" style="zoom:800%;" />
 
 # Section 1. AI 윤리
 
-
-
+<br>
 
 
 ## 데이터 전처리와 분석 방법은 적절한가?
@@ -44,7 +43,7 @@ LG Amier 4기 : AI 전문가 과정
 - 데이터 학습의 결과가 적절한 수준인지에 대한 인식이 있어야한다.
 - 학습(training)데이터는 테스트(testing) 데이터와 달라야한다.
 
-
+<br>
 
 
 
@@ -56,14 +55,14 @@ LG Amier 4기 : AI 전문가 과정
 - High risk 결정에서는 설명력도 정확도 만큼이나 중요하다.
 - Saliency map, SHAP과 같이 post-hoc explainability를 제공하는 기술이 생걌다.
 
-<img src="{{site.url}}/images/2023-01-08-LG Aimer Module 1/module1 3-4707772.png" alt="module1 3" style="zoom:100%;" />
+<img src="{{site.url}}/images/2023-01-08-LG Aimer Module 1/module1 3-4707772.png" alt="module1 3" style="zoom:90%;" />
 
 (post-hoc explainability)은 알고리즘의 내면을 가시화 해주는 사후 설명력이다.
 
 - One pixel attack 의 예시에서는 픽셀 하나만 바뀔 경우 알고리즘 학습 결과가 달라진다.
 
 
-
+<br>
 
 
 ## Handling the Web data
@@ -74,9 +73,9 @@ LG Amier 4기 : AI 전문가 과정
 - 오정보의 빠른 확산으로 인한 인포데믹 현상
     - 인포데믹 : 사실정보와 더불어 오정보가 많아져 사실 구분이 힘든 현상이다.
 
+<br>
 
-
-<img src="{{site.url}}/images/2023-01-08-LG Aimer Module 1/module1 4.png" alt="module1 4" style="zoom:100%;" />
+<img src="{{site.url}}/images/2023-01-08-LG Aimer Module 1/module1 4.png" alt="module1 4" style="zoom:70%;" />
 
 ## 윤리
 
@@ -88,7 +87,7 @@ LG Amier 4기 : AI 전문가 과정
     - 혐오 발언, 아동 학대, 테러 선동 등 불법 콘텐츠 유통 막아야한다.
 
 
-
+<br>
 
 
 ## AI and Ethical Decisions
@@ -101,7 +100,7 @@ LG Amier 4기 : AI 전문가 과정
     - 남성 지원자가 다수였던 과거 10년 이력서 데이터를 학습
     - 편향 현상 : 성별 이슈
 
-
+<br>
 
 
 
@@ -111,7 +110,7 @@ LG Amier 4기 : AI 전문가 과정
 - 알고리즘의 설명력, 편향, 신뢰의 문제에 주의해야 한다!
 
 
-
+<br>
 
 
 ## AI Ethics
