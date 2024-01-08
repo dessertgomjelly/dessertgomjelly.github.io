@@ -7,62 +7,39 @@
 
 이에 관하여 행렬 분해, 블록 최적화, 주성분 분석 등 데이터를 다루기 위한 방법을 학습하게 됩니다.
 
-<img src="{{site.url}}/images/2023-01-08-LG Aimer Module 2/module2 1.png" alt="module1 2" style="zoom:100%;" />
 
 CHAPTER 1은 Matrix Decomposition,  CHAPTER  2는 Convex Optimization, CHAPTER 3은 PCA로 구성되어있다.
 
 이 강의를 들으면서 이해한 내용을 보다 개념적인 접근에 집중하여 소개하도록 하겠다.
 
-<br>
 
-<br>
-
-<br>
-
-<br>
-
-<br>
 
 # CHAPTER 1. ***Matrix Decomposition***
 
-<br>
 
-<br>
 
-<br>
+
 
 ## Matrix decomposition 행렬분해
 
----
-
 인공지능이나 Machine Learning model을 학습하다 보면 많은 Data가 Matrix 형태로 표현되어 있는 경우가 많다.
 
-<br>
 
-<br>
 
-<br>
 
-<br>
 
-<br>
+
 
 ## Summary
-
----
 
 - **Determinant(행렬식), Eigenvalue(고유값)**
 - **Cholesky Decomposition (촐레스키 분해), Diagonalization (대각화), Singular Value Decomposition (특이값 분해)**
 
-<br>
 
-<br>
 
-<br>
 
-<br>
 
-<br>
+
 
 ## Determinant (행렬식)
 
@@ -110,19 +87,13 @@ $$
 det(T) = \prod_{i = 1}^{n} T_{ii}
 $$
 
-<br>
 
-<br>
 
-<br>
 
-<br>
 
-<br>
+
 
 ## Trace (행렬의 대각합)
-
----
 
 - 정의
     - Trace는 Determinant보다 훨씬 더 정의하기 쉽다.
@@ -144,15 +115,13 @@ $$
 tr(I_n)=n
 $$
 
-<br>
 
-<br>
 
-<br>
 
-<br>
 
-<br>
+
+
+
 
 ## Eigenvalue(고유값) and Eigenvector(고유벡터)
 
@@ -186,15 +155,11 @@ $$
 
 이 사실을 통해 Eigenvalue는 unique하지는 않다는 사실을 알 수 있다.
 
-<br>
 
-<br>
 
-<br>
 
-<br>
 
-<br>
+
 
 ## 결론
 
@@ -214,20 +179,17 @@ $$
     tr(A) = \sum_{i = 1}^{n}\lambda_i
     $$
     
+- 
 
-<br>
 
-<br>
 
-<br>
 
-<br>
 
-<br>
+
+
+
 
 ## Choelsky Decomoposition (Choelsky 분해기법)
-
----
 
 - Choelsky Decomoposition
     - 모든 Eigenvalue가 0보다 클때는 Matrix A가 LL^T형태로 표현된다는 것을 증명 할 수 있다.
@@ -247,15 +209,11 @@ $$
 det(A) = det(L)det(L^T)=det(L)^2
 $$
 
-<br>
 
-<br>
 
-<br>
 
-<br>
 
-<br>
+
 
 ## Diagonal Matrix
 
@@ -269,6 +227,8 @@ $$
 <img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 5.png" alt="module2" style="zoom:50%;" />
 
 <img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 6.png" alt="module2" style="zoom:50%;" />
+
+
 
 ---
 
@@ -294,19 +254,13 @@ $$
 
 Singular Value Decomposition은 일반적인 Matrix에 적용할 수 있는 개념이다.
 
-<br>
 
-<br>
 
-<br>
 
-<br>
 
-<br>
+
 
 ## Singular Value Decomposition(특이 값 분해)
-
----
 
 - 어떤 Matrix A가 주어졌을 때 임의의 행렬을 세 개의 특별한 형태의 행렬의 곱으로 분해하는 기법이다.
 - 이때 U와 V^T는 항상 orthogonal Matrix(직교 행렬)가 된다는 것이 가장 중요한 특징이다.
@@ -315,27 +269,21 @@ $$
 A = UΣV^T
 $$
 
-<br>
 
-<br>
 
-<br>
 
-<br>
 
-<br>
 
-<br>
 
-<br>
+
+
+
 
 # CHAPTER  2. Convex Optimization
 
-<br>
 
-<br>
 
-<br>
+
 
 ## Convex Optimization(블록 최적화)
 
@@ -349,15 +297,11 @@ $$
     - 즉 미분값이 0이 되는 포인트가 함수의 Minimum이 되는 경우가 많이 있다.
     - 즉 함수의 Gradient(미분) 정보가 최적화하는데 매우 중요한 역할을 하게 된다.
 
-<br>
 
-<br>
 
-<br>
 
-<br>
 
-<br>
+
 
 ## Optimization Using Gradient Descent
 
@@ -388,15 +332,11 @@ $$
 
 이 Gradient와 반대 방향으로 아무렇게나 잡기만 하면, 적절한 스텝 사이즈 *α* 를 선택한다면, 목적 함수를 최소화하는 방향으로 항상 이동할 수 있다는 것을 의미한다!!
 
-<br>
 
-<br>
 
-<br>
 
-<br>
 
-<br>
+
 
 ## Steepest gradient descent
 
@@ -405,15 +345,11 @@ $$
 - 현재 위치의 기울기(Gradient) 방향으로 이동하는 방법 중 하나이다. 이 방법은 각 단계에서 최대 기울기 방향으로 이동하여 최소값을 찾아가는 방법이다.
 - 따라서 이 두 변환(전치와 -)를 함께 사용하여 현재 위치의 기울기의 반대 방향을 나타내고, 이 방향으로 이동하여 목적 함수를 줄이는 방향으로 움직이게 된다.
 
-<br>
 
-<br>
 
-<br>
 
-<br>
 
-<br>
+
 
 ## Stochastic Gradient Descent(SGD)
 
@@ -434,16 +370,12 @@ $$
     - **Stochastic Gradient Descent (SGD)**
         - 미니배치 크기가 1인 Mini-Batch의 특수한 경우로, 각 데이터 포인트에 대해 그래디언트를 계산하고 파라미터를 업데이트한다.
         
-        <br>
-        
-        <br>
-        
-        <br>
-        
-        <br>
-        
-        <br>
-        
+
+
+
+
+
+
 
 ## **Momentum for Better Convergence in Gradient Descent**
 
@@ -457,15 +389,11 @@ $$
 x_{k+1} = x_k - \gamma_i \cdot \nabla f(x_k)^T + \alpha \cdot \Delta x_k
 $$
 
-<br>
 
-<br>
 
-<br>
 
-<br>
 
-<br>
+
 
 ## Standard Constrained Optimization Problem
 
@@ -478,16 +406,10 @@ $$
     - 계속 그래디언트를 업데이트를 하다보면 위 조건 0보다 작아야 하거나 0인 경우에 만족하지 않는 경우들이 나오게 된다.
     - 이러한 Constrained Optimization을 Unconstrained Optimization처럼 풀도록 한 것이 “Langrange Multipliers”이다.
     
-    <br>
-    
-    <br>
-    
-    <br>
-    
-    <br>
-    
-    <br>
-    
+
+
+
+
 
 ## Langrange Multipliers
 
@@ -504,11 +426,9 @@ $$
     - 이런 dual function 은 항상 Convex Optimization이다.
     - **결론적으로 원래 Optimization 문제는 x에 대한 함수였는데 Lagrange dual function은 람다와 뮤에 대한 함수이다.**
 
-<br>
 
-<br>
 
-<br>
+
 
 - 여기서 주목해야 할 사실은 dual function D 는 Optimal value인 p*의 항상 lower bound가 된다는 것이다.
 
@@ -523,11 +443,9 @@ $$
     - 모든 Optimization 문제들에 대해서 때로는 Optimization 문제가 풀릴 수 도 있고 풀리기 힘든 경우도 있지만
     - Convex Optimization문제는 항상 풀리기 때문이다!!
 
-<br>
 
-<br>
 
-<br>
+
 
 ---
 
@@ -542,15 +460,11 @@ $$
 d^* \leq p^*
 $$
 
-<br>
 
-<br>
 
-<br>
 
-<br>
 
-<br>
+
 
 ## Convex Optimization
 
@@ -563,11 +477,11 @@ $$
 - `Convex Optimization이 왜 중요할까?`
     - 보통 Optimization문제가 풀린다, 안풀린다는 이 문제가 convex하냐 아니냐로 나뉜다 !
 
-<br>
 
-<br>
 
-<br>
+
+
+
 
 ## Convex Set
 
@@ -577,11 +491,11 @@ $$
 
 <img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 13.png" alt="module2" style="zoom:50%;" />
 
-<br>
 
-<br>
 
-<br>
+
+
+
 
 ### Convex Functions
 
@@ -606,11 +520,11 @@ $$
     - 예를 들어 log 함수는 Concave이고, 음수를 취하면 Convex이다.
     
 
-<br>
 
-<br>
 
-<br>
+
+
+
 
 ### First -order condition
 
@@ -618,11 +532,11 @@ $$
 - f가 미분 가능하다면 그래디언트를 이용하여 접선보다 함수가 항상 위에 있다면 convex하다.
 - 대표적인 예로 f(y) = y^2이 있다.
 
-<br>
 
-<br>
 
-<br>
+
+
+
 
 ### Second-order condition
 
@@ -631,15 +545,11 @@ $$
     - 쉽게 말하자면 두 번 미분 가능한 함수의 Hessian 행렬이 Positive Semidefinite(양의 준정부호) 일 때, 그 함수는 어떤 지점에서 극소값을 가질 가능성이 있다. 이는 함수가 그 근처에서 '아래로 볼록한(curved downward)' 모양을 갖고 있음을 의미한다.
 - First - order condition 정의와 서로 동치다.
 
-<br>
 
-<br>
 
-<br>
 
-<br>
 
-<br>
+
 
 ## Convex Optimization의 성질
 
@@ -654,27 +564,15 @@ $$
 
 <img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 15.png" alt="module2" style="zoom:50%;" />
 
-<br>
 
-<br>
 
-<br>
 
-<br>
-
-<br>
-
-<br>
-
-<br>
 
 # CHAPTER 3. ***PCA(Principal Component Analysis)***
 
-<br>
 
-<br>
 
-<br>
+
 
 ## PCA Motivation
 
@@ -696,15 +594,11 @@ $$
 | 4. Schools around |  |
 | 5. Crime rate |  |
 
-<br>
 
-<br>
 
-<br>
 
-<br>
 
-<br>
+
 
 ## PCA Algorithm
 
@@ -721,13 +615,11 @@ $$
 
 <img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 17.png" alt="module2" style="zoom:80%;" />
 
-<br>
 
-<br>
 
-<br>
 
-<br>
+
+
 
 ### Data Covariance Matrix
 
@@ -745,15 +637,11 @@ $$
 
 ![module2]({{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 18.png)
 
-<br>
 
-<br>
 
-<br>
 
-<br>
 
-<br>
+
 
 ## PCA의 수학적 증명
 
