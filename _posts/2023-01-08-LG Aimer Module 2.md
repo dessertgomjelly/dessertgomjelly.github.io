@@ -66,7 +66,7 @@ CHAPTER 1은 Matrix Decomposition,  CHAPTER  2는 Convex Optimization, CHAPTER 3
 
 ## Determinant (행렬식)
 
-![module2](/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LG Aimer Module 2/module2.png)
+![module2]({{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2.png)
 
 - 2 * 2 matrix와 역행렬에서 Determinant 를 알 수 있다. 이 공식에 따라 0이나 0이 아니냐에 따라서 Determinant의 존재 유무가 정해지기 때문이다.
 
@@ -85,7 +85,7 @@ $$
 - Lapace expansion(라플라스 전개)
     - 3 * 3 패턴의 matrix는 이 처럼 2 * 2 패턴의 Recursive formular 로 정의가 된다는 사실을 발견하였다.
       
-        ![module2](/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LG Aimer Module 2/module2 1.png)
+        ![module2]({{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 1.png)
         
     
     ---
@@ -130,7 +130,7 @@ $$
 - 특징
     - 다음과 같은 성질들을 가지고 있다. Determinant는 곱셈의 성질을 가지고 있는 반면에 Trace는 덧셈의 성질을 가지고 있는 것을 알 수 있다.
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LG Aimer Module 2/module2 2.png" alt="module2" style="zoom:50%;" />
+<img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 2.png" alt="module2" style="zoom:50%;" />
 $$
 tr(A+B)=tr(A)+tr(B)
 $$
@@ -175,7 +175,7 @@ $$
 
 - 구체적인 예제를 통해 알아보자.
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LG Aimer Module 2/module2 3.png" alt="module2" style="zoom:50%;" />
+<img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 3.png" alt="module2" style="zoom:50%;" />
 
 2 * 2 형태의 Matrix A에서 Diagonal Entry에  λ를 뺀후 그것에 대한 Determinant(행렬식)를 구하면 된다. 
 
@@ -232,7 +232,7 @@ $$
     - 모든 Eigenvalue가 0보다 클때는 Matrix A가 LL^T형태로 표현된다는 것을 증명 할 수 있다.
     - 여기서 L은 lower-triangle matrix이다. 대부분의 Upper Entry 가 다 0이고 밑의 Entry만 살아 있는 것을 의미한다.
       
-        <img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LG Aimer Module 2/module2 4.png" alt="module2" style="zoom:50%;" />
+        <img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 4.png" alt="module2" style="zoom:50%;" />
         
     - Diagonals은 positive 한 경우이다.
     - 따라서 L은 unique하고, 이런 Matrix L을 A의 Cholesky facotor 라고 한다.
@@ -265,9 +265,9 @@ $$
     - Determinant 도 Diagonal Entry에 곱셈을 하면 된다.
     - 다시 말해 Digonal Matrix는 다양한 연산들이 매우 쉽게 되는 여러가지 좋은 성질을 갖고 있다
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LG Aimer Module 2/module2 5.png" alt="module2" style="zoom:50%;" />
+<img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 5.png" alt="module2" style="zoom:50%;" />
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LG Aimer Module 2/module2 6.png" alt="module2" style="zoom:50%;" />
+<img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 6.png" alt="module2" style="zoom:50%;" />
 
 ---
 
@@ -373,7 +373,7 @@ $$
 
 - 우리가 찾는  어떤 Direction d 가 어떤 Gradient와 내적 값이 0이 된다는 것은 두 벡터가 직교한다는 것을 의미한다.
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LG Aimer Module 2/module2 7.png" alt="module2" style="zoom:50%;" />
+<img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 7.png" alt="module2" style="zoom:50%;" />
 
 
 
@@ -399,7 +399,7 @@ $$
 
 ## Steepest gradient descent
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LG Aimer Module 2/module2 8.png" alt="module2" style="zoom:50%;" />
+<img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 8.png" alt="module2" style="zoom:50%;" />
 
 - 현재 위치의 기울기(Gradient) 방향으로 이동하는 방법 중 하나이다. 이 방법은 각 단계에서 최대 기울기 방향으로 이동하여 최소값을 찾아가는 방법이다.
 - 따라서 이 두 변환(전치와 -)를 함께 사용하여 현재 위치의 기울기의 반대 방향을 나타내고, 이 방향으로 이동하여 목적 함수를 줄이는 방향으로 움직이게 된다.
@@ -420,7 +420,7 @@ $$
 - Gradient update
     - Loss함수가 각각의 Data Point에 대한 Loss 함수의 합으로 표현되기 때문에 다음과 같이 표현 된다.
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LG Aimer Module 2/module2 9.png" alt="module2" style="zoom:50%;" />
+<img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 9.png" alt="module2" style="zoom:50%;" />
 
 
 
@@ -451,7 +451,7 @@ $$
     - 경사 하강법의 변형 중 하나로, 이전 업데이트의 영향을 고려하여 파라미터를 업데이트한다.
     - 현재 그래디언트와 이전 업데이트의 조합으로 새로운 업데이트 계산한다.
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LG Aimer Module 2/module2 10.png" alt="module2" style="zoom:50%;" />
+<img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 10.png" alt="module2" style="zoom:50%;" />
 $$
 x_{k+1} = x_k - \gamma_i \cdot \nabla f(x_k)^T + \alpha \cdot \Delta x_k
 $$
@@ -494,9 +494,9 @@ $$
 - 일반적으로 최적화 문제의 목적 함수에 제약 조건을 부과하여 새로운 목적 함수를 만들고, 라그랑주 승수를 이용하여 이를 해결하는 방법을 포함한다.
 - Standard Constrained Optimization Problem에서 말했던 g , h 에대한 두가지 조건을 생각해야 한다.
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LG Aimer Module 2/module2 11.png" alt="module2" style="zoom:50%;" />
+<img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 11.png" alt="module2" style="zoom:50%;" />
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LG Aimer Module 2/module2 12.png" alt="module2" style="zoom:50%;" />
+<img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 12.png" alt="module2" style="zoom:50%;" />
 
 - Lagrange dual function
     - Constraint에 해당하는 조건마다 *D*(*λ*,*ν*)가 정의될때 이에 대한 함수이다.
@@ -574,7 +574,7 @@ $$
 - 2번째 그림처럼 set안에서 나가는 경우가 생긴다면 convex set이 아니다.
 - 3번째 그림또한 entry가 포함되지 않는 선분이 있기 때문에  convex set이 아니다.
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LG Aimer Module 2/module2 13.png" alt="module2" style="zoom:50%;" />
+<img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 13.png" alt="module2" style="zoom:50%;" />
 
 <br>
 
@@ -598,7 +598,7 @@ $$
     
     
     
-    <img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LG Aimer Module 2/module2 14.png" alt="module2" style="zoom:50%;" />
+    <img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 14.png" alt="module2" style="zoom:50%;" />
     
 - Concave
     - -f 일때 convex 하다.  보통 오목 함수 형태이다.
@@ -651,7 +651,7 @@ $$
         - Lagrangian Dual함수는 람다와 뮤에 대한 선형함수이다. 다시 말해 x를 고정할때 이 함수는 Concave 함수가 되기도 하고 Convex함수가 되기도 한다. 그래서 이것을 Infimum(= 최대상계 = 하한값)를 취해도 여전히 concave 함수라는 것이다.
             - concave함수를 최대화 하는 문제는 Convex Optimization이다. 라고 할 수 있다.
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LG Aimer Module 2/module2 15.png" alt="module2" style="zoom:50%;" />
+<img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 15.png" alt="module2" style="zoom:50%;" />
 
 <br>
 
@@ -680,7 +680,7 @@ $$
 - 다음과 같은 2차원 데이터를 생각해본다면 x1은 매우 중요한 데이터에 대한 정보지만 x2 데이터는 거의 0에 수렴하기때문에 의미가 적은 것을 눈으로 볼 수 있다.
 - 이는 ML에서 분석과 시각화를 어렵게한다. 따라서 차원 축소를 방법론을 선택하는 것이 대표적인 방법이다.
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LG Aimer Module 2/module2 16.png" alt="module2" style="zoom:67%;" />
+<img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 16.png" alt="module2" style="zoom:67%;" />
 
 ### Example : Housing Data
 
@@ -718,7 +718,7 @@ $$
     1. Eigenvector들이 이루는 공간을로 Data Point를 Projection(투영) 시킨다.
 5. Centering, Standardization의 역연산
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LG Aimer Module 2/module2 17.png" alt="module2" style="zoom:80%;" />
+<img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 17.png" alt="module2" style="zoom:80%;" />
 
 <br>
 
@@ -742,7 +742,7 @@ $$
 - 결국 PCA 가 하는 것은 Orginal x가 있을 때 이것을 어떤 B라는 행렬을 곱해서 차원을 축소시킨다. B라는 matrix가 Orthonormal(직교) 하다고 가정했기 때문에 다시 B^T를 곱하면 원래 공간에 재구성된 데이터가 나온다.
 - 결국엔 PCA는 선형적인 인코딩, 디코딩을 하는 과정이다.
 
-![module2](/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LG Aimer Module 2/module2 18.png)
+![module2]({{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 18.png)
 
 <br>
 
