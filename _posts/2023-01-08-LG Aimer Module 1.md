@@ -1,7 +1,7 @@
 ---
 layout : single
 title : "LG Amier Module1. AI 윤리" 
-categories: LG Amier
+categories: LG_Amier
 ---
 
 # LG Amier : AI 전문가 과정 4차 교육
