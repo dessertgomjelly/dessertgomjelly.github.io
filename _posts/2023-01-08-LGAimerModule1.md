@@ -2,11 +2,31 @@
 layout : single
 title : LG Aimer 4기  (Module 1. AI 윤리)
 ---
+LG Amier : AI 전문가 과정 4차 교육
+
+[LG AI](https://www.lgaimers.ai/)
+
+해당 내용은 LG에서 주관하는 LG Amier : AI 전문가 과정 4기 교육 과정이다.<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LGAimerModule1/스크린샷 2024-01-08 오후 2.11.58.png" alt="스크린샷 2024-01-08 오후 2.11.58" style="zoom:50%;" />
+
+
+
+<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LGAimerModule1/스크린샷 2024-01-08 오후 2.12.01.png" alt="스크린샷 2024-01-08 오후 2.12.01" style="zoom:50%;" />
+
+
+
+교육과정에 대하여 출처를 정확히 밝힌다면 블로그에 작성해도 된다는 답변을 받아 해당 과정을 블로그에 기록해보겠다.
+
+
+
+
+
 # Module 1. AI 윤리
 
-## 데이터 전처리와 분석 방법은 적절한가?
 
----
+
+
+
+## 데이터 전처리와 분석 방법은 적절한가?
 
 - Error bar 추가하기
 - 적합한 통계 테스트 찾기
@@ -22,9 +42,11 @@ title : LG Aimer 4기  (Module 1. AI 윤리)
 - 데이터 학습의 결과가 적절한 수준인지에 대한 인식이 있어야한다.
 - 학습(training)데이터는 테스트(testing) 데이터와 달라야한다.
 
-## black box algorithnm
 
----
+
+
+
+## black box algorithnm
 
 - 설명력이 중요한 AI 예시 : 탈세범 검출
 - 실제 알고리즘에서 설명력을 높이기 위한 노력을 한다.
@@ -32,15 +54,17 @@ title : LG Aimer 4기  (Module 1. AI 윤리)
 - High risk 결정에서는 설명력도 정확도 만큼이나 중요하다.
 - Saliency map, SHAP과 같이 post-hoc explainability를 제공하는 기술이 생걌다.
 
-![Untitled](Module%201%20AI%20%E1%84%8B%E1%85%B2%E1%86%AB%E1%84%85%E1%85%B5%2042c50d19f3d1418fbaea9703b13a3639/Untitled.png)
+<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LGAimerModule1/스크린샷 2024-01-08 오후 2.12.07.png" alt="스크린샷 2024-01-08 오후 2.12.07" style="zoom:50%;" />
 
 (post-hoc explainability)은 알고리즘의 내면을 가시화 해주는 사후 설명력이다.
 
 - One pixel attack 의 예시에서는 픽셀 하나만 바뀔 경우 알고리즘 학습 결과가 달라진다.
 
-## Handling the Web data
 
----
+
+
+
+## Handling the Web data
 
 - 의견의 대표성 : Spiral of silence
     - 인터넷 상의 의견의 대표성 있는 의견이 아닐 수 있음을 인지해야 한다.
@@ -48,11 +72,11 @@ title : LG Aimer 4기  (Module 1. AI 윤리)
 - 오정보의 빠른 확산으로 인한 인포데믹 현상
     - 인포데믹 : 사실정보와 더불어 오정보가 많아져 사실 구분이 힘든 현상이다.
 
-![Untitled](Module%201%20AI%20%E1%84%8B%E1%85%B2%E1%86%AB%E1%84%85%E1%85%B5%2042c50d19f3d1418fbaea9703b13a3639/Untitled%201.png)
+<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LGAimerModule1/스크린샷 2024-01-08 오후 2.12.11.png" alt="스크린샷 2024-01-08 오후 2.12.11" style="zoom:50%;" />
+
+
 
 ## 윤리
-
----
 
 - GDPR : 과다 광고에 노출, 혹은 혐오 표현의 노출을 규제하는 법률이다.
 - Digital Services Act
@@ -61,9 +85,11 @@ title : LG Aimer 4기  (Module 1. AI 윤리)
     - 어린이 대상 개인화 추천 광고 금지한다.
     - 혐오 발언, 아동 학대, 테러 선동 등 불법 콘텐츠 유통 막아야한다.
 
-## AI and Ethical Decisions
 
----
+
+
+
+## AI and Ethical Decisions
 
 - 법 분야에서 COMPAS 제도
     - 피고의 미래 범죄 위험을 점수로 예측하는 Software Tool이다.
@@ -73,16 +99,20 @@ title : LG Aimer 4기  (Module 1. AI 윤리)
     - 남성 지원자가 다수였던 과거 10년 이력서 데이터를 학습
     - 편향 현상 : 성별 이슈
 
-## 데이터 분석과 AI 학습에서 유의 점
 
----
+
+
+
+## 데이터 분석과 AI 학습에서 유의 점
 
 - 데이터의 확보, 전처리, 분석, 해석의 전 과정이 중요하다.!!!
 - 알고리즘의 설명력, 편향, 신뢰의 문제에 주의해야 한다!
 
-## AI Ethics
 
----
+
+
+
+## AI Ethics
 
 - 인간의 창조적 활동 영역으로 들어온 인공지능
     - AI가 기술혁신과 창작 도구로 활용이 점차 확대됨에 따라, 인간의 개입 없이 독자적 창작과 혁신활동이 가능한 수준으로 발전 하리라 전망한다.
