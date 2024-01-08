@@ -1,0 +1,735 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Module 2. Mathematics for ML</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="6089221b-7ec7-4887-8d45-38a44e0bbd2c" class="page sans"><header><h1 class="page-title">Module 2. Mathematics for ML</h1><p class="page-description"></p></header><div class="page-body"><ul id="5a618991-e122-459e-9bca-862e285ad543" class="bulleted-list"><li style="list-style-type:disc">교수 : KAIST 신진우 교수</li></ul><ul id="87c7dbbd-9ad2-4c86-b3e2-33b8b0d91b4f" class="bulleted-list"><li style="list-style-type:disc">학습목표</li></ul><p id="2958cbe4-401d-4584-85c9-3cca09fce10d" class="">본 모듈은 AI기술을 이해하기 위한 바탕이 되는 수학적 지식을 학습하기 위한 과정입니다.</p><p id="c4c31698-4aa0-448b-bb5a-48036f93424c" class="">이에 관하여 행렬 분해, 블록 최적화, 주성분 분석 등 데이터를 다루기 위한 방법을 학습하게 됩니다.</p><p id="38ad63bc-b375-4415-bc94-5b3b47223a7a" class="">
+</p><p id="e75deb23-0a1b-4094-8d55-a0fb5f7e4243" class="">
+</p><p id="efa8798b-7181-413e-8bbe-3d968f999747" class="">CHAPTER 1은 Matrix Decomposition,<em><strong> </strong></em>CHAPTER  2는 Convex Optimization, CHAPTER 3은 PCA로 구성되어있다.</p><p id="a1d998f2-8029-44b4-908d-4686e7bbd4b9" class="">이 강의를 들으면서 이해한 내용을 보다 개념적인 접근에 집중하여 소개하도록 하겠다.</p><p id="386e8ce4-051a-4f35-aebc-817a66fcea5d" class="">
+</p><p id="4d3e14d1-6ff2-4bbb-91c0-7be294df3658" class="">&lt;br&gt;</p><p id="98eead04-d131-4c6f-9ea9-1e8bfc982282" class="">&lt;br&gt;</p><h1 id="ea4359a5-24e5-4e86-a264-031cb3764669" class="">CHAPTER 1.<em><strong> Matrix Decomposition</strong></em></h1><h2 id="663910c6-cdbc-409f-850e-53c113ce748a" class="">Matrix decomposition 행렬분해</h2><hr id="ec3e0e0d-6383-4850-a504-b99e95ff30af"/><p id="fff044ce-391f-4e32-b560-e084323dc36d" class="">인공지능이나 Machine Learning model을 학습하다 보면 많은 Data가 Matrix 형태로 표현되어 있는 경우가 많다.</p><p id="21ea22fa-f662-4a04-a250-6d72a77d9092" class="">
+</p><p id="e25eef83-c4b4-4347-b32c-b244e2079373" class="">
+</p><p id="06a4dc71-f911-4531-a72b-4c27573140ba" class="">
+</p><h2 id="a297fb09-a3e9-48db-a55c-6e49be025906" class="">Summary</h2><hr id="7c1aa7d4-1cdc-4d65-bb48-b2b3cfb02c43"/><ul id="6d9cab33-9eae-4fa7-a739-35f94960dc84" class="bulleted-list"><li style="list-style-type:disc"><strong>Determinant(행렬식), Eigenvalue(고유값)</strong></li></ul><ul id="ee81bcaf-87f8-40fd-bc85-9a728e9ff0a2" class="bulleted-list"><li style="list-style-type:disc"><strong>Cholesky Decomposition (촐레스키 분해), Diagonalization (대각화), Singular Value Decomposition (특이값 분해)</strong></li></ul><p id="535d7f89-197a-471b-ada4-e7e3b603db2c" class="">
+</p><p id="baf0f4e0-2b5d-41b5-8d7e-9c8ed984f3e8" class="">
+</p><p id="cf4f3ef1-ec56-43c2-bccd-d6d267ce5d0d" class="">
+</p><h2 id="fa95516a-30d0-4cf8-8915-a42f064a19f8" class="">Determinant (행렬식)</h2><hr id="b37e7d3a-287e-4af1-bfa9-f9eb489bd76a"/><figure id="9dc17f45-9ef0-4dd7-9d57-69978abda808" class="image"><a href="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled.png"><img style="width:528px" src="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled.png"/></a></figure><ul id="9e0b1abc-bbb7-4a47-b8e3-81f11d810afb" class="bulleted-list"><li style="list-style-type:disc">2 * 2 matrix와 역행렬에서 Determinant 를 알 수 있다. 이 공식에 따라 0이나 0이 아니냐에 따라서 Determinant의 존재 유무가 정해지기 때문이다.</li></ul><p id="221bf70d-1071-47f0-9ae1-4472fbeaeebe" class="">
+</p><figure id="073041af-3d8e-4a43-96b0-aa5b2203ecf6" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>α</mi><mn>11</mn></msub><msub><mi>α</mi><mn>22</mn></msub><mo>−</mo><msub><mi>α</mi><mn>12</mn></msub><msub><mi>α</mi><mn>21</mn></msub><mo mathvariant="normal">≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex"> \alpha_{11} \alpha_{22}- \alpha_{12} \alpha_{21} \neq 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">11</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">22</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">12</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">21</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="inner"><span class="mord"><span class="mrel"></span></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></span></div></figure><ul id="53527d3d-1d91-44bc-80bb-8c68fe5d948c" class="bulleted-list"><li style="list-style-type:disc">따라서 Determinant(A)는 이러한 식이 성립한다.</li></ul><figure id="0e431aea-73ea-4348-9cb7-b5985be3576c" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><mi>e</mi><mi>t</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi>α</mi><mn>11</mn></msub><msub><mi>α</mi><mn>22</mn></msub><mo>−</mo><msub><mi>α</mi><mn>12</mn></msub><msub><mi>α</mi><mn>21</mn></msub></mrow><annotation encoding="application/x-tex"> det(A) = \alpha_{11} \alpha_{22}- \alpha_{12} \alpha_{21} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">11</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">22</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">12</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">21</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></div></figure><hr id="7fd5612c-c04d-403d-b049-239bcf227500"/><ul id="f4ced45f-2a9d-4d0b-95c2-36180fa061ed" class="bulleted-list"><li style="list-style-type:disc">Lapace expansion(라플라스 전개)<ul id="27c21f46-684e-45ba-8f02-406ffa3d6b79" class="bulleted-list"><li style="list-style-type:circle">3 * 3 패턴의 matrix는 이 처럼 2 * 2 패턴의 Recursive formular 로 정의가 된다는 사실을 발견하였다. <figure id="99af5b8f-6291-43c1-867c-8ebead4f5e81" class="image"><a href="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%201.png"><img style="width:1408px" src="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%201.png"/></a></figure></li></ul><hr id="48ff2194-c0b1-4b8f-8375-152ff3abfe62"/></li></ul><ul id="1d12daf2-d178-46e4-9273-94aab9996b3e" class="bulleted-list"><li style="list-style-type:disc">특징<ul id="3d078489-23c3-4d20-b156-8bf929b73524" class="bulleted-list"><li style="list-style-type:circle">여기서 주요 특징으로는 Determinant(AB)는 곱셈에 의해서 분해 된다.</li></ul></li></ul><figure id="59df1a40-072e-4bd5-8965-d8637cbb1d31" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><mi>e</mi><mi>t</mi><mo stretchy="false">(</mo><mi>A</mi><mi>B</mi><mo stretchy="false">)</mo><mo>=</mo><mi>d</mi><mi>e</mi><mi>t</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo><mi>d</mi><mi>e</mi><mi>t</mi><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex"> det(AB)= det(A)det(B)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose">)</span></span></span></span></span></div></figure><figure id="34df3cb0-63ab-40a7-b2a4-415875438c75" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><mi>e</mi><mi>t</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo><mo>=</mo><mi>d</mi><mi>e</mi><mi>t</mi><mo stretchy="false">(</mo><msup><mi>A</mi><mi>T</mi></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">det(A) = det(A^T)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1413em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></div></figure><figure id="50d9d782-adc9-4b09-8071-0b92b5086735" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><mi>e</mi><mi>t</mi><mo stretchy="false">(</mo><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn><mi mathvariant="normal">/</mi><mi>d</mi><mi>e</mi><mi>t</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">det(A^{-1}) = 1/det(A)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1141em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1/</span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mclose">)</span></span></span></span></span></div></figure><figure id="2ae1b54f-7976-4ede-9705-9221675f918d" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><mi>e</mi><mi>t</mi><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo><mo>=</mo><munderover><mo>∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>T</mi><mrow><mi>i</mi><mi>i</mi></mrow></msub></mrow><annotation encoding="application/x-tex">det(T) = \prod_{i = 1}^{n} T_{ii}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.9291em;vertical-align:-1.2777em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8723em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∏</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2777em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">ii</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></div></figure><h2 id="5e404d14-adfc-4103-8937-01e2601e71b9" class="">Trace (행렬의 대각합)</h2><hr id="b531b323-c591-4191-bf28-41772cfceb7d"/><ul id="96db6192-62e9-4fb6-9217-6fa1493f35fe" class="bulleted-list"><li style="list-style-type:disc">정의<ul id="3677ba4f-1f09-4c71-9100-c1dc998e92d2" class="bulleted-list"><li style="list-style-type:circle">Trace는 Determinant보다 훨씬 더 정의하기 쉽다.</li></ul><ul id="dda77cff-ca7d-476b-b1ef-136c424ff576" class="bulleted-list"><li style="list-style-type:circle">어떤 Matrix가 있으면 Matrix의 어떤 Diagonal Entry(대각성분)를 다 더한 형태를 Trace라고 한다.</li></ul></li></ul><p id="6ba14629-1570-4dbd-8d5f-9dc63e5154c8" class="">
+</p><ul id="e8e7b624-00bf-46b6-adb6-dd5cf8db98be" class="bulleted-list"><li style="list-style-type:disc">특징<ul id="45529c9f-acfb-4302-8846-850b3d552742" class="bulleted-list"><li style="list-style-type:circle">다음과 같은 성질들을 가지고 있다. Determinant는 곱셈의 성질을 가지고 있는 반면에 Trace는 덧셈의 성질을 가지고 있는 것을 알 수 있다.</li></ul></li></ul><figure id="8bbfbf4c-5e5a-4dc3-b555-2f061cbbcf04" class="image"><a href="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%202.png"><img style="width:192px" src="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%202.png"/></a></figure><figure id="e7ceb011-a35a-46e7-ba09-bc4d259059a9" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>t</mi><mi>r</mi><mo stretchy="false">(</mo><mi>A</mi><mo>+</mo><mi>B</mi><mo stretchy="false">)</mo><mo>=</mo><mi>t</mi><mi>r</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo><mo>+</mo><mi>t</mi><mi>r</mi><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">tr(A+B)=tr(A)+tr(B)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose">)</span></span></span></span></span></div></figure><figure id="9bc41755-3e82-47bf-8356-1424854748f2" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>t</mi><mi>r</mi><mo stretchy="false">(</mo><mi>α</mi><mi>A</mi><mo stretchy="false">)</mo><mo>=</mo><mi>α</mi><mi>t</mi><mi>r</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">tr(\alpha A) = \alpha tr(A)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mord mathnormal">A</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mclose">)</span></span></span></span></span></div></figure><figure id="32cdc891-ae6d-49cc-9cb1-4a12af2d31a6" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>t</mi><mi>r</mi><mo stretchy="false">(</mo><msub><mi>I</mi><mi>n</mi></msub><mo stretchy="false">)</mo><mo>=</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">tr(I_n)=n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span></div></figure><p id="6182cf62-41a4-4180-a07d-905442a49700" class="">
+</p><h2 id="548d8fa8-1568-4cc2-aa0c-c947e578f048" class="">Eigenvalue(고유값) and Eigenvector(고유벡터)</h2><hr id="f86e2f84-8abf-47f9-9968-0443fd853194"/><ul id="b671df17-7693-4062-9f05-f352025916fd" class="bulleted-list"><li style="list-style-type:disc">Determinant, Trace와 밀접한 관련이 있다.</li></ul><ul id="ff0956d1-66e1-4354-99e1-0165a7738598" class="bulleted-list"><li style="list-style-type:disc">정의<figure id="ea633ade-8765-436f-8041-07824beaf280" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mi>x</mi><mo>=</mo><mi>λ</mi><mi>x</mi></mrow><annotation encoding="application/x-tex"> A{x} = \lambda {x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord"><span class="mord mathnormal">x</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">λ</span><span class="mord"><span class="mord mathnormal">x</span></span></span></span></span></span></div></figure><ul id="1af679e5-07c5-458c-97be-a669d585b0ca" class="bulleted-list"><li style="list-style-type:circle"><strong>Eigenvalue (고유값)</strong><ul id="e6dec353-d491-49c4-a48a-fc925bb437a5" class="bulleted-list"><li style="list-style-type:square">주어진 행렬 A에 대해, 어떤 스칼라 λ(람다)가 존재하여 위의 식을 만족하는 경우, 그 스칼라 λ가 행렬 A의 고유값(Eigenvalue)이 된다. </li></ul></li></ul><ul id="106901c4-f724-4d54-b66a-a5ff04867d61" class="bulleted-list"><li style="list-style-type:circle"><strong>Eigenvector (고유벡터)</strong><ul id="82a8a498-8abf-4d1b-ac36-1077570211f5" class="bulleted-list"><li style="list-style-type:square">행렬 A와 그에 해당하는 고유값 λ에 대해 위의 식을 만족하는 영벡터가 아닌 벡터 x를 고유벡터(Eigenvector)라고 한다.</li></ul><ul id="db895971-2b9e-4232-829b-ad208ee44e81" class="bulleted-list"><li style="list-style-type:square">λ와 x를 찾으면, λ가 A의 고유값이 되고, x가 그에 해당하는 고유벡터가 된다.</li></ul><p id="4f7852e5-c73f-4d30-aaae-d6c9f40415e8" class="">
+</p></li></ul></li></ul><hr id="936ae31e-9ac2-43e7-83fb-c836ae311156"/><ul id="70b9ee0a-5474-4c24-8d68-a5642fa40adc" class="bulleted-list"><li style="list-style-type:disc">구체적인 예제를 통해 알아보자.</li></ul><figure id="647ff6ff-1dc5-400c-a0b8-77e482b3905f" class="image"><a href="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%203.png"><img style="width:672px" src="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%203.png"/></a></figure><p id="a74ad974-cd92-44ae-9b6e-860bcb4cfabe" class="">
+</p><p id="6f31b63f-3742-4e2a-9172-0cc3e7c54721" class="">2 * 2 형태의 Matrix A에서 Diagonal Entry에  λ를 뺀후 그것에 대한 Determinant(행렬식)를 구하면 된다. </p><p id="0a504786-525b-4e1b-b244-2f78a9609373" class="">그러면  λ에 대한 2차식이 나오게 되는데 이것이 0가 되는 Solution을 구해 보면  λ=2,  λ=5 를 알 수 있다. 따라서 2, 5가 Eigenvalue(고유값)이 된다.</p><p id="2cd5289c-5fc4-4de9-93a1-f3612c0aa3d1" class="">그다음에는 2와 5에 해당하는 Eigenvector도 쉽게 구할 수 있다. Eigenvector * c 를 한 어떠한 vector도 다 Eigenvector가 된다.</p><p id="598494d7-864f-4aa8-94e6-7eef7bf08662" class="">이 사실을 통해 Eigenvalue는 unique하지는 않다는 사실을 알 수 있다.</p><p id="163744fa-0d5f-4499-b99c-c08ffa602d3a" class="">
+</p><h2 id="5e625e46-fef3-4eeb-9a57-13d73c6b8b80" class="">결론</h2><hr id="abf829d9-611b-44f2-b4b9-49c587aa7ba0"/><ul id="e4b6b428-7de5-4cf8-bf65-d897c58678c3" class="bulleted-list"><li style="list-style-type:disc">Determinant<ul id="38644911-3ba1-482e-8447-de26330b159e" class="bulleted-list"><li style="list-style-type:circle">Determinant 는 이런식으로 Eigenvalue들의 곱셈으로 표현된다는 것을 알 수 있다.</li></ul></li></ul><figure id="a618f5f0-252a-4217-bc88-39b8f596462f" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><mi>e</mi><mi>t</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo><mo>=</mo><munderover><mo>∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>λ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">det(A) = \prod_{i = 1}^{n}\lambda_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.9291em;vertical-align:-1.2777em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8723em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∏</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2777em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></div></figure><p id="64793a6d-fdd0-4287-9fdf-211eb0c638f2" class="">
+</p><ul id="a902bba3-9c31-4ab5-885e-03fdf5183123" class="bulleted-list"><li style="list-style-type:disc">Trace<ul id="3c85b005-a29c-41da-b761-30783d438196" class="bulleted-list"><li style="list-style-type:circle">Trace는 Eigenvalue들의 덧셈으로 표현된다는 것을 알 수 있다.</li></ul><figure id="ef5297a9-5417-4ca5-b05b-7792c5aa7d30" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>t</mi><mi>r</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>λ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">tr(A) = \sum_{i = 1}^{n}\lambda_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.9291em;vertical-align:-1.2777em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8723em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2777em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></div></figure></li></ul><p id="5dfc9c2e-e38f-4f7c-a45e-217abfb29f2d" class="">
+</p><h2 id="a4efb4ea-b312-49cd-b714-ee9cbf5309bd" class="">Choelsky Decomoposition (Choelsky 분해기법)</h2><hr id="468b1cfd-82c2-4858-81fa-76c24982c5a0"/><ul id="eb365adf-9376-4c1e-8ec1-65dfe4cb722c" class="bulleted-list"><li style="list-style-type:disc">Choelsky Decomoposition<ul id="eef1d5ae-e770-4484-a0ee-12d457e41b72" class="bulleted-list"><li style="list-style-type:circle">모든 Eigenvalue가 0보다 클때는 Matrix A가 LL^T형태로 표현된다는 것을 증명 할 수 있다. </li></ul><ul id="fdd91654-d7e6-4496-962e-b0d4355570af" class="bulleted-list"><li style="list-style-type:circle">여기서 L은 lower-triangle matrix이다. 대부분의 Upper Entry 가 다 0이고 밑의 Entry만 살아 있는 것을 의미한다.<figure id="dccf81c8-f279-4cf8-9991-bd681934df2d" class="image"><a href="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%204.png"><img style="width:192px" src="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%204.png"/></a></figure></li></ul><ul id="b8644958-7c76-4e0d-953e-1ee9f15cc74f" class="bulleted-list"><li style="list-style-type:circle">Diagonals은 positive 한 경우이다.</li></ul><ul id="40fa8921-6045-4fc4-aa97-92c3bda90d6a" class="bulleted-list"><li style="list-style-type:circle">따라서 L은 unique하고, 이런 Matrix L을 A의 Cholesky facotor 라고 한다.</li></ul><p id="f5311588-770b-4bdb-b324-b3ff9fe4bcae" class="">
+</p></li></ul><ul id="34cc4269-073c-4a78-af5b-4874de8f7318" class="bulleted-list"><li style="list-style-type:disc">응용<ul id="76807f1a-9a49-47b2-a02c-772375ae195f" class="bulleted-list"><li style="list-style-type:circle"><strong><span style="border-bottom:0.05em solid">Decomoposition(분해 기법)을 할 수 있으면 Determinant(행렬식) 계산이 매우 쉬워 지기 때문에 사용한다.</span></strong></li></ul><ul id="04a5ec65-e023-49a3-848c-6b7780ea837e" class="bulleted-list"><li style="list-style-type:circle">Determinant 는 곱셈에 대해서 분해가 되기때문에 L곱하기 L^T 가 된다. L^T는 Determinant 성질에 의해 L로 변환되고 따라서 다음 식이 성립한다.<ul id="76c5d056-557d-4e4e-ad74-045fc4d2858d" class="bulleted-list"><li style="list-style-type:square">Determinant L은 lower-triangle matrix 이기 때문에 매우 구하기 쉽다. </li></ul></li></ul></li></ul><figure id="499c1a93-4942-4b61-8296-231ebce1b896" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><mi>e</mi><mi>t</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo><mo>=</mo><mi>d</mi><mi>e</mi><mi>t</mi><mo stretchy="false">(</mo><mi>L</mi><mo stretchy="false">)</mo><mi>d</mi><mi>e</mi><mi>t</mi><mo stretchy="false">(</mo><msup><mi>L</mi><mi>T</mi></msup><mo stretchy="false">)</mo><mo>=</mo><mi>d</mi><mi>e</mi><mi>t</mi><mo stretchy="false">(</mo><mi>L</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">det(A) = det(L)det(L^T)=det(L)^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1413em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal">L</span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1141em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal">L</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></div></figure><p id="9c0c579d-e96d-4c97-8898-fb87e1e2ead0" class="">
+</p><p id="bb17268c-8e4c-4ebd-be89-ec2d2eca4747" class="">
+</p><h2 id="ca25334f-25f5-4ff6-8d91-d0cbfb1fd88f" class="">Diagonal Matrix </h2><hr id="8b3ebd4f-ba6e-49a8-887a-b16908cc690c"/><ul id="c3c565d5-b8a3-4674-9bd3-881527c51b61" class="bulleted-list"><li style="list-style-type:disc">Diagonal Matrix <ul id="fc3992d7-492f-446e-a64b-dbc8ea4ad69b" class="bulleted-list"><li style="list-style-type:circle">대각성분을 제외하고 0인 Matrix이다.</li></ul><ul id="13d9407c-4551-4b20-8b3b-d5dd96e5d3be" class="bulleted-list"><li style="list-style-type:circle">이 Matrix의 주요 특징으로는 Diagonal Matrix의 지수승 즉, Matrix D를 k번 곱한 것들이 매우 쉽게 표현이 된다는 것이다. 대각 성분을 제외하고는 0이기 때문이다.</li></ul><ul id="9bcfd93a-0404-4712-82d3-fe46f711dd7f" class="bulleted-list"><li style="list-style-type:circle">역행렬을 구하는 것 또한 쉽다.</li></ul><ul id="54b0465f-2704-451c-99ce-ad5a3b8f88a4" class="bulleted-list"><li style="list-style-type:circle">Determinant 도 Diagonal Entry에 곱셈을 하면 된다.</li></ul><ul id="4e508446-2635-43e0-b320-88e4ceebf3b9" class="bulleted-list"><li style="list-style-type:circle">다시 말해 Digonal Matrix는 다양한 연산들이 매우 쉽게 되는 여러가지 좋은 성질을 갖고 있다</li></ul></li></ul><div id="e96884f5-89e0-48c4-aaea-f2272a66de68" class="column-list"><div id="429a891f-5251-439c-8d09-289077cf56ca" style="width:18.75%" class="column"><figure id="0a8bc982-d1ff-4fed-8d07-a29ee72bc6c0" class="image"><a href="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%205.png"><img style="width:192px" src="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%205.png"/></a></figure></div><div id="d81ec509-df67-49c1-a80d-65958e148847" style="width:81.25%" class="column"><figure id="6e5c9ee5-2b6d-403b-a950-7c6dbad43362" class="image"><a href="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%206.png"><img style="width:672px" src="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%206.png"/></a></figure></div></div><hr id="b2af4e06-87f7-44b2-9cdb-1abbba505969"/><ul id="60133e64-14a8-43f4-8696-1bfdcecfeb86" class="bulleted-list"><li style="list-style-type:disc">정의<ul id="d6696d01-8de9-47d5-ab2e-489681709420" class="bulleted-list"><li style="list-style-type:circle">어떤 Matrix A가 있을때 D(<mark class="highlight-red">Diagonalizable</mark>) 하게 되면 쉽게 계산할 수 있게 된다.</li></ul><ul id="c7bfb980-b2da-41a3-a5a8-e3578f6998b3" class="bulleted-list"><li style="list-style-type:circle">이는 A를 대각화 행렬 D와 닮은 행렬 P를 사용하여 A = PDP^(-1) 형태로 표현할 수 있다는 것을 의미한다는 말이다.</li></ul></li></ul><p id="4ad775ef-56c6-47ec-aaec-f1f3d2cc5113" class="">
+</p><p id="bd934fdd-64fe-4a51-aefc-61c2a1c20c8f" class=""><mark class="highlight-default">Diagonalizable의 예를 살펴보자</mark></p><figure id="bd114e75-5db3-4f98-b7c9-9eac86e15bf8" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>A</mi><mi>k</mi></msup><mo>=</mo><mi>P</mi><msup><mi>D</mi><mi>k</mi></msup><msup><mi>P</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">A^k = PD^kP^{-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8991em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8991em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span></span></div></figure><figure id="58d2a3f8-4d5c-4d20-8f8d-98115e0c4566" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><mi>e</mi><mi>t</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo><mo>=</mo><mi>d</mi><mi>e</mi><mi>t</mi><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo><mi>d</mi><mi>e</mi><mi>t</mi><mo stretchy="false">(</mo><mi>D</mi><mo stretchy="false">)</mo><mi>d</mi><mi>e</mi><mi>t</mi><mo stretchy="false">(</mo><msup><mi>P</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo><mo>=</mo><mi>d</mi><mi>e</mi><mi>t</mi><mo stretchy="false">(</mo><mi>D</mi><mo stretchy="false">)</mo><mo>=</mo><munder><mo>∏</mo><mi>i</mi></munder><msub><mi>d</mi><mrow><mi>i</mi><mi>i</mi></mrow></msub></mrow><annotation encoding="application/x-tex">det(A) = det(P)det(D)det(P^{-1}) = det(D) = \prod_i d_{ii}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1141em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.3277em;vertical-align:-1.2777em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.05em;"><span style="top:-1.8723em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∏</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2777em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">ii</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></div></figure><p id="49b67761-96ad-4ca5-ad24-47d0a365c19e" class="">
+</p><p id="c10969df-ca50-4991-865d-9755437d4a75" class="">그렇다면 “어떤 Matrix가 PDP^-1로 Diagonal하게 표현 될 수 있을까?”라는 궁금증이 생긴다. 정답은.</p><p id="fcfa2ae4-cebc-4577-8408-de9f1a1c05a6" class="">대칭행렬(symmetric matrix)은 항상 직교 대각화 가능(orthogonally diagonalizable)하다.</p><p id="0e8a72e0-8293-4b53-8442-2e8a5350be21" class="">
+</p><p id="1eac801c-5ede-4a1b-86b3-704a0f06fa4d" class="">결론적으로 Eigenvalue Decomposition (고유벡터 분해 기법)은 Symmetric Matrix에서만 사용할 수 있는 개념이고. </p><p id="5a368e6e-7e6f-4913-85b5-8794e8d0e28d" class="">Singular Value Decomposition은 일반적인 Matrix에 적용할 수 있는 개념이다.</p><p id="65c09e36-8c75-4ac3-ac00-5af14832c9e9" class="">
+</p><h2 id="3ab926d1-d909-4d0d-98e0-ee7f855954fe" class="">Singular Value Decomposition(특이 값 분해)</h2><hr id="be555074-616b-4abd-8d62-d1426de239cc"/><ul id="eacf04f5-77a1-4de4-bb83-59e2b025e53e" class="bulleted-list"><li style="list-style-type:disc">어떤 Matrix A가 주어졌을 때 임의의 행렬을 세 개의 특별한 형태의 행렬의 곱으로 분해하는 기법이다. </li></ul><ul id="7b4baead-89c9-49ea-9b3a-06dc0c0f7588" class="bulleted-list"><li style="list-style-type:disc">이때 U와 V^T는 항상 orthogonal Matrix(직교 행렬)가 된다는 것이 가장 중요한 특징이다.</li></ul><figure id="0d776d7e-8e26-44c8-9863-2cd0e3edb16d" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mo>=</mo><mi>U</mi><mi mathvariant="normal">Σ</mi><msup><mi>V</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">A = UΣV^T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8913em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span><span class="mord">Σ</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span></span></span></span></span></div></figure><p id="7f5be8d3-4781-4a7e-a4fe-bf20a5ff8e92" class="">
+</p><p id="c1a074b1-a6f0-4e4a-8fa8-0742fc8f9290" class="">&lt;br&gt;</p><p id="8d31f7e1-ecfd-4a64-9a7b-017cc23c88d8" class="">&lt;br&gt;</p><p id="0bb4dcec-c9ca-4079-9bf2-5b0472e9cfbf" class="">&lt;br&gt;</p><h1 id="fbd128be-91f0-4cd5-8244-66fe5c71f5d7" class="">CHAPTER  2. Convex Optimization</h1><p id="f5fe259e-f242-4710-b3f6-7bc10a90d4bf" class="">
+</p><h2 id="0373b27c-f4c7-475c-ae71-49ce74feabd3" class="">Convex Optimization(블록 최적화)</h2><hr id="2b3116c1-326d-4f2b-a3ea-acaeb64cf1c7"/><ul id="8d39a83c-9583-4299-836b-a7130873d594" class="bulleted-list"><li style="list-style-type:disc">Optimization은 기계학습을 이용하는 데에 매우 중요하다. 보통 ML모델을 학습한다고 했을 때 보통은 그게 Optimization 문제로 구성 되고 모델의 좋은 파라미터를 찾는 과정과 일치하게 된다.</li></ul><ul id="d5156b94-f8eb-42d9-b3f5-01cc99cbb6a9" class="bulleted-list"><li style="list-style-type:disc">Machine Learning 을 하려다 보면 Optimization 문제들이 자주 등장하고 이걸 어떻게 잘 푸느냐가 좋은 Model을 찾는 것과 직결되는 문제이다.</li></ul><ul id="e6358e11-4a49-4bf8-bbad-f32877f67cbc" class="bulleted-list"><li style="list-style-type:disc">Optimization의 종류<ul id="626d27db-2854-4b1b-a2cb-e2367fd195dd" class="bulleted-list"><li style="list-style-type:circle">Unconstrained optimization(제약이 없는 최적화)</li></ul><ul id="b014fcd5-eea2-401a-ab11-578523f04860" class="bulleted-list"><li style="list-style-type:circle">Constrained optimization(제약이 있는 최적화)</li></ul><ul id="52b8e3bc-4892-429f-b3d8-e21eaac53bf8" class="bulleted-list"><li style="list-style-type:circle">Convex optimization(블록 최적화)</li></ul></li></ul><ul id="83332858-265f-4f1b-9c06-0ca51c07b822" class="bulleted-list"><li style="list-style-type:disc">Gradient <ul id="4b6b2a67-44fd-4d5b-9fda-dcc4b9532bae" class="bulleted-list"><li style="list-style-type:circle">즉 미분값이 0이 되는 포인트가 함수의 Minimum이 되는 경우가 많이 있다.</li></ul><ul id="b733ae7e-631e-4be9-9eaf-0652a65a626d" class="bulleted-list"><li style="list-style-type:circle">즉 함수의 Gradient(미분) 정보가 최적화하는데 매우 중요한 역할을 하게 된다.</li></ul></li></ul><p id="2c348cde-64d6-4519-8218-ce71ecf5cf1d" class="">
+</p><h2 id="814c0291-5b7c-489a-9b2d-e038c2c06a3b" class="">Optimization Using Gradient Descent</h2><hr id="390660ca-4d2f-44a4-b20d-ad63a4525b62"/><ul id="53452aac-39c3-461d-bf9f-a3dca4faff11" class="bulleted-list"><li style="list-style-type:disc">최적화의 목표는 보통 목적 함수 f(x)를 최소화 하는 것이 목표이다.</li></ul><ul id="3bb287b5-970d-40b8-9625-6759e396f58d" class="bulleted-list"><li style="list-style-type:disc">즉, 손실함수(=목적함수)를 최소화 하는 것이 좋은 파라미터를 찾는 것이다</li></ul><p id="92c76dfd-6a8a-45fe-a98a-0f7d89ab03d5" class="">
+</p><ul id="4986e3d4-bb6d-4177-a6d4-cffa85aaf753" class="bulleted-list"><li style="list-style-type:disc">Gradient-type algorithms 는 다음과 같은 수식으로 표현된다. <ul id="90d29a5d-d684-4a87-9141-aa8dfd041895" class="bulleted-list"><li style="list-style-type:circle">Gamma K는 step size(= 학습률) 라고 부르는 어떤 Scaler 값이고</li></ul><ul id="626328d1-eb1d-4991-9327-54aefd4a6399" class="bulleted-list"><li style="list-style-type:circle">d는 방향성을 나타내는 Direction이 된다.</li></ul></li></ul><figure id="3b975ddb-d7c9-42a4-bf2f-3dbda598d805" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>X</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><msub><mi>X</mi><mi>K</mi></msub><mo>+</mo><msub><mi>γ</mi><mi>k</mi></msub><msub><mi>d</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">X_{k+1} = X_K + \gamma_kd_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8917em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">K</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0556em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></div></figure><p id="7ceb529f-365f-4e59-bbe0-c6d1e1a970df" class="">
+</p><ul id="fb71f1fa-775f-4505-a9ff-7b0b865c6b21" class="bulleted-list"><li style="list-style-type:disc">우리가 찾는  어떤 Direction d 가 어떤 Gradient와 내적 값이 0이 된다는 것은 두 벡터가 직교한다는 것을 의미한다.</li></ul><figure id="42c415fd-90c7-49a8-8d63-d422f0726f74" class="image" style="text-align:left"><a href="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%207.png"><img style="width:144px" src="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%207.png"/></a></figure><p id="eb9d42c2-8115-40d8-b29b-abec0b88ad78" class="">
+</p><h3 id="fcfa6cec-1e54-4ac9-94e7-f805f8abbb37" class=""><strong>Lemma: Orthogonality of Gradient and Direction</strong></h3><p id="9f08d126-06ad-42a1-b51d-e98159025625" class="">만약 어떤 방향 벡터 <em>d </em>가 현재 위치의 기울기(Gradient)와 직교한다면, 이 방향에 대해서는 목적 함수를 줄이는 데 어떤 <em>α</em>를 사용하더라도 그 변화가 없다. </p><p id="8e15230a-b232-47fa-b8b1-0e9169dfc3d5" class="">이 레마는 최적화 알고리즘에서 현재 기울기와 직교하는 방향으로 이동하더라도 목적 함수의 값이 <em>α</em>에 따라 변하지 않는다는 것을 나타낸다. 이는 최적화 과정에서 특정 방향으로 움직여도 목적 함수의 값이 변하지 않는다면 다른 방향으로 움직이는 것이 더 나은 선택일 수 있음을 시사한다.</p><p id="7f7a65ef-10c6-462b-b227-15d4fa139e3b" class="">
+</p><p id="210d7664-daa8-4937-8c64-c5051dff7f6c" class=""><code><span style="border-bottom:0.05em solid">하지만 이 Lemma를 긍정적으로 생각해본다면??</span></code></p><p id="eda0417f-dd2a-4634-b0ef-e69d5beb808a" class="">이 Gradient와 반대 방향으로 아무렇게나 잡기만 하면, 적절한 스텝 사이즈 <em>α </em>를 선택한다면, 목적 함수를 최소화하는 방향으로 항상 이동할 수 있다는 것을 의미한다!!</p><p id="5e109686-aea4-496e-86ce-daeb41a327a5" class="">
+</p><h2 id="94ab7eca-2cd0-4633-8749-588677565653" class="">Steepest gradient descent</h2><hr id="a574de22-89a0-43cb-89c0-49311de6f9ad"/><figure id="2e9149a2-5db9-467d-bb8c-d7bb96146b01" class="image"><a href="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%208.png"><img style="width:668px" src="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%208.png"/></a></figure><ul id="af832698-f267-454d-82a7-e95967fbb696" class="bulleted-list"><li style="list-style-type:disc">현재 위치의 기울기(Gradient) 방향으로 이동하는 방법 중 하나이다. 이 방법은 각 단계에서 최대 기울기 방향으로 이동하여 최소값을 찾아가는 방법이다.</li></ul><ul id="fbcde737-507f-4639-a147-12e41ecb9c3f" class="bulleted-list"><li style="list-style-type:disc">따라서 이 두 변환(전치와 -)를 함께 사용하여 현재 위치의 기울기의 반대 방향을 나타내고, 이 방향으로 이동하여 목적 함수를 줄이는 방향으로 움직이게 된다.</li></ul><p id="ad35c7c9-6300-49f0-8bde-5c433bbc1907" class="">
+</p><h2 id="64917bc4-9fd9-41b8-8831-db4180071489" class="">Stochastic Gradient Descent(SGD)</h2><hr id="0ee56b5d-6810-4a61-bc9c-ebedcded8e48"/><ul id="a987f453-842e-4e60-b235-245944509428" class="bulleted-list"><li style="list-style-type:disc">Data point에 대한 Loss의 Summation 형태로 표현된다. </li></ul><ul id="1502d6d6-5a66-4aa7-8318-e3f051e04fe1" class="bulleted-list"><li style="list-style-type:disc">Gradient update <ul id="ffbdda25-3d4c-476c-ac10-93593f7bbd53" class="bulleted-list"><li style="list-style-type:circle">Loss함수가 각각의 Data Point에 대한 Loss 함수의 합으로 표현되기 때문에 다음과 같이 표현 된다.</li></ul></li></ul><figure id="cdfad7da-e2e4-4e87-8a51-075e9bdb981f" class="image" style="text-align:center"><a href="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%209.png"><img style="width:720px" src="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%209.png"/></a></figure><ul id="0fd75ee6-ad6c-460e-9c0d-cf3e61f86ea4" class="bulleted-list"><li style="list-style-type:disc">하지만 N, 즉 데이터가 수억개 처럼 많아진다면 이 Summation은 업데이트할때마다 매번 계산하는 것이 힘들다. 따라서 데이터 양에 따라 여러 방법으로 나눌 수 있다.<ul id="346ffe44-f8ca-4b03-995b-4868d9940abe" class="bulleted-list"><li style="list-style-type:circle"><strong>Batch Gradient Descent (BGD)</strong><ul id="3ca6d428-969d-49c7-9d04-d27326d178ef" class="bulleted-list"><li style="list-style-type:square">모든 데이터를 한 번에 사용하여 그래디언트를 계산하고 파라미터를 업데이트합니다. 안정적이지만 큰 데이터셋에는 계산 비용이 높을 수 있다.</li></ul></li></ul><ul id="1d0a70ca-3822-4f41-9cb3-ddb639bdbf32" class="bulleted-list"><li style="list-style-type:circle"><strong>Mini-Batch Gradient Descent</strong><ul id="6eff6db0-4e35-4aee-839e-e2148f149f16" class="bulleted-list"><li style="list-style-type:square">전체 데이터를 작은 미니배치로 나눠 각 미니배치에 대한 그래디언트를 계산하고 파라미터를 업데이트합니다. 계산 비용을 줄이면서도 빠른 학습이 가능하다.</li></ul></li></ul><ul id="fea08bf1-e103-4b80-a4ce-1cbd15c52cb5" class="bulleted-list"><li style="list-style-type:circle"><strong>Stochastic Gradient Descent (SGD)</strong><ul id="ba3cb0b7-4cfb-4d2c-bdfa-db82c8f1e2f8" class="bulleted-list"><li style="list-style-type:square">미니배치 크기가 1인 Mini-Batch의 특수한 경우로, 각 데이터 포인트에 대해 그래디언트를 계산하고 파라미터를 업데이트한다.</li></ul><p id="9f76b444-b6f9-412a-af38-78335c619e0b" class="">
+</p><p id="bfcc2e81-f20b-4b38-b340-e350d39a2bbc" class="">
+</p></li></ul></li></ul><h2 id="9b01e3fd-ed7b-477e-8140-93c1539e6371" class=""><strong>Momentum for Better Convergence in Gradient Descent</strong></h2><hr id="81c57363-38e8-4069-aae2-8ece385aed64"/><ul id="84da3cde-2e31-429b-94fc-9516c68f5a2d" class="bulleted-list"><li style="list-style-type:disc">너무 작은 StepSize는 학습 속도를 늦추고, 너무 큰 StepSize은 발산이나 비효율적인 학습을 초래할 수 있다.</li></ul><ul id="ea5f26b6-50d7-4b77-9b3d-5af7d3effb3c" class="bulleted-list"><li style="list-style-type:disc"><strong>Momentum : 해결책</strong><ul id="e3bbfd74-21e1-48e1-a673-90f7f19918e9" class="bulleted-list"><li style="list-style-type:circle">경사 하강법의 변형 중 하나로, 이전 업데이트의 영향을 고려하여 파라미터를 업데이트한다.</li></ul><ul id="6b490eb3-9685-431f-a0c8-804e90dd4299" class="bulleted-list"><li style="list-style-type:circle">현재 그래디언트와 이전 업데이트의 조합으로 새로운 업데이트 계산한다.</li></ul></li></ul><p id="52392cc0-94b6-4fc5-b3a9-f128b724a7a4" class="">
+</p><figure id="2f2c9219-3f2b-48d4-8de4-1c6d53b3e731" class="image"><a href="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%2010.png"><img style="width:576px" src="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%2010.png"/></a></figure><figure id="4969af1a-7cb1-42ef-aebe-8db89da34e91" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>x</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><msub><mi>x</mi><mi>k</mi></msub><mo>−</mo><msub><mi>γ</mi><mi>i</mi></msub><mo>⋅</mo><mi mathvariant="normal">∇</mi><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mi>k</mi></msub><msup><mo stretchy="false">)</mo><mi>T</mi></msup><mo>+</mo><mi>α</mi><mo>⋅</mo><mi mathvariant="normal">Δ</mi><msub><mi>x</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">x_{k+1} = x_k - \gamma_i \cdot \nabla f(x_k)^T + \alpha \cdot \Delta x_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6389em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6389em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0556em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1413em;vertical-align:-0.25em;"></span><span class="mord">∇</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4445em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></div></figure><p id="dd6cc090-877a-4067-b688-a403649986d5" class="">
+</p><h2 id="2cb533e5-c72d-48c4-9b39-a88580acc203" class="">Standard Constrained Optimization Problem</h2><hr id="89740eeb-00aa-4d51-98f1-91d391acf996"/><ul id="ff9069a3-8f7d-47ed-8a40-300f40fa49af" class="bulleted-list"><li style="list-style-type:disc">목적함수를 최소화 하는 데에 있어서 두가지 조건이 있다고 생각해보자<figure id="d3f31031-5b0c-40d3-afc6-cf0993d0daf8" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>g</mi><mi>i</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>≤</mo><mn>0</mn><mo separator="true">,</mo><msub><mi>h</mi><mi>j</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">g_i(x) \leq 0, h_j = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9805em;vertical-align:-0.2861em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">h</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></span></div></figure><ul id="0dc69b82-5a8f-4aa3-8e23-f11f727f8146" class="bulleted-list"><li style="list-style-type:circle">계속 그래디언트를 업데이트를 하다보면 위 조건 0보다 작아야 하거나 0인 경우에 만족하지 않는 경우들이 나오게 된다.</li></ul><ul id="ee6bd896-b9b1-4c97-86ae-c87853b0d252" class="bulleted-list"><li style="list-style-type:circle">이러한 Constrained Optimization을 Unconstrained Optimization처럼 풀도록 한 것이 “Langrange Multipliers”이다.</li></ul><p id="a6ae943f-9dcf-48f1-a79a-9e820a6cfd4c" class="">
+</p></li></ul><h2 id="ef3572e9-6b28-4026-af5d-287b02c12708" class="">Langrange Multipliers</h2><hr id="50d61630-81d5-45de-880c-39cd49a39d55"/><ul id="472c1336-4610-49b8-8a11-5f48ec39491a" class="bulleted-list"><li style="list-style-type:disc">라그랑주 승수를 사용하여 등식 제한 조건을 고려하는 최적화 문제를 다른 형태로 변환하는 이론이다.</li></ul><ul id="6852ae70-ac84-42fb-a64f-e735f1c72f49" class="bulleted-list"><li style="list-style-type:disc">일반적으로 최적화 문제의 목적 함수에 제약 조건을 부과하여 새로운 목적 함수를 만들고, 라그랑주 승수를 이용하여 이를 해결하는 방법을 포함한다.</li></ul><ul id="233fbcd6-4575-45d7-88c0-76d9026f8e0a" class="bulleted-list"><li style="list-style-type:disc">Standard Constrained Optimization Problem에서 말했던 g , h 에대한 두가지 조건을 생각해야 한다.</li></ul><figure id="ea710114-c8d8-463c-b705-2989ac3cf109" class="image"><a href="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%2011.png"><img style="width:1134px" src="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%2011.png"/></a></figure><figure id="66c01860-807a-4475-a937-edde0519d0d5" class="image" style="text-align:left"><a href="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%2012.png"><img style="width:240px" src="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%2012.png"/></a></figure><ul id="26fb2578-145e-4513-b00b-d72686aa7ee4" class="bulleted-list"><li style="list-style-type:disc">Lagrange dual function <ul id="b1dfcffc-3043-45d1-9e7b-ec15e630fc20" class="bulleted-list"><li style="list-style-type:circle">Constraint에 해당하는 조건마다 <em>D</em>(<em>λ</em>,<em>ν</em>)가 정의될때 이에 대한 함수이다.</li></ul><ul id="afc27479-5924-4780-aed0-316c8450be66" class="bulleted-list"><li style="list-style-type:circle">이런 dual function 은 항상 Convex Optimization이다.</li></ul><ul id="fa0f4873-136d-4d6c-aa1b-638c32c8a12a" class="bulleted-list"><li style="list-style-type:circle"><strong>결론적으로 원래 Optimization 문제는 x에 대한 함수였는데 Lagrange dual function은 람다와 뮤에 대한 함수이다.</strong></li></ul></li></ul><p id="94a73c65-40ef-4eff-aae8-c705647a5920" class="">
+</p><p id="5632c7b0-9b33-40fa-beae-dc4034dd4492" class="">&lt;br&gt;</p><p id="d6110e5a-40b0-4ce2-8b47-1faaeafd99c7" class="">
+</p><ul id="8a69b6c4-c655-4f63-9c32-e7a204395769" class="bulleted-list"><li style="list-style-type:disc">여기서 주목해야 할 사실은 dual function D 는 Optimal value인 p*의 항상 lower bound가 된다는 것이다.</li></ul><figure id="6d778f05-d7d3-47b7-ad41-d46c6a896636" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>D</mi><mo stretchy="false">(</mo><mi>λ</mi><mo separator="true">,</mo><mi>μ</mi><mo stretchy="false">)</mo><mo>≤</mo><msup><mi>p</mi><mo>∗</mo></msup></mrow><annotation encoding="application/x-tex">D(\lambda,\mu) \leq p^*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mopen">(</span><span class="mord mathnormal">λ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9331em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7387em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span></span></span></span></span></div></figure><ul id="b4b0de54-d736-4510-933c-b4ebf20f23fc" class="bulleted-list"><li style="list-style-type:disc"><code><span style="border-bottom:0.05em solid">그렇다면 best lower bound는 무엇일까?</span></code><ul id="47e15526-0210-4f61-905a-f0b6fed25df9" class="bulleted-list"><li style="list-style-type:circle">Langrangian dual problem 문제이다. Lower bound를 Maximaization 한다고 생각해도 여전히 원래의 Optimization의 Lower bound가 되기 때문이다.</li></ul></li></ul><p id="18853c5c-bbeb-47dc-af7d-054457de98b1" class="">
+</p><p id="716d7335-db3e-48c9-9349-0096910739ea" class="">
+</p><ul id="d90f3528-d761-4364-be57-1a5140ee60fc" class="bulleted-list"><li style="list-style-type:disc">그렇다면 처음으로 돌아가서 <code><span style="border-bottom:0.05em solid">Convex Optimization을 공부하는 이유는 무엇일까?</span></code><ul id="dfab2104-14f5-4441-b71a-bb0f532bb237" class="bulleted-list"><li style="list-style-type:circle">모든 Optimization 문제들에 대해서 때로는 Optimization 문제가 풀릴 수 도 있고 풀리기 힘든 경우도 있지만</li></ul><ul id="d88a4a64-b467-490e-8fb2-839a43958e2c" class="bulleted-list"><li style="list-style-type:circle">Convex Optimization문제는 항상 풀리기 때문이다!!</li></ul></li></ul><p id="cba4210b-1efa-4029-becd-715ffef819de" class="">
+</p><hr id="430b13b4-08f3-48f0-9757-5e2527e74ebb"/><h3 id="0e3502d2-aefe-41e9-b7e2-eb9ce0b6bad9" class="">Weak Duality</h3><ul id="13e4ea93-f4bc-4b8f-9d90-48dcd43db92a" class="bulleted-list"><li style="list-style-type:disc">Weak Duality Theorem은 <strong>P (Primal Optimization)와 D(dual Optimization) </strong>의 관계를 설명하는 것이다. 다음 성질을 기억 해야 한다.<ul id="98326b3b-09c2-43e6-a087-3be47b897f55" class="bulleted-list"><li style="list-style-type:circle">P는 매우 풀기 힘들지만 D는 항상 풀 수 있다.</li></ul><ul id="06f31859-66a4-4b57-88d2-cc2f252230b9" class="bulleted-list"><li style="list-style-type:circle">D는 항상 P의 Lower bound이다.</li></ul><ul id="210a3c5b-b0c8-45ef-8268-39c06cd9fe23" class="bulleted-list"><li style="list-style-type:circle">P와 D의 Gap 을 duality gap이라고 한다.</li></ul></li></ul><figure id="0dbf0067-5023-49ff-9d02-89fcca51413c" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>d</mi><mo>∗</mo></msup><mo>≤</mo><msup><mi>p</mi><mo>∗</mo></msup></mrow><annotation encoding="application/x-tex">d^* \leq p^*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8747em;vertical-align:-0.136em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7387em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9331em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7387em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span></span></span></span></span></div></figure><p id="b868bd6d-8f1d-47e4-9a92-51484737854e" class="">
+</p><h2 id="f44b88f2-54bf-4d67-8249-b96d4c5f40d7" class="">Convex Optimization</h2><hr id="36d05a87-d569-4416-af78-8058b7006f01"/><p id="6833d1f0-1ed1-49dc-96be-415fbf8f63ec" class="">이제 이번 챕터의 주인공인 Convex Optimization에 대해서 알아보자.</p><ul id="abcbd802-f9e7-4e6c-8b18-148b94171589" class="bulleted-list"><li style="list-style-type:disc">정의<ul id="2f856f52-7798-42f2-8875-be25df1575df" class="bulleted-list"><li style="list-style-type:circle">f(x)라는 함수를 최소화</li></ul><ul id="199e89d2-0c5c-459b-b836-6a8a941d1cd1" class="bulleted-list"><li style="list-style-type:circle">f에 대한 조건을 다루는 어떤 f가 x라는 set안에 속해 있다고 가정을 한다면</li></ul><ul id="41e32bbb-d9de-4a7f-80b9-cc8b732268de" class="bulleted-list"><li style="list-style-type:circle">f가 Convex function이고, x가 convex set이 될 때 Convex Optimization이라한다.</li></ul></li></ul><ul id="c6da59d4-89a3-4529-a8dc-979e014ecdbc" class="bulleted-list"><li style="list-style-type:disc"><code><span style="border-bottom:0.05em solid">Convex Optimization이 왜 중요할까?</span></code><ul id="0f6015db-2065-4a88-9c1a-7ed02896aa8d" class="bulleted-list"><li style="list-style-type:circle">보통 Optimization문제가 풀린다, 안풀린다는 이 문제가 convex하냐 아니냐로 나뉜다 !</li></ul></li></ul><p id="456ea29a-7857-4208-8071-e707bb3f712d" class="">
+</p><h2 id="65fb4683-d0de-49b0-ad5e-3604efa5c089" class="">Convex Set</h2><ul id="0f9bdebc-c548-4541-b63b-56a58746c703" class="bulleted-list"><li style="list-style-type:disc">수학적으로 어떤한 Set에서 Point를 두개 잡고, 이 둘을 가르는 선분을 긋는다. 그러면 이 선분이 set안에 포함되어있을 때이다.</li></ul><ul id="db4e3b34-1e34-4819-aca6-e9752a6e4bc0" class="bulleted-list"><li style="list-style-type:disc">2번째 그림처럼 set안에서 나가는 경우가 생긴다면 convex set이 아니다.</li></ul><ul id="d377c647-7fe9-4db1-a9db-c9d01c40d488" class="bulleted-list"><li style="list-style-type:disc">3번째 그림또한 entry가 포함되지 않는 선분이 있기 때문에  convex set이 아니다.</li></ul><figure id="4c9037a1-6474-489f-bcc1-63090d93e2d3" class="image"><a href="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%2013.png"><img style="width:384px" src="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%2013.png"/></a></figure><p id="44db4a91-e468-448d-b526-b8d0c4093916" class="">
+</p><h3 id="e900a93b-83ac-4994-9179-391a0ac64715" class="">Convex Functions</h3><ul id="b310bede-2d7f-4b2d-8964-7cddd3b6dcae" class="bulleted-list"><li style="list-style-type:disc">다음 식을 성립한다.</li></ul><figure id="99b2eb5a-7c08-4542-a95f-eb233a56939b" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>θ</mi><mi>x</mi><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>θ</mi><mo stretchy="false">)</mo><mi>y</mi><mo stretchy="false">)</mo><mo>≤</mo><mi>θ</mi><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>θ</mi><mo stretchy="false">)</mo><mi>f</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(\theta x + (1 - \theta)y) \leq\theta f(x) + (1-\theta)f(y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span></span></div></figure><ul id="94369cf2-7141-42f5-b2f5-f5df34c304b6" class="bulleted-list"><li style="list-style-type:disc">θ를 1/2 이라고 했을 때 다음 식을 성립해야한다. 보통 볼록 함수 형태이다.<figure id="f83c09aa-498e-49e0-8895-baf22df63eb9" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac><mo stretchy="false">)</mo><mo>≤</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>f</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex"> f(\frac{x+y}{2})\leq\frac{1}{2}f(x)+\frac{1}{2}f(y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.9463em;vertical-align:-0.686em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.2603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span></span></div></figure><figure id="6a787667-eb2e-411d-a6bd-d804977fc730" class="image" style="text-align:center"><a href="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%2014.png"><img style="width:288px" src="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%2014.png"/></a></figure></li></ul><ul id="2f716c9b-dfd7-4814-9d9e-bc65fb45215e" class="bulleted-list"><li style="list-style-type:disc">Concave<ul id="20f6789b-214b-4be2-a524-209f81828890" class="bulleted-list"><li style="list-style-type:circle"> -f 일때 convex 하다.  보통 오목 함수 형태이다.</li></ul><ul id="39dec972-abfd-48d8-823b-4b95221e99cf" class="bulleted-list"><li style="list-style-type:circle">예를 들어 log 함수는 Concave이고, 음수를 취하면 Convex이다.</li></ul><p id="1cfb9088-0eb0-47b9-b671-079f591aa98d" class="">
+</p></li></ul><h3 id="ba09ebfa-1cf1-4d5b-bf63-61a15d83971b" class="">First -order condition</h3><ul id="6cf3fcff-9c6b-4655-8c17-e5d9a4fc3998" class="bulleted-list"><li style="list-style-type:disc">이것은 convex 함수를 확인 할 수 있는 한가지 방법이다.</li></ul><ul id="8d1e96d1-96c4-486d-a7d6-9266ffffd727" class="bulleted-list"><li style="list-style-type:disc">f가 미분 가능하다면 그래디언트를 이용하여 접선보다 함수가 항상 위에 있다면 convex하다.</li></ul><ul id="ae93a2a1-2c7b-443f-86f5-6e447ea851de" class="bulleted-list"><li style="list-style-type:disc">대표적인 예로 f(y) = y^2이 있다.</li></ul><p id="0e96be1e-fbf9-4983-82f2-7e75dda8e791" class="">
+</p><h3 id="f53703d8-cdd5-4f5b-8227-f917cab19501" class="">Second-order condition</h3><ul id="b52e0c73-88e9-4143-a8df-a6f1f6dd7151" class="bulleted-list"><li style="list-style-type:disc">Convex 함수를 확인 할 수 있는 두번째 방법이다.</li></ul><ul id="e259e9bb-b607-4599-89e4-9f1c0c61b9e3" class="bulleted-list"><li style="list-style-type:disc">f가 두번 미분 가능하다면 두번미분한 Hassian Matrix가 Positive Semidefinite Matrix인 경우이다.<ul id="85503642-a7f0-4545-b755-f025a530727a" class="bulleted-list"><li style="list-style-type:circle">쉽게 말하자면 두 번 미분 가능한 함수의 Hessian 행렬이 Positive Semidefinite(양의 준정부호) 일 때, 그 함수는 어떤 지점에서 극소값을 가질 가능성이 있다. 이는 함수가 그 근처에서 &#x27;아래로 볼록한(curved downward)&#x27; 모양을 갖고 있음을 의미한다.</li></ul></li></ul><ul id="8e7bf7da-ae53-455d-b891-115f7aacc474" class="bulleted-list"><li style="list-style-type:disc">First - order condition 정의와 서로 동치다.</li></ul><p id="6485504b-50dc-4439-ad66-53278c901bc1" class="">
+</p><h3 id="6da87cf0-e32e-4d0d-bf17-e156a680687b" class="">Convex Optimization의 성질</h3><ul id="76de9c40-bcef-4569-b522-f13774aba84e" class="bulleted-list"><li style="list-style-type:disc">Convex 함수들을 선형 결합을 하게 되면 이 함수 역시 Convex하다.</li></ul><ul id="00a3b513-3f7c-4dd2-a202-c6ef85595108" class="bulleted-list"><li style="list-style-type:disc">f가 Convex하다면 선형적으로 Transformation 한 다음에 f를 취해도 여전히 Convex하다.</li></ul><ul id="b39d146f-8219-49a0-a6eb-4e6b5422d954" class="bulleted-list"><li style="list-style-type:disc">f1과 f2가 Convex하다면 최댓값을 취해도 Convex하다.</li></ul><ul id="af515cfc-bde3-4c76-be65-502a3b8e53a3" class="bulleted-list"><li style="list-style-type:disc">그럼 다시 되돌아가서 <code><span style="border-bottom:0.05em solid">Lagrangian Function이 Convex 하다?</span></code><ul id="f0a8432a-e435-49a3-b2d9-c4c5a4ff5220" class="bulleted-list"><li style="list-style-type:circle">F(x,y)가 y가 주어져 있을 때 항상 Convex하다면 y에 대한 sup(=최소상계 = 상한값)를 취하면 이 함수도 convex하다.<ul id="a44e0de0-a8ea-435c-95c3-2d7972c9ba56" class="bulleted-list"><li style="list-style-type:square">쉽게 말해서 어떤 함수 f(x,y)가 y에 대해서 항상 convex하다면 y값 중에 볼록한 성질중에 가장 작은 값을 선택하는 것이다.</li></ul><ul id="c1be094a-a445-4a40-8785-b152a31492f1" class="bulleted-list"><li style="list-style-type:square">Lagrangian Dual함수는 람다와 뮤에 대한 선형함수이다. 다시 말해 x를 고정할때 이 함수는 Concave 함수가 되기도 하고 Convex함수가 되기도 한다. 그래서 이것을 Infimum(= 최대상계 = 하한값)를 취해도 여전히 concave 함수라는 것이다. <ul id="53af48ff-f8f4-429c-8e3e-a62c4e8ff1e8" class="bulleted-list"><li style="list-style-type:disc">concave함수를 최대화 하는 문제는 Convex Optimization이다. 라고 할 수 있다.</li></ul></li></ul></li></ul></li></ul><figure id="a94242eb-896a-4171-8d22-ab608f095cbd" class="image"><a href="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%2015.png"><img style="width:336px" src="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%2015.png"/></a></figure><p id="88c72f15-29cb-478b-8238-21eb36b0c0fd" class="">
+</p><p id="0dcc7990-f570-4618-bc92-b9b96eb2ea26" class="">&lt;br&gt;</p><p id="1433b82f-08b7-4943-be54-30359f5c4b88" class="">&lt;br&gt;</p><p id="bac8a3e3-1636-4bf8-9b38-97ffa41ead61" class="">&lt;br&gt;</p><h1 id="14f1863e-1489-4d63-ac92-ac7baf34d809" class="">CHAPTER 3.<em><strong> PCA(Principal Component Analysis)</strong></em></h1><p id="c731bac7-b0e7-463c-b51b-845d8c1920e2" class="">
+</p><h2 id="5face4a2-dc8b-4cfe-b661-945cf347bdea" class="">PCA Motivation</h2><ul id="a5ec5c69-9bd8-4481-8bb7-0b65185b94fd" class="bulleted-list"><li style="list-style-type:disc">다음과 같은 2차원 데이터를 생각해본다면 x1은 매우 중요한 데이터에 대한 정보지만 x2 데이터는 거의 0에 수렴하기때문에 의미가 적은 것을 눈으로 볼 수 있다. </li></ul><ul id="e77dc44a-73ad-4cb2-a775-9a5a6f7b1f50" class="bulleted-list"><li style="list-style-type:disc">이는 ML에서 분석과 시각화를 어렵게한다. 따라서 차원 축소를 방법론을 선택하는 것이 대표적인 방법이다.</li></ul><figure id="bdaa46f6-108a-48f3-ab3a-a51dea6add50" class="image"><a href="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%2016.png"><img style="width:596px" src="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%2016.png"/></a></figure><h3 id="c5e432ef-d475-478a-a2a6-b262356bd387" class="">Example : Housing Data</h3><ul id="943a47ca-eaff-454f-b735-9cd3d7d1c2df" class="bulleted-list"><li style="list-style-type:disc">집을 고를 때 다섯 가지 Feature들을 고민해야한다. 하지만 고민의 요소들이 많을 수록 어떤 요소들을 좀 더 고민 해야할 지가 복잡해 주는 경우가 있다.</li></ul><ul id="558771eb-36c2-4b9c-84fc-14eefca1311c" class="bulleted-list"><li style="list-style-type:disc">따라서 Size, Location처럼 두가지로 줄여주는 방법론이 있다면 좀 더 수월 하게 집을 결정할 수 있다.</li></ul><table id="8a6a3b8d-c264-4bb9-a555-c76ec9c261d0" class="simple-table"><thead class="simple-table-header"><tr id="3672f8e7-73f0-4f4b-aca1-08e52046788c"><th id="&gt;VYm" class="simple-table-header-color simple-table-header">5 dimensions</th><th id="ru_L" class="simple-table-header-color simple-table-header">2 dimensions</th></tr></thead><tbody><tr id="4307e985-f5c8-4df3-868b-12c6fe179e48"><td id="&gt;VYm" class="">1. Size</td><td id="ru_L" class="">1. Size feature</td></tr><tr id="47cee633-aadc-49d0-a496-429189faa9d5"><td id="&gt;VYm" class="">2. Number of rooms</td><td id="ru_L" class="">2. Location feature</td></tr><tr id="098c140f-4085-43db-8c14-bce694c305f8"><td id="&gt;VYm" class="">3. Number of bathrooms</td><td id="ru_L" class=""></td></tr><tr id="8670c461-9403-4403-afe0-237fac3c9770"><td id="&gt;VYm" class="">4. Schools around</td><td id="ru_L" class=""></td></tr><tr id="b7419cc5-e0e2-4902-8d13-710f3f721b97"><td id="&gt;VYm" class="">5. Crime rate</td><td id="ru_L" class=""></td></tr></tbody></table><p id="76fd6b24-814c-42db-bd95-625c9c4880c9" class="">&lt;br&gt;</p><h2 id="d40a30b8-715c-48eb-9031-84d50c5e5c72" class="">PCA Algorithm</h2><ul id="de99a2d6-f5d7-49c5-beba-4fe1f5623d69" class="bulleted-list"><li style="list-style-type:disc">PCA Algorithm의 순서에 대해서 알아보자.</li></ul><ol type="1" id="821ea7ac-527f-4241-8e02-86e949095864" class="numbered-list" start="1"><li>Centerting <ol type="a" id="234cea87-0eb6-42ec-a44c-6e57643f55c5" class="numbered-list" start="1"><li>Data의 평균을 구하고, 각 Data에 평균을 뺀다. 즉 원점을 중심으로 정렬하는 것이다.</li></ol></li></ol><ol type="1" id="14201bd9-0890-4196-98f4-8bd8fcdd3d7c" class="numbered-list" start="2"><li>Standardization<ol type="a" id="fd0f0812-034c-46bd-b928-f46bf64a91ed" class="numbered-list" start="1"><li>각 차원마다 분산을 구한 다음에 그 분산으로 Data Point를 나눠주는 과정이다.</li></ol></li></ol><ol type="1" id="be497d07-4d93-4502-9f68-2303e938a5be" class="numbered-list" start="3"><li>Eigenvalue/vector<ol type="a" id="af1f8454-311f-4902-aecc-f567f71df986" class="numbered-list" start="1"><li>Data Covariance Matrix에 Eigenvalue와 Eigenvector를 구하는데 그중에 M개의 제일 큰 Eigenvalue와 그것에 해당하는 Eigenvector를 구한다. 이때 M은 우리가 축소하고 싶은 차원의 개수이다. 이에 대한 개념은 뒤에서 좀 더 자세히 설명하겠다. </li></ol></li></ol><ol type="1" id="d1de29af-ef9f-41fe-9465-193f69d96c07" class="numbered-list" start="4"><li>Projection<ol type="a" id="6d636520-f04b-401f-802b-ff692266226b" class="numbered-list" start="1"><li>Eigenvector들이 이루는 공간을로 Data Point를 Projection(투영) 시킨다.</li></ol></li></ol><ol type="1" id="eaf1ca04-eb34-4775-b28f-75d1bad29104" class="numbered-list" start="5"><li>Centering, Standardization의 역연산</li></ol><figure id="9952a86d-958a-4346-b7fe-b912c07a2b76" class="image"><a href="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%2017.png"><img style="width:632px" src="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%2017.png"/></a></figure><p id="cb9e4c2e-7977-429b-8c16-da5e41cfdc3a" class="">
+</p><h3 id="e6068ef3-b029-49bd-b478-22b2eecb6527" class="">Data Covariance Matrix</h3><ul id="36a97507-bc83-4e51-9ba5-cccbe5c1e46b" class="bulleted-list"><li style="list-style-type:disc"> N : 데이터의 개수, D : 데이터의 차원 이라고 할 때, Covariance matrix는 다음과 같은 수식이다.</li></ul><ul id="b0098775-0d60-4f77-988b-0170b6b19bd5" class="bulleted-list"><li style="list-style-type:disc">항상 Positive Definite(양의 정부호) 된다.</li></ul><figure id="92a87400-43a4-4c7e-b780-8a79e404448f" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>S</mi><mo>=</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><mi>X</mi><msup><mi>X</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">S = \frac{1}{N}XX^T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span></span></span></span></span></div></figure><p id="25cf8b5c-855c-4252-ba0e-069f14e2333e" class="">&lt;br&gt;</p><p id="3f086881-84be-429a-bc44-8f1db93ad51e" class="">
+</p><ul id="dfa0236b-2182-456d-b1c9-7aa02b0ddc41" class="bulleted-list"><li style="list-style-type:disc">결국 PCA 가 하는 것은 Orginal x가 있을 때 이것을 어떤 B라는 행렬을 곱해서 차원을 축소시킨다. B라는 matrix가 Orthonormal(직교) 하다고 가정했기 때문에 다시 B^T를 곱하면 원래 공간에 재구성된 데이터가 나온다.</li></ul><ul id="a73de85e-9ce1-4c82-9869-33ef0c7e7016" class="bulleted-list"><li style="list-style-type:disc">결국엔 PCA는 선형적인 인코딩, 디코딩을 하는 과정이다.</li></ul><figure id="640e18d6-b4d7-4727-b778-e8c5da024df9" class="image"><a href="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%2018.png"><img style="width:318px" src="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%2018.png"/></a></figure><p id="a9590d13-a384-435a-85f7-98f5ae6fc6b2" class="">
+</p><h2 id="04529293-ff65-4eec-b3fa-e366fe93f823" class="">PCA의 수학적 증명</h2><ul id="b63dd302-a20f-4865-8909-e144a86b0387" class="bulleted-list"><li style="list-style-type:disc">X : Original Data Point 를 의미한다</li></ul><ul id="a14678df-7dd2-424d-ac8a-9b6715acd226" class="bulleted-list"><li style="list-style-type:disc">B : 저차원 공간으로 Mapping하는 어떠한 행렬</li></ul><ul id="b471e739-9b87-4f13-9518-ff0c337157d6" class="bulleted-list"><li style="list-style-type:disc">D : Mapping 된 Vector</li></ul><ul id="9e00cf91-53d0-4a1b-93eb-4d8de84ffae5" class="bulleted-list"><li style="list-style-type:disc">Z : 새로운 좌표</li></ul><ul id="5032ea4d-5ffb-4e0a-a43a-9d8141ef1911" class="bulleted-list"><li style="list-style-type:disc">M (축소시키기위한 차원) ≤ D(원래 차원)</li></ul><figure id="aeab5638-97b2-49e6-a199-4b1eee583e3f" class="image"><a href="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%2019.png"><img style="width:480px" src="Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%2019.png"/></a></figure><p id="a60e737d-90f7-46a3-a4bf-07af9f5e4361" class="">
+</p><ul id="ab2f2913-3480-44e5-9705-ddd7f2f9b62a" class="bulleted-list"><li style="list-style-type:disc">z에 대한 분산을 최대화하는 B를 골랐을 때의 Progiection Matrix를 찾는 문제에서 Data Covariance Matrix의 Eigenvalue와 밀접한 연관이 있다는 것을 수학적 귀납법을 통해 증명해 보겠다.</li></ul><p id="2de49775-9123-4ec1-98be-eab4718028b3" class="">
+</p><ul id="b0d29edd-e60f-499a-8f51-5bb2aaa3888c" class="bulleted-list"><li style="list-style-type:disc"><strong>단계 1:</strong> 첫 번째 주성분 b1을 찾는다.<ul id="e74f48c4-b2fa-4cec-83b8-8ebdb77db613" class="bulleted-list"><li style="list-style-type:circle">데이터를 1차원으로 투영하여 분산을 최대화하는 벡터를 찾는다.</li></ul><ul id="1459fbda-1939-487c-89f0-b9443105724f" class="bulleted-list"><li style="list-style-type:circle">이 벡터는 데이터 공분산 행렬의 가장 큰 고유값에 해당하는 고유벡터임을 확인한다.</li></ul></li></ul><ul id="90706c59-c5dd-48a5-8451-bd314ab9e9d7" class="bulleted-list"><li style="list-style-type:disc"><strong>단계 k:</strong> k번째 주성분 bk를 찾는다.<ul id="b07eafb0-9858-41f3-a314-043c084514c0" class="bulleted-list"><li style="list-style-type:circle">이전의 주성분들과 직교하면서 k-D 평면에 데이터를 투영하여 분산을 최대화하는 고유벡터를 찾는다.</li></ul></li></ul><p id="739ae390-d444-4da7-ae4a-5fdc942c5094" class="">
+</p><ol type="1" id="1ad85608-042d-4beb-815f-0501450a282d" class="numbered-list" start="1"><li><strong>고유벡터 계산 방법:</strong><ul id="bce8eacb-39b7-4edb-89dc-b76e492ed111" class="bulleted-list"><li style="list-style-type:disc">EVD(고윳값 분해) 또는 SVD(특이값 분해) 방법을 사용하여 계산한다.</li></ul><ul id="b370b8b4-8da5-41e0-b33d-9c52730597b9" class="bulleted-list"><li style="list-style-type:disc">고윳값과 특이값을 활용하여 고유벡터를 찾는다.</li></ul></li></ol><ol type="1" id="1d564065-ed1c-40fe-847a-640b60ba4c60" class="numbered-list" start="2"><li><strong>주요 고려 사항:</strong><ul id="7f9f90fe-8f07-4873-a047-182402a81495" class="bulleted-list"><li style="list-style-type:disc"><strong>데이터 공분산 행렬:</strong> 데이터 간의 상관 관계를 이해하고 주성분을 찾기 위해 사용된다.</li></ul><ul id="ca5b7487-5f97-4306-a407-65efd966dc08" class="bulleted-list"><li style="list-style-type:disc"><strong>고유값 순서화:</strong> 고유값의 크기에 따라 해당하는 고유벡터를 순서화하여 주성분을 결정한다.</li></ul></li></ol><ol type="1" id="f4668c71-8dc8-4a73-89c1-50e12abccc50" class="numbered-list" start="3"><li><strong>PCA의 활용:</strong><ul id="eed97e77-58c7-42ba-bb6c-3dcd3175c10f" class="bulleted-list"><li style="list-style-type:disc">데이터 시각화, 차원 축소, 특징 추출 등에 활발히 활용된다.</li></ul><ul id="f303fad1-89f7-4ac0-9bb7-5ee982c997b1" class="bulleted-list"><li style="list-style-type:disc">데이터의 차원을 줄이고 중요한 정보를 보존하여 더 효율적인 데이터 처리 가능하다.</li></ul><p id="0b874838-2e6a-467e-8b0d-9d6e4b2cbc70" class="">
+</p></li></ol></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
