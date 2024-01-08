@@ -1,6 +1,6 @@
 ---
 layout : single
-title : LG Aimer 4기  (Module 1. AI 윤리)
+title : LG Aimer 4기  (Module 1. AI 윤리)
 ---
 # Module 1. AI 윤리
 
