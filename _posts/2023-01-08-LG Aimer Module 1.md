@@ -1,3 +1,9 @@
+---
+layout : single
+title : "LG Amier Module1. AI 윤리" 
+categories: LG Amier
+---
+
 # LG Amier : AI 전문가 과정 4차 교육
 
 해당 내용은 LG에서 주관하는 LG Amier : AI 전문가 과정 4기 교육 과정이다.
