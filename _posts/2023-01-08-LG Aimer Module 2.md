@@ -1,3 +1,9 @@
+---
+layout : single
+title : "LG Amier Module 2. Mathematics for ML" 
+categories: LG Amier
+---
+
 # Module 2. Mathematics for ML
 
 - 교수 : KAIST 신진우 교수
