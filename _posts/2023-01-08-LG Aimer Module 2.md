@@ -1,13 +1,13 @@
 ---
 layout: single
 title: "Section2. Mathematics for ML" 
-categories: LG_Amier
-tag: AI
+categories: LG_Aimers
+tag: [AI, LG, LG_Aimers, 인공지능, ML, Machine Learning]
 ---
 
-LG Amier 4기 : AI 전문가 과정 
+LG Amiers 4기 : AI 전문가 과정 
 
-해당 내용은 LG에서 주관하는 LG Amier : AI 전문가 과정 4기 교육 과정입니다.
+해당 내용은 LG에서 주관하는 LG Amiers : AI 전문가 과정 4기 교육 과정입니다.
 <br>
 
 # Section 2. Mathematics for ML
