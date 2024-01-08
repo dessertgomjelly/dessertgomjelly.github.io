@@ -1,3 +1,8 @@
+---
+layout : single
+title : LG Aimer 4기 입니다. (Module 1. AI 윤리)
+---
+
 # LG Amier : AI 전문가 과정 4차 교육
 
 해당 내용은 LG에서 주관하는 LG Amier : AI 전문가 과정 4기 교육 과정이다.
