@@ -19,7 +19,6 @@ CHAPTER 1은 Matrix Decomposition,  CHAPTER  2는 Convex Optimization, CHAPTER 3
 이 강의를 들으면서 이해한 내용을 보다 개념적인 접근에 집중하여 소개하도록 하겠다.
 
 
-
 # CHAPTER 1. ***Matrix Decomposition***
 
 
