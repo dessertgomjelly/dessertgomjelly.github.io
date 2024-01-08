@@ -1,7 +1,7 @@
 ---
 layout : single
 title : "LG Amier Module 2. Mathematics for ML" 
-categories: LG Amier
+categories: LG_Amier
 ---
 
 # Module 2. Mathematics for ML
