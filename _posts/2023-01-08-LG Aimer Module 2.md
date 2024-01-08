@@ -3,6 +3,7 @@ layout: single
 title: "Section2. Mathematics for ML" 
 categories: LG_Aimers
 tag: [AI, LG, LG_Aimers, 인공지능, ML, Machine Learning]
+toc: ture # 목차
 ---
 
 LG Amiers 4기 : AI 전문가 과정 
