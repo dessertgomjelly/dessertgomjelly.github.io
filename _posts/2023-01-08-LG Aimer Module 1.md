@@ -2,6 +2,7 @@
 layout: single
 title: "Section1. AI 윤리" 
 categories: LG_Amier
+tag: AI
 ---
 
 LG Amier 4기 : AI 전문가 과정
