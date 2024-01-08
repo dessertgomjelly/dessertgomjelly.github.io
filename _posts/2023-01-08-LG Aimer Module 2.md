@@ -68,6 +68,7 @@ CHAPTER 1은 Matrix Decomposition,  CHAPTER  2는 Convex Optimization, CHAPTER 3
 
 ![module2]({{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2.png)
 
+
 - 2 * 2 matrix와 역행렬에서 Determinant 를 알 수 있다. 이 공식에 따라 0이나 0이 아니냐에 따라서 Determinant의 존재 유무가 정해지기 때문이다.
 
 $$
