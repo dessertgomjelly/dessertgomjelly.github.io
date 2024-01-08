@@ -1,20 +1,16 @@
----
-layout : single
-title : LG Aimer 4기  (Module 1. AI 윤리)
----
-LG Amier : AI 전문가 과정 4차 교육
-
-[LG AI](https://www.lgaimers.ai/)
+# LG Amier : AI 전문가 과정 4차 교육
 
 해당 내용은 LG에서 주관하는 LG Amier : AI 전문가 과정 4기 교육 과정이다.
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/_posts/images/2023-01-08-LGAimerModule1/스크린샷 2024-01-08 오후 2.11.58.png" alt="스크린샷 2024-01-08 오후 2.11.58" style="zoom: 40%;" />
+[LG AI](https://www.lgaimers.ai/)
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/_posts/images/2023-01-08-LGAimerModule1/스크린샷 2024-01-08 오후 2.12.01.png" alt="스크린샷 2024-01-08 오후 2.12.01" style="zoom:50%;" />
+2024.01.02~2024.01.29 까지 한달 동안 온라인 AI 교육을 받고,  2024.02.01~2024.02.26까지 온라인 해커톤을 참여하는 여정이다.![module1](/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-08-LG Aimer Module 1/module1.png)
 
 
 
-또한 교육과정에 대하여 출처를 정확히 밝힌다면 블로그에 작성해도 된다는 답변을 받아 해당 과정을 블로그에 기록해보겠다.
+
+
+교육과정에 대하여 출처를 정확히 밝힌다면 블로그에 작성해도 된다는 답변을 받아 해당 과정을 블로그에 기록해보겠다.
 
 
 
@@ -54,7 +50,7 @@ LG Amier : AI 전문가 과정 4차 교육
 - High risk 결정에서는 설명력도 정확도 만큼이나 중요하다.
 - Saliency map, SHAP과 같이 post-hoc explainability를 제공하는 기술이 생걌다.
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/_posts/images/2023-01-08-LGAimerModule1/스크린샷 2024-01-08 오후 2.12.07.png" alt="스크린샷 2024-01-08 오후 2.12.07" style="zoom:50%;" />
+![Untitled](LG%20Amier%20AI%20%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%86%E1%85%AE%E1%86%AB%E1%84%80%E1%85%A1%20%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%204%E1%84%8E%E1%85%A1%20%E1%84%80%E1%85%AD%E1%84%8B%E1%85%B2%E1%86%A8%2042c50d19f3d1418fbaea9703b13a3639/Untitled%203.png)
 
 (post-hoc explainability)은 알고리즘의 내면을 가시화 해주는 사후 설명력이다.
 
@@ -72,7 +68,9 @@ LG Amier : AI 전문가 과정 4차 교육
 - 오정보의 빠른 확산으로 인한 인포데믹 현상
     - 인포데믹 : 사실정보와 더불어 오정보가 많아져 사실 구분이 힘든 현상이다.
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/_posts/images/2023-01-08-LGAimerModule1/스크린샷 2024-01-08 오후 2.12.11.png" alt="스크린샷 2024-01-08 오후 2.12.11" style="zoom:50%;" />
+![Untitled](LG%20Amier%20AI%20%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%86%E1%85%AE%E1%86%AB%E1%84%80%E1%85%A1%20%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%204%E1%84%8E%E1%85%A1%20%E1%84%80%E1%85%AD%E1%84%8B%E1%85%B2%E1%86%A8%2042c50d19f3d1418fbaea9703b13a3639/Untitled%204.png)
+
+
 
 
 
