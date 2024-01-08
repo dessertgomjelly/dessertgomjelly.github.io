@@ -7,7 +7,7 @@
 
 이에 관하여 행렬 분해, 블록 최적화, 주성분 분석 등 데이터를 다루기 위한 방법을 학습하게 됩니다.
 
-
+<img src="{{site.url}}/images/2023-01-08-LG Aimer Module 2/module2 1.png" alt="module1 2" style="zoom:100%;" />
 
 CHAPTER 1은 Matrix Decomposition,  CHAPTER  2는 Convex Optimization, CHAPTER 3은 PCA로 구성되어있다.
 
