@@ -1,3 +1,7 @@
+---
+layout : single
+title : LG Aimer 4기  (Module 1. AI 윤리)
+---
 # Module 1. AI 윤리
 
 ## 데이터 전처리와 분석 방법은 적절한가?
