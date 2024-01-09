@@ -14,7 +14,7 @@ LG Amiers 4기 : AI 전문가 과정
 
 <style>
   body {
-    font-size: 15px; /* 폰트 사이즈 조절 */
+    font-size: 18px; /* 폰트 사이즈 조절 */
   }
 </style>
 
