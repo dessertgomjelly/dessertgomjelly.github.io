@@ -11,7 +11,7 @@ search: true
 ---
 <style>
   body {
-    font-size: 10px; /* 폰트 사이즈 조절 */
+    font-size: 15px; /* 폰트 사이즈 조절 */
   }
 </style>
 
@@ -32,9 +32,9 @@ LG Amiers 4기 : AI 전문가 과정
 
 교육과정에 대하여 출처를 정확히 밝힌다면 블로그에 작성해도 된다는 답변을 받아 해당 과정을 블로그에 기록해보겠습니다.
 
-<img src="{{site.url}}/images/2023-01-08-LG Aimer Module 1/module1 1.png" alt="module1 1" style="zoom:70%;" />
+<img src="{{site.url}}/images/2023-01-08-LG Aimer Module 1/module1 1.png" alt="module1 1" style="zoom:40%;" />
 
-<img src="{{site.url}}/images/2023-01-08-LG Aimer Module 1/module1 2.png" alt="module1 2" style="zoom:800%;" />
+<img src="{{site.url}}/images/2023-01-08-LG Aimer Module 1/module1 2.png" alt="module1 2" style="zoom:50%;" />
 
 # Section 1. AI 윤리
 
@@ -69,7 +69,7 @@ LG Amiers 4기 : AI 전문가 과정
 - High risk 결정에서는 설명력도 정확도 만큼이나 중요하다.
 - Saliency map, SHAP과 같이 post-hoc explainability를 제공하는 기술이 생걌다.
 
-<img src="{{site.url}}/images/2023-01-08-LG Aimer Module 1/module1 3-4707772.png" alt="module1 3" style="zoom:90%;" />
+<img src="{{site.url}}/images/2023-01-08-LG Aimer Module 1/module1 3-4707772.png" alt="module1 3" style="zoom:70%;" />
 
 (post-hoc explainability)은 알고리즘의 내면을 가시화 해주는 사후 설명력이다.
 
@@ -89,7 +89,7 @@ LG Amiers 4기 : AI 전문가 과정
 
 <br>
 
-<img src="{{site.url}}/images/2023-01-08-LG Aimer Module 1/module1 4.png" alt="module1 4" style="zoom:70%;" />
+<img src="{{site.url}}/images/2023-01-08-LG Aimer Module 1/module1 4.png" alt="module1 4" style="zoom:40%;" />
 
 ## 윤리
 
