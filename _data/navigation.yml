@@ -4,10 +4,10 @@ main:
     url: /categories/
   - title: "태그"
     url: /tags/
+  - title: "연도별"
+    url: /year-archive/ 
   - title: "검색"
     url: /search/
-  - title: "연도별"
-    url: /year-archive/  
   - title: "About me"
     url: https://github.com/dessertgomjelly
 
