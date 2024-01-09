@@ -5,8 +5,6 @@ categories: LG_Aimers
 tag: [AI, LG, LG_Aimers, 인공지능, AI 윤리]
 ---
 
-LG Amiers 4기 : AI 전문가 과정!
-
 <style>
   body {
     font-size: 17px; /* 폰트 사이즈 조절 */
@@ -14,10 +12,9 @@ LG Amiers 4기 : AI 전문가 과정!
 </style>
 
 
-**[공지사항]** [해당 내용은 LG에서 주관하는 LG Amiers : AI 전문가 과정 4기 교육 과정입니다.]
+**[공지사항]** [해당 내용은 LG에서 주관하는 LG Amiers : AI 전문가 과정 4기 교육 과정입니다.] [LG AI](https://www.lgaimers.ai/)
 {: .notice--danger}
 
-[LG AI](https://www.lgaimers.ai/)
 
 2024.01.02 ~ 2024.01.29 까지 한달 동안 온라인 AI 교육을 받고,  2024.02.01~2024.02.26까지 온라인 해커톤을 참여하는 여정입니다.
 
