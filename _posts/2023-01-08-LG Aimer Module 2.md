@@ -669,7 +669,7 @@ $$
 - Z : 새로운 좌표
 - M (축소시키기위한 차원) ≤ D(원래 차원)
 
-![Untitled](Module%202%20Mathematics%20for%20ML%206089221b7ec748878d4538a44e0bbd2c/Untitled%2019.png)
+![module2]({{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 19.png)
 
 - z에 대한 분산을 최대화하는 B를 골랐을 때의 Progiection Matrix를 찾는 문제에서 Data Covariance Matrix의 Eigenvalue와 밀접한 연관이 있다는 것을 수학적 귀납법을 통해 증명해 보겠다.
 
