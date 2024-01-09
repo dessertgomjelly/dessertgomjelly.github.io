@@ -5,10 +5,7 @@ categories: LG_Aimers
 tag: [AI, LG, LG_Aimers, 인공지능, ML, Machine Learning]
 toc: true # 목차
 author_profile: false # 게시글 선택시 왼쪽 프로필 없애기
-sidebar:
-    nav: "docs"
 search: true
-teaser: /assets/images/문성준.jpeg
 ---
 
 LG Amiers 4기 : AI 전문가 과정!
