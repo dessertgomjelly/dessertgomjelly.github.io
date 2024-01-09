@@ -8,7 +8,7 @@ use_math: true #수학 공식 가능하게
 
 <style>
   body {
-    font-size: 17px; /* 폰트 사이즈 조절 */
+    font-size: 16px; /* 폰트 사이즈 조절 */
   }
 </style>
 
