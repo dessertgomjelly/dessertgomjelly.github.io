@@ -9,16 +9,15 @@ sidebar:
     nav: "docs"
 search: true
 ---
+
+LG Amiers 4기 : AI 전문가 과정
+
 <style>
   body {
-    font-size: 13px; /* 폰트 사이즈 조절 */
+    font-size: 15px; /* 폰트 사이즈 조절 */
   }
 </style>
 
-# 13으로 변경
-
-
-LG Amiers 4기 : AI 전문가 과정
 
 해당 내용은 LG에서 주관하는 LG Amiers : AI 전문가 과정 4기 교육 과정입니다.
 
