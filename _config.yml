@@ -108,7 +108,7 @@ author:
   avatar           : "/assets/images/빵빵이.jpg"
   bio              : "Joon's development notes"
   location         : "South Korea/Seoul"
-  email            : "msj1291@naver.com"
+  email            : 
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
