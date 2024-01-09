@@ -6,8 +6,10 @@ tag: [AI, LG, LG_Aimers, 인공지능, ML, Machine Learning]
 ---
 
 
-**[공지사항]** [해당 내용은 LG에서 주관하는 LG Amiers : AI 전문가 과정 4기 교육 과정입니다.] 해당링크 : [LG AI](https://www.lgaimers.ai/)
+**[공지사항]** [해당 내용은 LG에서 주관하는 LG Amiers : AI 전문가 과정 4기 교육 과정입니다.] 
+해당링크 : [LG AI](https://www.lgaimers.ai/)
 {: .notice--danger}
+
 
 <style>
   body {
