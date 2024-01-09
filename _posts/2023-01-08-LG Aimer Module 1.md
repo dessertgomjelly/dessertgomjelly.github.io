@@ -3,7 +3,8 @@ layout: single
 title: "Section1. AI 윤리" 
 categories: LG_Aimers
 tag: [AI, LG, LG_Aimers, 인공지능, AI 윤리]
-toc: ture # 목차
+toc: ture # 목차 나타내기
+author_profile: false # 게시글 선택시 왼쪽 프로필 없애기
 ---
 
 LG Amiers 4기 : AI 전문가 과정
