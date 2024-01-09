@@ -9,6 +9,14 @@ sidebar:
     nav: "docs"
 search: true
 ---
+<style>
+  body {
+    font-size: 20px; /* 폰트 사이즈 조절 */
+  }
+</style>
+
+# 여기에 마크다운 내용을 작성합니다.
+
 
 LG Amiers 4기 : AI 전문가 과정
 
