@@ -5,7 +5,8 @@ categories: LG_Aimers
 tag: [AI, LG, LG_Aimers, 인공지능, ML, Machine Learning]
 ---
 
-**[공지사항]** [해당 내용은 LG에서 주관하는 LG Amiers : AI 전문가 과정 4기 교육 과정입니다.]
+
+**[공지사항]** [해당 내용은 LG에서 주관하는 LG Amiers : AI 전문가 과정 4기 교육 과정입니다.] 해당링크 : [LG AI](https://www.lgaimers.ai/)
 {: .notice--danger}
 
 <style>
@@ -15,9 +16,7 @@ tag: [AI, LG, LG_Aimers, 인공지능, ML, Machine Learning]
 </style>
 
 
-LG Amiers 4기 : AI 전문가 과정 
-
-해당 내용은 LG에서 주관하는 LG Amiers : AI 전문가 과정 4기 교육 과정입니다.
+<br>
 <br>
 - 교수 : KAIST 신진우 교수
 - 학습목표
