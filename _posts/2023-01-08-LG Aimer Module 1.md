@@ -10,7 +10,7 @@ sidebar:
 search: true
 ---
 
-LG Amiers 4기 : AI 전문가 과정
+LG Amiers 4기 : AI 전문가 과정!
 
 <style>
   body {
