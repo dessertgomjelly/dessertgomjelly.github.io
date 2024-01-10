@@ -17,14 +17,19 @@ use_math: true #수학 공식 가능하게
 [LG AI](https://www.lgaimers.ai/)
 {: .notice--danger}
 
-
 <br>
 <br>
-- 교수 : KAIST 신진우 교수
-- 학습목표
 
-본 모듈은 AI기술을 이해하기 위한 바탕이 되는 수학적 지식을 학습하기 위한 과정입니다.
-이에 관하여 행렬 분해, 블록 최적화, 주성분 분석 등 데이터를 다루기 위한 방법을 학습하게 됩니다.
+
+
+# Section 2. Mathematics for ML
+
+-  교수 
+   -   KAIST 신진우 교수
+
+-  학습목표
+   - 본 모듈은 AI기술을 이해하기 위한 바탕이 되는 수학적 지식을 학습하기 위한 과정입니다.
+      이에 관하여 행렬 분해, 블록 최적화, 주성분 분석 등 데이터를 다루기 위한 방법을 학습하게 됩니다.
 
 
 CHAPTER 1은 Matrix Decomposition,  CHAPTER  2는 Convex Optimization, CHAPTER 3은 PCA로 구성되어있다.
@@ -32,8 +37,13 @@ CHAPTER 1은 Matrix Decomposition,  CHAPTER  2는 Convex Optimization, CHAPTER 3
 
 <br>
 
-# CHAPTER 1. ***Matrix Decomposition***
+<br>
 
+
+
+# Chapter 1.Matrix Decomposition
+
+<br>
 
 <br>
 
@@ -44,7 +54,7 @@ CHAPTER 1은 Matrix Decomposition,  CHAPTER  2는 Convex Optimization, CHAPTER 3
 
 <br>
 
-
+<br>
 
 
 
@@ -54,6 +64,8 @@ CHAPTER 1은 Matrix Decomposition,  CHAPTER  2는 Convex Optimization, CHAPTER 3
 - **Cholesky Decomposition (촐레스키 분해), Diagonalization (대각화), Singular Value Decomposition (특이값 분해)**
 
 
+
+<br>
 
 <br>
 
@@ -109,6 +121,8 @@ $$
 
 <br>
 
+<br>
+
 
 
 ## Trace (행렬의 대각합)
@@ -137,13 +151,11 @@ $$
 
 <br>
 
-
+<br>
 
 
 
 ## Eigenvalue(고유값) and Eigenvector(고유벡터)
-
----
 
 - Determinant, Trace와 밀접한 관련이 있다.
 - 정의
@@ -177,6 +189,8 @@ $$
 
 <br>
 
+<br>
+
 
 
 ## 결론
@@ -203,7 +217,7 @@ $$
 
 <br>
 
-
+<br>
 
 
 
@@ -227,6 +241,8 @@ $$
 det(A) = det(L)det(L^T)=det(L)^2
 $$
 
+
+<br>
 
 <br>
 
@@ -275,6 +291,8 @@ Singular Value Decomposition은 일반적인 Matrix에 적용할 수 있는 개�
 
 <br>
 
+<br>
+
 
 
 
@@ -295,12 +313,17 @@ $$
 
 <br>
 
+<br>
+
 
 
 # CHAPTER  2. Convex Optimization
 
+<br>
 
 <br>
+
+
 
 
 ## Convex Optimization(블록 최적화)
@@ -316,6 +339,8 @@ $$
     - 즉 함수의 Gradient(미분) 정보가 최적화하는데 매우 중요한 역할을 하게 된다.
 
 
+
+<br>
 
 <br>
 
@@ -353,6 +378,8 @@ $$
 
 <br>
 
+<br>
+
 
 
 
@@ -365,8 +392,11 @@ $$
 
 
 
+<br>
 
 <br>
+
+
 
 
 ## Stochastic Gradient Descent(SGD)
@@ -389,10 +419,11 @@ $$
         - 미니배치 크기가 1인 Mini-Batch의 특수한 경우로, 각 데이터 포인트에 대해 그래디언트를 계산하고 파라미터를 업데이트한다.
         
 
-
-
+<br>
 
 <br>
+
+
 
 
 ## **Momentum for Better Convergence in Gradient Descent**
@@ -411,6 +442,8 @@ $$
 
 <br>
 
+<br>
+
 
 
 ## Standard Constrained Optimization Problem
@@ -425,7 +458,7 @@ $$
     - 이러한 Constrained Optimization을 Unconstrained Optimization처럼 풀도록 한 것이 “Langrange Multipliers”이다.
     
 
-<br>
+<br><br>
 
 
 
@@ -478,7 +511,7 @@ $$
 d^* \leq p^*
 $$
 
-
+<br>
 
 
 <br>
@@ -497,6 +530,7 @@ $$
 
 
 
+<br>
 
 <br>
 
@@ -510,6 +544,8 @@ $$
 <img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 13.png" alt="module2" style="zoom:50%;" />
 
 
+
+<br>
 
 <br>
 
@@ -542,6 +578,8 @@ $$
 
 
 
+<br>
+
 
 
 ### First -order condition
@@ -554,6 +592,8 @@ $$
 
 
 
+<br>
+
 
 
 ### Second-order condition
@@ -563,10 +603,11 @@ $$
     - 쉽게 말하자면 두 번 미분 가능한 함수의 Hessian 행렬이 Positive Semidefinite(양의 준정부호) 일 때, 그 함수는 어떤 지점에서 극소값을 가질 가능성이 있다. 이는 함수가 그 근처에서 '아래로 볼록한(curved downward)' 모양을 갖고 있음을 의미한다.
 - First - order condition 정의와 서로 동치다.
 
-
-
+<br>
 
 <br>
+
+
 
 
 ## Convex Optimization의 성질
@@ -582,14 +623,20 @@ $$
 
 <img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 15.png" alt="module2" style="zoom:50%;" />
 
+<br>
 
 <br>
+
+
 
 
 # CHAPTER 3. ***PCA(Principal Component Analysis)***
 
+<br>
 
 <br>
+
+
 
 
 ## PCA Motivation
@@ -615,6 +662,8 @@ $$
 
 <br>
 
+<br>
+
 
 
 
@@ -633,6 +682,8 @@ $$
 
 <img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 17.png" alt="module2" style="zoom:80%;" />
 
+
+<br>
 
 <br>
 
@@ -656,6 +707,8 @@ $$
 ![module2]({{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 18.png)
 
 
+
+<br>
 
 <br>
 
