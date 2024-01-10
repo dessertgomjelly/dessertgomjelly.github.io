@@ -24,12 +24,10 @@ use_math: true #수학 공식 가능하게
 - 학습목표
 
 본 모듈은 AI기술을 이해하기 위한 바탕이 되는 수학적 지식을 학습하기 위한 과정입니다.
-
 이에 관하여 행렬 분해, 블록 최적화, 주성분 분석 등 데이터를 다루기 위한 방법을 학습하게 됩니다.
 
 
 CHAPTER 1은 Matrix Decomposition,  CHAPTER  2는 Convex Optimization, CHAPTER 3은 PCA로 구성되어있다.
-
 이 강의를 들으면서 이해한 내용을 보다 개념적인 접근에 집중하여 소개하도록 하겠습니다.
 
 <br>
