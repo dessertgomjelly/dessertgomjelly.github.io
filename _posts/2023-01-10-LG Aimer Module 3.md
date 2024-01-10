@@ -17,7 +17,6 @@ use_math: true #수학 공식 가능하게
 {: .notice--danger}
 
 <br>
-
 <br>
 
 # **Section 3. Machine Learning 개론**
@@ -56,7 +55,7 @@ use_math: true #수학 공식 가능하게
     - P : 체스의 승률
     - E : 한판 한판 둔 경험
 
-<img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 3/module3.png" alt="module3" style="zoom:50%;" />
+<img src="{{stie.url}}/images/2023-01-10-LG Aimer Module 3/module3.png" alt="module3" style="zoom:50%;" />
 
 <br>
 
@@ -69,7 +68,7 @@ use_math: true #수학 공식 가능하게
 - Machine learning
     - 기계학습의 경우 input과 원하는 output을 주면 최종적으로 프로그램이 나온다.
 
-![module3 1]({{stie.url}}/images/2023-01-08-LG Aimer Module 3/module3 1.png)
+![module3 1]({{stie.url}}/images/2023-01-10-LG Aimer Module 3/module3 1.png)
 
 - Spell cheker프로그램의 예를 살펴보자.
     - 전통적인 방식으로 spell checking 프로그램을 짜면 수많은 룰과 예외 사항이 많기 때문에 매우 어렵다.
@@ -81,7 +80,7 @@ use_math: true #수학 공식 가능하게
 - 이런 Input이 들어가면 이런 Ouput이 나왔으면 좋겠다 라는 쌍을 최대한 많이 모와서 그것들을 학습 Data로해서 알고리즘으로 준다.
 - 그럼 알고리즘으로 학습된 프로그램이 나오고 그 프로그램을 사용하는 것이다.
 
-![module3 2]({{stie.url}}/images/2023-01-08-LG Aimer Module 3/module3 2.png)
+![module3 2]({{stie.url}}/images/2023-01-10-LG Aimer Module 3/module3 2.png)
 
 <br>
 
@@ -141,7 +140,7 @@ use_math: true #수학 공식 가능하게
 - Regression (회귀)
     - Output이 실수로 예측 된다.
     - 많은 경우에 x가 Vector를 이루게 된다. 여러 차원의 Vector가 되는 경우가 많다.
-    - ![module3 3]({{stie.url}}/images/2023-01-08-LG Aimer Module 3/module3 3.png)
+    - ![module3 3]({{stie.url}}/images/2023-01-10-LG Aimer Module 3/module3 3.png)
 
 <br>
 
@@ -178,7 +177,7 @@ use_math: true #수학 공식 가능하게
 
 
 
-![module3 4]({{stie.url}}/images/2023-01-08-LG Aimer Module 3/module3 4.png)
+![module3 4]({{stie.url}}/images/2023-01-10-LG Aimer Module 3/module3 4.png)
 비슷한 데이터 포인트는 비슷한 레이블을 갖는 경향이 있다. 레이블이 없는 데이터는 경계를 더 정확하게 식별하는 데 도움이 될 수 있다.
 
 <br>
@@ -198,4 +197,4 @@ use_math: true #수학 공식 가능하게
 4. **에이전트의 행동이 이후 데이터에 영향을 준다.**
     - 시스템의 행동은 그 다음 데이터에 영향을 줄 수 있다.
 
-<img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 3/module3 5.png" alt="module3 5" style="zoom:67%;" />
+<img src="{{stie.url}}/images/2023-01-10-LG Aimer Module 3/module3 5.png" alt="module3 5" style="zoom:67%;" />
