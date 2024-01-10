@@ -1,11 +1,10 @@
-```
+---
 layout: single
 title: "[LG Aimers] Section3. Intruduction to Machine Learning"
 categories: LG_Aimers
 tag: [AI, LG, LG_Aimers, 인공지능, ML, Machine Learning]
 use_math: true #수학 공식 가능하게
-
-```
+---
 
 <style>
   body {
@@ -179,7 +178,8 @@ use_math: true #수학 공식 가능하게
 
 
 
-![module3 4]({{stie.url}}/images/2023-01-08-LG Aimer Module 3/module3 4.png)비슷한 데이터 포인트는 비슷한 레이블을 갖는 경향이 있다. 레이블이 없는 데이터는 경계를 더 정확하게 식별하는 데 도움이 될 수 있다.
+![module3 4]({{stie.url}}/images/2023-01-08-LG Aimer Module 3/module3 4.png)
+비슷한 데이터 포인트는 비슷한 레이블을 갖는 경향이 있다. 레이블이 없는 데이터는 경계를 더 정확하게 식별하는 데 도움이 될 수 있다.
 
 <br>
 
