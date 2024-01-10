@@ -1,5 +1,3 @@
-module 3.
-
 ```
 layout: single
 title: "[LG Aimers] Section3. Intruduction to Machine Learning"
