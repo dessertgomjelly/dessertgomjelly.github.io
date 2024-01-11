@@ -133,14 +133,19 @@ use_math: true #수학 공식 가능하게
 ## 1. Supervised Learning(지도학습)
 
 - 학습 Data가 X,Y 쌍(Input, Output) 으로 구성 되어있다.
+
 - X1이 들어가면 Y1, Xn이 들어가면 Yn 이 나와야 된다고 알려주는 것이다.
+
 - Classfication (분류)
     - Output이 범주형 변수 인 것이다.
     - 예를 들면 Binary Classfication라면 Positive Class, Negative Class 로 나뉠 수 있다.
+    
 - Regression (회귀)
     - Output이 실수로 예측 된다.
+    
     - 많은 경우에 x가 Vector를 이루게 된다. 여러 차원의 Vector가 되는 경우가 많다.
-    - ![module3 3]({{stie.url}}/images/2023-01-10-LG Aimer Module 3/module3 3.png)
+    
+       ![module3 3]({{stie.url}}/images/2023-01-10-LG Aimer Module 3/module3 3.png)
 
 <br>
 
