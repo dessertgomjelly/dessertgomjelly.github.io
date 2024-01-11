@@ -20,6 +20,8 @@ sidebar:
 </style>
 
 
+
+
 **[공지사항]** [해당 내용은 LG에서 주관하는 LG Amiers : AI 전문가 과정 4기 교육 과정입니다.] 
 [LG AI](https://www.lgaimers.ai/)
 {: .notice--danger}
@@ -118,18 +120,36 @@ sidebar:
 <img src="{{site.url}}/images/2023-01-11-LG Aimer Module 3-2/image-20240111190722024.png" alt="image-20240111190722024" style="zoom:50%;" />
 
 
+
+<br>
+
+<br>
+
+
+
+
 ## 규제화 (Regularization)
 
-1. **Bias/Variance Decomposition (편향/분산 분해)**
+-  **Bias/Variance Decomposition (편향/분산 분해)**
+
    -  편향은 모델이 실제 값과 얼마나 떨어져 있는지를 나타낸다. 낮은 편향은 모델이 데이터를 잘 예측한다는 것을 의미한다.
+
    -  분산은 데이터를 다르게 샘플링할 때 모델이 얼마나 변하는지를 나타낸다. 낮은 분산은 모델이 안정적이라는 것을 의미한다.
-2. **Trade-off between Bias and Variance (편향과 분산 간의 균형)**
+
+-  **Trade-off between Bias and Variance (편향과 분산 간의 균형)**
+
    -  모델 복잡도를 늘리면 분산은 증가하고 편향은 감소하는 경향이 있다. 
+
    -  즉, 모델이 데이터에 더 잘 적합되지만, 과적합의 위험이 있다.
+
    -  둘 다 낮을 수록 좋기 때문에 이 둘의 균형이 중요하다.
-3. **Overfitting vs Underfitting (과적합 대 과소적합)**
+
+-  **Overfitting vs Underfitting (과적합 대 과소적합)**
+
    -  높은 분산은 모델이 데이터에 과하게 적합되어 새로운 데이터에 대한 일반화 성능이 떨어지는 과적합을 나타낸다.
+
    -  높은 편향은 모델이 데이터에 부적합하여 훈련 데이터에서도 성능이 낮은 과소적합을 나타낸다.
-4. **Weight decay(가중치 감쇠)**
+
+-  **Weight decay(가중치 감쇠)**
    -  가중치 감쇠는 모델이 너무 복잡하지 않게 유지하면서도 중요한 특징을 학습하도록 도와주는 규제화 방법이다. 이를 통해 모델의 일반화 성능을 향상시킬 수 있다.
 
