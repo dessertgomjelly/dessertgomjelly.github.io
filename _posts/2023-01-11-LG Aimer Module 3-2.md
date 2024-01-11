@@ -66,4 +66,14 @@ use_math: true #수학 공식 가능하게
 
 ## Generalization Error
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-11LG Aimer Module 3-2/image-20240111183551688.png" alt="image-20240111183551688" style="zoom:50%;" />
+-  Loss를 하나의 숫자로 요약한다. Loss는 확률 분포를 따르는데  모델이 예측한 값과 실제 정답 간의 차이를 측정하여 모델의 성능을 평가하는 것이다. 
+
+-  Generalization Error(일반화 오차) 를 구하는 이 수식을 보면 예측값 h(x), y에 대한 Loss를 E라는 숫자로 표현한다. 
+-  <img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-11LG Aimer Module 3-2/image-20240111183551688.png" alt="image-20240111183551688" style="zoom:50%;" />
+
+-  **과소적합 (Underfitting):** 
+   -  일반화 오차 < 훈련 오차. 
+-  **과적합 (Overfitting):**
+   -   일반화 오차 > 훈련 오차. 
+
+-  일반적으로 과소적합이 최악의 경우이다. "학습도 제대로 못 시켰네" 라는 기계학습의 기본조차도 못한것처럼 이야기 하는 경우가 많다.
