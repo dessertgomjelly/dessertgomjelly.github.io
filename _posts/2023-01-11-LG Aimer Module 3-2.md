@@ -1,12 +1,14 @@
-# module 3-2
+---
 
-```
 layout: single
 title: "[LG Aimers] Section 3-2. Intruduction to Machine Learning"
 categories: LG_Aimers
 tag: [AI, LG, LG_Aimers, 인공지능, ML, Machine Learning]
 use_math: true #수학 공식 가능하게
-```
+
+---
+
+
 
 <style> body { font-size: 16px; /* 폰트 사이즈 조절 */ } </style>
 
@@ -43,7 +45,7 @@ use_math: true #수학 공식 가능하게
    -  오른쪽 그림의 경우 학습된 부분들이 부드럽기 때문에 새로운 영역에 대해서도 잘본다.
       -  따라서 실제 Y값과 함수 값의 Training Error 가 큼에도 불구하고 이 함수를 활용한다.
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-11LG Aimer Module 3-2/image-20240111183454963.png" alt="image-20240111183454963" style="zoom:50%;" />
+<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-11-LG Aimer Module 3-2/image-20240111185725653.png" alt="image-20240111185725653" style="zoom:50%;" />
 
 <br>
 
@@ -51,7 +53,7 @@ use_math: true #수학 공식 가능하게
 
 ## Training Data vs Test Data
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-11LG Aimer Module 3-2/image-20240111183532605.png" alt="image-20240111183532605" style="zoom: 33%;" />
+<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-11-LG Aimer Module 3-2/image-20240111185735888.png" alt="image-20240111185735888" style="zoom:50%;" />
 
 1. Universal Set (전체 집합):
    -  Universal Set은 일반적으로 데이터셋이나 분석 대상의 전체 집합을 나타낸다.
@@ -69,11 +71,39 @@ use_math: true #수학 공식 가능하게
 -  Loss를 하나의 숫자로 요약한다. Loss는 확률 분포를 따르는데  모델이 예측한 값과 실제 정답 간의 차이를 측정하여 모델의 성능을 평가하는 것이다. 
 
 -  Generalization Error(일반화 오차) 를 구하는 이 수식을 보면 예측값 h(x), y에 대한 Loss를 E라는 숫자로 표현한다. 
--  <img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-11LG Aimer Module 3-2/image-20240111183551688.png" alt="image-20240111183551688" style="zoom:50%;" />
+
+   <img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-11-LG Aimer Module 3-2/image-20240111185746067.png" alt="image-20240111185746067" style="zoom:50%;" />
 
 -  **과소적합 (Underfitting):** 
    -  일반화 오차 < 훈련 오차. 
 -  **과적합 (Overfitting):**
    -   일반화 오차 > 훈련 오차. 
 
--  일반적으로 과소적합이 최악의 경우이다. "학습도 제대로 못 시켰네" 라는 기계학습의 기본조차도 못한것처럼 이야기 하는 경우가 많다.
+-  일반적으로 과소적합이 최악의 경우이다. "학습도 제대로 못 시켰네" 라는 기계학습의 기본조차도 못한것처럼 이야기 하는 경우가 많다. 따라서 우선적으로 과적합을 목표로 기계학습을 하면 된다.
+
+<br>
+
+<br>
+
+## Model's Capacity
+
+<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-11-LG Aimer Module 3-2/image-20240111185711058.png" alt="image-20240111185711058" style="zoom:50%;" />
+
+-  다음과 같이 7개의 데이터를 fit 한다고 가정해보자.
+   -  선형함수 , 2차함수, 9차 함수 순으로 fitting을 한다고 가정한다면.
+
+-  선형함수
+   -  데이터의 굴곡이 있을때 선형함수를 사용한다면 과소적합이 날 수 밖에 없다. Training Error를 줄일 수 가 없다.
+-  9차함수
+   -  복잡한 함수를 쓰면 Training Error 는 무조건 작아진다. 즉 Capacity가 늘어날 수록 무조건 작아진다. 
+   -  하지만 너무 복잡한 모델을 쓰면 데이터가 없는 부분의 굴곡이 엄청나게 심하다. 따라서 과적합이 일어날 수 있다.
+
+<br>
+
+-  Training Error 는 복잡도를 높이면 높을수록 줄어든다.
+-  하지만 기계학습의 목적은 Training Error를 줄이는게 아니라 일반화 Error를 최소화하는 것이다.
+-  따라서 파란색 보다는 녹색 그래프가 최소가 되는 지점을 찾아야한다.
+   -  Traning Error는 학습과정에서 쉽게 볼 수 있지만 일반화 Error는 쉽게 볼 수 없다.
+      -  **** 따라서 Cross Validation등의 테크닉을 써서 일반화 Error를 예측한다.**** 
+
+<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-11-LG Aimer Module 3-2/image-20240111190722024.png" alt="image-20240111190722024" style="zoom:50%;" />
