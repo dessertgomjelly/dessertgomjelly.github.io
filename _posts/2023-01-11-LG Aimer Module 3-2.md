@@ -1,21 +1,25 @@
 ---
-
 layout: single
 title: "[LG Aimers] Section 3-2. Intruduction to Machine Learning"
 categories: LG_Aimers
-tag: [AI, LG, LG_Aimers, 인공지능, ML, Machine Learning]
+tag: [AI, 인공지능, Machine Learning]
 use_math: true #수학 공식 가능하게
-
+sidebar:
+    nav: "counts"
 ---
 
+<style>
+  body {
+    font-size: 16px; /* 폰트 사이즈 조절 */
+  }
+</style>
 
 
-<style> body { font-size: 16px; /* 폰트 사이즈 조절 */ } </style>
-
-**[공지사항]** [해당 내용은 LG에서 주관하는 LG Amiers : AI 전문가 과정 4기 교육 과정입니다.] [LG AI](https://www.lgaimers.ai/) {: .notice--danger}
+**[공지사항]** [해당 내용은 LG에서 주관하는 LG Amiers : AI 전문가 과정 4기 교육 과정입니다.] 
+[LG AI](https://www.lgaimers.ai/)
+{: .notice--danger}
 
 <br>
-
 <br>
 
 # **Section 3. Machine Learning 개론**
