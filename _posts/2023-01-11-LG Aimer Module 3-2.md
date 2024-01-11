@@ -161,3 +161,157 @@ sidebar:
 
 # *CHAPTER 3. Recent Progress of Large Language Models(초거대 언어모델)*
 
+<br>
+
+<br>
+
+
+
+## GPT 3
+
+-  Generative Pretrained Transformer (생산적인 학습된 딥러닝 아키텍쳐 Transformer)
+-  과거에는 정해진 task만 수행하는 모델이 많았지만 GPT는 일반 인공지능을 다룬다.
+-  언어 이해와 생성에 대한 모든 질문을 대답한다.
+-  1750억 파라미터
+
+<br>
+
+<br>
+
+
+
+## InstructGPT
+
+-  GPT 3.5
+-  언어 이해와 생성을 할 수 있는 GPT3를 가져다가 사람의 지시가 주어졌을때 유용하고 안전하게 만든 모델이다.
+-  Key idea : 사람의 피드백을 강화학습한다.
+   -  1.  이런 질문이 들어오면 이렇게 해야해 라는 감독학습을 한다.
+      2.  어느정도 응답 수준이 되면 하나의 질문에 대해서 여러 응답을 생성하게 함
+      3.  선호하는 응답에 대한 랭킹으로 대답한다.
+
+
+
+<br>
+
+step 1: GPT-3를 감독 학습하여 사람의 지시에 따라 여러 응답을 생성하고, 각 응답에 대한 레이블을 생성한다.
+
+Step 2: Reward Model (RM)을 학습하여 응답을 평가하는 선호도에 따라 Ranking score를 생성한다.
+
+Step 3: 새로운 질문에 대한 응답을 생성하고, 강화 학습에서 얻은 Ranking score를 보상으로 활용하여 모델을 향상시킨다.
+
+
+
+<img src="{{site.url}}/images/2023-01-11-LG Aimer Module 3-2/image-20240111212736183.png" alt="image-20240111212736183" style="zoom:50%;" />
+
+<br>
+
+<br>
+
+
+
+## Chat GPT
+
+-  API 호출을 해야하는 InstructGPT와 달리 채팅 형식으로 진핸된다.
+-  Iterative Deployment
+   -  InstructGPT 와 달리 거짓말에 대한 처리가 향상 되었다.
+
+<br>
+
+<br>
+
+ 
+
+## GPT-4 ##
+
+-  Large multimodal language model(대규모 대중모달 언어 모델)
+
+   -  텍스트 뿐만이 아니라 어떤 정보 형식이 오더라도 이해할 수 있어야한다. GPT4 는 이미지와 텍스트에 대해서도 가능하다.
+
+-  이제부턴 아무런 기술적 디테일을 공개하지 않는다.
+
+-  이전 GPT 모델처럼 거짓 정보를 생성하거나 추론 오류를 일으키는 등의 문제가 여전히 존재한다.
+
+   
+
+<br>
+
+<br>
+
+
+
+## Anthropic Claude
+
+-  Anthropic AI는 OpenAI의 전 연구원들이 창립한 회사로, ChatGPT와 유사한 작업을 수행하는 Claude라는 모델을 보유하고 있다.
+-  더 예측 가능하고 해로운 결과를 적게 생성한다고 주장한다.
+
+<img src="{{site.url}}/images/2023-01-11-LG Aimer Module 3-2/image-20240111214535245.png" alt="image-20240111214535245" style="zoom:50%;" />
+
+<br>
+
+<br>
+
+
+
+## Google Bard
+
+-  Google은 ChatGPT에 대해 'Code Red'를 발표하며 Google의 검색 엔진을 일부 대체할 수 있는지에 대한 논의를 시작했다.
+-  Bard는 아직 공개되지 않았으며 정보가 제한적이다.
+
+<img src="{{site.url}}/images/2023-01-11-LG Aimer Module 3-2/image-20240111214547461.png" alt="image-20240111214547461" style="zoom:50%;" />
+
+<br>
+
+<br>
+
+
+
+## Google PaLM
+
+-  Google의 PaLM은 Google의 Pathways 시스템을 기반으로 효율적인 스케일링을 제공한다.
+-  다양한 기능을 수행하며 멀티홉 추론, 코드 생성, 농담 설명 등에서 뛰어난 성능을 보인다.
+
+
+
+<br>
+
+<br>
+
+
+
+## Meta OPT & LLaMA
+
+-  Open Source로 공개를 해서 Userbase를 넓히는 계획.
+-  GPT3와 유사한 성능을 나타내면서도 개발에 필요한 탄소 발자국이 1/7에 불과하다.
+-  **Stanford Alpaca:**
+   -  LLaMA 7B 모델 파인튜닝.
+   -  GPT-3.5로 생성된 52,000개 샘플 사용.
+   -  작고 저렴하면서 성능이 우수.
+-  **LMsys Vicuna:**
+   -  LLaMA 13B 모델 파인튜닝.
+   -  500,000개의 대화 샘플 사용.
+   -  약 $300 비용으로 높은 품질의 ChatGPT와 유사한 결과.
+-  **Self-Instruct Tuning on LLaMA - GPT-4 Response Comparison:**
+   -  GPT-4에 의한 평가에서 Vicuna-Instructions-80은 여덟 가지 범주에 대해 10개의 질문을 생성하며 SoTA 프로프리어터리 챗봇과 유사한 성능을 나타냄.
+
+![image-20240111214601078]({{site.url}}/images/2023-01-11-LG Aimer Module 3-2/image-20240111214601078.png)
+
+<br>
+
+<br>
+
+## OpenAI’s Superalignment
+
+-  AI 시스템의 평가 및 해석가능성을 지원하고 문제가 있는 행동을 자동으로 찾아내는 것을 목표로 한다.
+
+
+
+<br>
+
+<br>
+
+
+
+## 결론
+
+-  데이터 중심 AI에 대한 강조: 모델 아키텍처 및 교육 전략은 거의 동일하지만 데이터가 중요한 차별 요소이다.
+-  오픈 소스 대 프로프리어터리 LLMs (Large Language Models) 비교 및 API 대 내부 LLM의 선택 등에 대한 논의가 있다.
