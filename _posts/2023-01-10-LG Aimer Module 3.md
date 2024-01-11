@@ -32,7 +32,7 @@ sidebar:
 
 <br>
 
-# **CHAPTER 1. Introduction to Machine Learning**
+# *CHAPTER 1. Introduction to Machine Learning*
 
 <br>
 

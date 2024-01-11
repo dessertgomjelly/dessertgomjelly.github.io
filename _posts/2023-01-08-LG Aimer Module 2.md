@@ -24,7 +24,7 @@ sidebar:
 
 
 
-# Section 2. Mathematics for ML
+# **Section 2. Mathematics for ML**
 
 -  교수 
    -   KAIST 신진우 교수
@@ -43,7 +43,7 @@ CHAPTER 1은 Matrix Decomposition,  CHAPTER  2는 Convex Optimization, CHAPTER 3
 
 
 
-# Chapter 1.Matrix Decomposition
+# *Chapter 1.Matrix Decomposition*
 
 <br>
 
@@ -319,7 +319,7 @@ $$
 
 
 
-# CHAPTER  2. Convex Optimization
+# *CHAPTER  2. Convex Optimization*
 
 <br>
 
@@ -632,7 +632,7 @@ $$
 
 
 
-# CHAPTER 3. ***PCA(Principal Component Analysis)***
+# *CHAPTER 3. ***PCA(Principal Component Analysis)*
 
 <br>
 

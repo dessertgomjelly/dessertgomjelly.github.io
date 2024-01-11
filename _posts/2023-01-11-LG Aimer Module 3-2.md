@@ -10,14 +10,10 @@ sidebar:
 
 <style>
   body {
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0; /* Body의 기본 마진 제거 */
+    font-size: 16px; /* 폰트 사이즈 조절 */
   }
 </style>
+
 
 
 
@@ -40,7 +36,9 @@ sidebar:
 
 <br>
 
-# **CHAPTER 2. Bias and Variance**
+<br>
+
+# *CHAPTER 2. Bias and Variance*
 
 <br>
 
@@ -152,4 +150,14 @@ sidebar:
 
 -  **Weight decay(가중치 감쇠)**
    -  가중치 감쇠는 모델이 너무 복잡하지 않게 유지하면서도 중요한 특징을 학습하도록 도와주는 규제화 방법이다. 이를 통해 모델의 일반화 성능을 향상시킬 수 있다.
+
+
+
+<br>
+
+<br>
+
+<br>
+
+# *CHAPTER 3. Recent Progress of Large Language Models(초거대 언어모델)*
 
