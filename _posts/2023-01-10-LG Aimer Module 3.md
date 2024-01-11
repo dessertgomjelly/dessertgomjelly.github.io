@@ -4,6 +4,8 @@ title: "[LG Aimers] Section3. Intruduction to Machine Learning"
 categories: LG_Aimers
 tag: [AI, LG, LG_Aimers, 인공지능, ML, Machine Learning]
 use_math: true #수학 공식 가능하게
+sidebar:
+    nav: "counts"
 ---
 
 <style>
