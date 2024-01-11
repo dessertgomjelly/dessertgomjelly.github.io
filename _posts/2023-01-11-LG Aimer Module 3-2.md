@@ -10,7 +10,12 @@ sidebar:
 
 <style>
   body {
-    font-size: 16px; /* 폰트 사이즈 조절 */
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; /* Body의 기본 마진 제거 */
   }
 </style>
 
