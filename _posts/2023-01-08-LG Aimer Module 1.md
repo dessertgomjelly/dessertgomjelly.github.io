@@ -2,7 +2,7 @@
 layout: single
 title: "[LG Aimers] Section1. AI 윤리" 
 categories: LG_Aimers
-tag: [AI, LG, 인공지능]
+tag: [AI, 인공지능, AI윤리]
 use_math: true #수학 공식 가능하게
 sidebar:
     nav: "counts"

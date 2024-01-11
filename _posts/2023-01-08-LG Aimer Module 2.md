@@ -2,7 +2,7 @@
 layout: single
 title: "[LG Aimers] Section2. Mathematics for ML" 
 categories: LG_Aimers
-tag: [AI, LG, 인공지능, ML, Machine Learning]
+tag: [AI, 인공지능, Machine Learning]
 use_math: true #수학 공식 가능하게
 sidebar:
     nav: "counts"
