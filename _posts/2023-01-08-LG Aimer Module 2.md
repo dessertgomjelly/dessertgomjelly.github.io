@@ -80,15 +80,11 @@ CHAPTER 1은 Matrix Decomposition,  CHAPTER  2는 Convex Optimization, CHAPTER 3
 
 - 2 * 2 matrix와 역행렬에서 Determinant 를 알 수 있다. 이 공식에 따라 0이나 0이 아니냐에 따라서 Determinant의 존재 유무가 정해지기 때문이다.
 
-$$
- \alpha_{11} \alpha_{22}- \alpha_{12} \alpha_{21} \neq 0
-$$
+$\alpha_{11} \alpha_{22}- \alpha_{12} \alpha_{21} \neq 0$
 
 - 따라서 Determinant(A)는 이러한 식이 성립한다.
 
-$$
- det(A) = \alpha_{11} \alpha_{22}- \alpha_{12} \alpha_{21} 
-$$
+$det(A) = \alpha_{11} \alpha_{22}- \alpha_{12} \alpha_{21}$
 
 ---
 
@@ -102,24 +98,10 @@ $$
     
 - 특징
     - 여기서 주요 특징으로는 Determinant(AB)는 곱셈에 의해서 분해 된다.
-
-$$
- det(AB)= det(A)det(B)
-$$
-
-$$
-det(A) = det(A^T)
-$$
-
-$$
-det(A^{-1}) = 1/det(A)
-$$
-
-$$
-det(T) = \prod_{i = 1}^{n} T_{ii}
-$$
-
-
+       -  $det(AB)= det(A)det(B)$
+       -  $det(A) = det(A^T)$
+       -  $det(A^{-1}) = 1/det(A)$
+       -  $det(T) = \prod_{i = 1}^{n} T_{ii}$
 
 <br>
 
@@ -132,22 +114,18 @@ $$
 - 정의
     - Trace는 Determinant보다 훨씬 더 정의하기 쉽다.
     - 어떤 Matrix가 있으면 Matrix의 어떤 Diagonal Entry(대각성분)를 다 더한 형태를 Trace라고 한다.
-
 - 특징
     - 다음과 같은 성질들을 가지고 있다. Determinant는 곱셈의 성질을 가지고 있는 반면에 Trace는 덧셈의 성질을 가지고 있는 것을 알 수 있다.
 
 <img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 2.png" alt="module2" style="zoom:50%;" />
-$$
-tr(A+B)=tr(A)+tr(B)
-$$
 
-$$
-tr(\alpha A) = \alpha tr(A)
-$$
+-  $tr(A+B)=tr(A)+tr(B)$
+-  $tr(\alpha A) = \alpha tr(A)$
+-  $tr(I_n)=n$
 
-$$
-tr(I_n)=n
-$$
+
+
+
 
 
 
@@ -162,9 +140,7 @@ $$
 - Determinant, Trace와 밀접한 관련이 있다.
 - 정의
   
-    $$
-     A{x} = \lambda {x}
-    $$
+    -  $A{x} = \lambda {x}$
     
     - **Eigenvalue (고유값)**
         - 주어진 행렬 A에 대해, 어떤 스칼라 λ(람다)가 존재하여 위의 식을 만족하는 경우, 그 스칼라 λ가 행렬 A의 고유값(Eigenvalue)이 된다.
@@ -201,19 +177,15 @@ $$
 
 - Determinant
     - Determinant 는 이런식으로 Eigenvalue들의 곱셈으로 표현된다는 것을 알 수 있다.
-
-$$
-det(A) = \prod_{i = 1}^{n}\lambda_i
-$$
+    
+    -  $det(A) = \prod_{i = 1}^{n}\lambda_i$
 
 - Trace
     - Trace는 Eigenvalue들의 덧셈으로 표현된다는 것을 알 수 있다.
     
-    $$
-    tr(A) = \sum_{i = 1}^{n}\lambda_i
-    $$
+    -  $tr(A) = \sum_{i = 1}^{n}\lambda_i$
     
-- 
+    
 
 
 
@@ -238,10 +210,8 @@ $$
     - **Decomoposition(분해 기법)을 할 수 있으면 Determinant(행렬식) 계산이 매우 쉬워 지기 때문에 사용한다.**
     - Determinant 는 곱셈에 대해서 분해가 되기때문에 L곱하기 L^T 가 된다. L^T는 Determinant 성질에 의해 L로 변환되고 따라서 다음 식이 성립한다.
         - Determinant L은 lower-triangle matrix 이기 때문에 매우 구하기 쉽다.
-
-$$
-det(A) = det(L)det(L^T)=det(L)^2
-$$
+        
+        -  $det(A) = det(L)det(L^T)=det(L)^2$
 
 
 <br>
@@ -274,13 +244,10 @@ $$
 
 Diagonalizable의 예를 살펴보자
 
-$$
-A^k = PD^kP^{-1}
-$$
+-  $A^k = PD^kP^{-1}$
+-  $det(A) = det(P)det(D)det(P^{-1}) = det(D) = \prod_i d_{ii}$
 
-$$
-det(A) = det(P)det(D)det(P^{-1}) = det(D) = \prod_i d_{ii}
-$$
+
 
 그렇다면 “어떤 Matrix가 PDP^-1로 Diagonal하게 표현 될 수 있을까?”라는 궁금증이 생긴다. 정답은.
 
@@ -303,9 +270,7 @@ Singular Value Decomposition은 일반적인 Matrix에 적용할 수 있는 개�
 - 어떤 Matrix A가 주어졌을 때 임의의 행렬을 세 개의 특별한 형태의 행렬의 곱으로 분해하는 기법이다.
 - 이때 U와 V^T는 항상 orthogonal Matrix(직교 행렬)가 된다는 것이 가장 중요한 특징이다.
 
-$$
-A = UΣV^T
-$$
+-  $A = UΣV^T$
 
 
 
@@ -356,10 +321,8 @@ $$
 - Gradient-type algorithms 는 다음과 같은 수식으로 표현된다.
     - Gamma K는 step size(= 학습률) 라고 부르는 어떤 Scaler 값이고
     - d는 방향성을 나타내는 Direction이 된다.
-
-$$
-X_{k+1} = X_K + \gamma_kd_k
-$$
+    
+    -  $X_{k+1} = X_K + \gamma_kd_k$
 
 - 우리가 찾는  어떤 Direction d 가 어떤 Gradient와 내적 값이 0이 된다는 것은 두 벡터가 직교한다는 것을 의미한다.
 
@@ -436,9 +399,7 @@ $$
     - 현재 그래디언트와 이전 업데이트의 조합으로 새로운 업데이트 계산한다.
 
 <img src="{{stie.url}}/images/2023-01-08-LG Aimer Module 2/module2 10.png" alt="module2" style="zoom:50%;" />
-$$
-x_{k+1} = x_k - \gamma_i \cdot \nabla f(x_k)^T + \alpha \cdot \Delta x_k
-$$
+-  $x_{k+1} = x_k - \gamma_i \cdot \nabla f(x_k)^T + \alpha \cdot \Delta x_k$
 
 
 
@@ -452,9 +413,7 @@ $$
 
 - 목적함수를 최소화 하는 데에 있어서 두가지 조건이 있다고 생각해보자
   
-    $$
-    g_i(x) \leq 0, h_j = 0
-    $$
+    -  $g_i(x) \leq 0, h_j = 0$
     
     - 계속 그래디언트를 업데이트를 하다보면 위 조건 0보다 작아야 하거나 0인 경우에 만족하지 않는 경우들이 나오게 된다.
     - 이러한 Constrained Optimization을 Unconstrained Optimization처럼 풀도록 한 것이 “Langrange Multipliers”이다.
@@ -484,10 +443,7 @@ $$
 <br>
 
 - 여기서 주목해야 할 사실은 dual function D 는 Optimal value인 p*의 항상 lower bound가 된다는 것이다.
-
-$$
-D(\lambda,\mu) \leq p^*
-$$
+   -  $D(\lambda,\mu) \leq p^*$
 
 - `그렇다면 best lower bound는 무엇일까?`
     - Langrangian dual problem 문제이다. Lower bound를 Maximaization 한다고 생각해도 여전히 원래의 Optimization의 Lower bound가 되기 때문이다.
@@ -508,10 +464,8 @@ $$
     - P는 매우 풀기 힘들지만 D는 항상 풀 수 있다.
     - D는 항상 P의 Lower bound이다.
     - P와 D의 Gap 을 duality gap이라고 한다.
-
-$$
-d^* \leq p^*
-$$
+    
+    -  $d^* \leq p^*$
 
 <br>
 
@@ -556,16 +510,12 @@ $$
 ### Convex Functions
 
 - 다음 식을 성립한다.
-
-$$
-f(\theta x + (1 - \theta)y) \leq\theta f(x) + (1-\theta)f(y)
-$$
+   -  $f(\theta x + (1 - \theta)y) \leq\theta f(x) + (1-\theta)f(y)$
 
 - θ를 1/2 이라고 했을 때 다음 식을 성립해야한다. 보통 볼록 함수 형태이다.
   
-    $$
-    f(\frac{x+y}{2})\leq\frac{1}{2}f(x)+\frac{1}{2}f(y)
-    $$
+    - $f(\frac{x+y}{2})\leq\frac{1}{2}f(x)+\frac{1}{2}f(y)$
+    
     
     
     
@@ -574,7 +524,7 @@ $$
 - Concave
     - -f 일때 convex 하다.  보통 오목 함수 형태이다.
     - 예를 들어 log 함수는 Concave이고, 음수를 취하면 Convex이다.
-    
+
 
 
 
@@ -696,10 +646,7 @@ $$
 
 - N : 데이터의 개수, D : 데이터의 차원 이라고 할 때, Covariance matrix는 다음과 같은 수식이다.
 - 항상 Positive Definite(양의 정부호) 된다.
-
-$$
-S = \frac{1}{N}XX^T
-$$
+   -  $S = \frac{1}{N}XX^T$
 
 <br>
 
