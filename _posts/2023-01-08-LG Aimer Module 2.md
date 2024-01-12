@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[LG Aimers] Section2. Mathematics for ML" 
+title: "[LG Aimers] 2. Mathematics for ML" 
 categories: LG_Aimers
 tag: [AI, 인공지능, Machine Learning]
 use_math: true #수학 공식 가능하게
