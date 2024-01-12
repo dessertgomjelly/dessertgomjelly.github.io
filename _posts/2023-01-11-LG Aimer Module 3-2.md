@@ -2,7 +2,7 @@
 layout: single
 title: "[LG Aimers] 3-2. Intruduction to Machine Learning"
 categories: LG_Aimers
-tag: [AI, 인공지능, Machine Learning, GPT, LLM]
+tag: [AI, 인공지능, Machine Learning, LLM]
 use_math: true #수학 공식 가능하게
 sidebar:
     nav: "counts"
