@@ -24,7 +24,7 @@ sidebar:
 
 
 
-# **Section 2. Mathematics for ML**
+# **2. Mathematics for ML**
 
 -  교수 
    -   KAIST 신진우 교수

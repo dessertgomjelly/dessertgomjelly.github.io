@@ -37,7 +37,7 @@ sidebar:
 
 <br>
 
-# **Section 1. AI 윤리**
+# **1. AI 윤리**
 
 -  교수
    -  KAIST 차미영 교수

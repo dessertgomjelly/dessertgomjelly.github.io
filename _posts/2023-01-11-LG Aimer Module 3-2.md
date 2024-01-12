@@ -25,7 +25,7 @@ sidebar:
 <br>
 <br>
 
-# **Section 3. Machine Learning 개론**
+# **3-2. Machine Learning 개론**
 
 -  교수
    -  서울대학교 김건희
