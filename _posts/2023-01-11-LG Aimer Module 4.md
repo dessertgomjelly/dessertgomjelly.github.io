@@ -78,7 +78,7 @@ sidebar:
 -  Linear regression은 주어진 입력에 대해 출력과의 선형적인 관계를 추론하는 문제이다.
 -  밑의 그림 처럼 3을 input으로 넣었을 때 에측 결과 2.71 이 나오게 된다.
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-11-LG Aimer Module 4/image-20240111231541115.png" alt="image-20240111231541115" style="zoom:67%;" />
+<img src="{{stie.url}}/images/2023-01-11-LG Aimer Module 4/image-20240111231541115.png" alt="image-20240111231541115" style="zoom:67%;" />
 
 -  Linear regression의 절차
    -  1.  어떤 predictor를 이용할 것인가?
