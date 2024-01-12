@@ -52,9 +52,10 @@ sidebar:
 
 -  수식을 보면 세타와 x의 내적연산으로 나타 낼 수 있다. 
 
--  #### <img src="{{site.url}}/images/2023-01-11-LG Aimer Module 4/image-20240111230203273.png" alt="image-20240111230203273" style="zoom:50%;" />
+   <img src="{{site.url}}/images/2023-01-11-LG Aimer Module 4/image-20240111230203273.png" alt="image-20240111230203273" style="zoom:50%;" />
 
 -  이 모델에서 유의점은 선형 모델이라고 해서 반드시 입력 변수의 선형일 필요는 없다.
+
 -  모델이 단순하기 때문에 성능이 높지 않더라도 다양한 환경에서 안정적인 성능을 제공할수 있다.
    -  Regression과 Classification에서 둘 다 사용 가능하다.
 
