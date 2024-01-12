@@ -191,7 +191,9 @@ A. 선형 회귀에서 가설은 꼭 선형 형태일 필요가 없습니다. �
 
 
 
- # *CHAPTER 2. Gradient Decent*
+# *CHAPTER 2. Gradient Descent*
+
+
 
 <br>
 
