@@ -277,6 +277,8 @@ sidebar:
 
 <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113172541220.png" alt="image-20240113172541220" style="zoom:50%;" />
 
+<br>
+
 #### SVM Primal problem
 
 -  *||w||*는<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113172957598.png" alt="image-20240113172957598" style="zoom:50%;" /> 과 같은 수식을 따른다. 그렇게 때문에 편의를 위해 제곱을 하고 결론적으로는 $||w||^2$을 최소화하는 것과 동일하다고 말할 수 있다.
@@ -372,5 +374,3 @@ sidebar:
 
 -  Ensemble Learning은 이미 사용하고 있거나 개발한 알고리즘의 간단한 확장이다. 
 -  Supervised learning task에서 성능을 올릴 수 있는 방법이다.
-
-왜이러는거야 ~
