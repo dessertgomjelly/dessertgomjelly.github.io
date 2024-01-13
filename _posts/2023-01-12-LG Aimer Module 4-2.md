@@ -122,7 +122,7 @@ sidebar:
 
 <br>
 
-#### Zero-One Loss
+**Zero-One Loss**
 
 -  Zero-One Loss 는 내부의 logic을 판별하여 맞으면 0 틀리면 1을 출력하는 함수이다.
 
@@ -135,9 +135,9 @@ sidebar:
 <br>
 <br>
 
-
-
 ## Hinge Loss
+
+
 
 -  각 샘플에 대해 모델의 예측과 실제 레이블 간의 여유(margin)를 고려하는 분류 모델에서 사용되는 손실 함수 중 하나이다. 다음 수식을 살펴보자
 -  $Hinge Loss(**w**,*b*,**x***i*,*y**i*)=max(0,1−*y**i*⋅(**w**⋅**x***i*+*b*))$
