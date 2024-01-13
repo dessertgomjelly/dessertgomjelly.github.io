@@ -41,7 +41,7 @@ sidebar:
 
 <br>
 
-# *CHAPTER 4. Linear Classification*
+# *CHAPTER 3. Linear Classification*
 
 <br>
 
@@ -213,7 +213,7 @@ sidebar:
 
 
 
-# *CHAPTER 5. Advanced Classification*
+# *CHAPTER 4. Advanced Classification*
 
 <br>
 
@@ -384,3 +384,5 @@ sidebar:
 
 -  Ensemble Learning은 이미 사용하고 있거나 개발한 알고리즘의 간단한 확장이다. 
 -  Supervised learning task에서 성능을 올릴 수 있는 방법이다.
+
+왜이러는거야 ~
