@@ -363,3 +363,176 @@ sidebar:
 
 -  Ensemble Learning은 이미 사용하고 있거나 개발한 알고리즘의 간단한 확장이다. 
 -  Supervised learning task에서 성능을 올릴 수 있는 방법이다.
+-  머신러닝에서 알고리즘의 종류에. 상관 없이 서로 다르거나, 같은 매커니즘으로 동작하는 다양한 머신러닝 모델을 묶어 함께 사용하는 방식이다.
+-  예를 들어, SVM, Neural Network Model과 같이 여러 다른 model을 함께 모와서 예측 model의 집합으로 사용하는 것이다.
+
+<br>
+
+<br>
+
+## Ensemble Methods
+
+-  앙상블 모델의 학습 과정은 다음과 같다.
+   -  학습 데이터 S를 랜덤하게 S1부터 Sn까지 나누어서 학습을 진행한다.
+   -  이러한 앙상블은 서로 다른 모델로 구성할 수 있지만 같은 학습 모델로 구성 될 수 있다.
+   -  최종 결정은 마지막에 학습한 다수의 모델이 각각 결정을 내린후에 다수결로 예측 결과를 제공한다.
+
+<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113192220183.png" alt="image-20240113192220183" style="zoom:50%;" />
+
+<br>
+
+-  앙상블을 구성하는 기본적인 요소 기술은 bagging 과 boosting의 개념이 있다.
+-  앙상블 기술의 장점은 예측 성능을 안정적으로 향상시킬 수 있다는 것이다.
+   -  다양한 모델의 결정으로 최종 예측결과를 제공하기 때문에 noise등에서 보다 안정적이다.
+   -  다양한 모델을 사용하고 직접적으로 연합하여 적용하기 때문에 쉽게 구현이 가능하다. 
+      -  각 모델이 독립적으로 사용되기 때문에 모델 파라미터의 튜닝이 많이 필요없다.
+-  앙상블 기술의 단점은 모델 자체로 간결한 표현이 되기 어려운 문제가 있다.
+
+<br>
+
+<br>
+
+## Bagging
+
+-  Bagging은 학습 과정에서 training sample을 랜덤하게 나누어 선택해 학습하는 것이다.
+-  학습데이터 S를 N개로 구분하여 서로다른 Subset을 구성하여 서로 다른 Classifier을 사용한다.
+   -  설령 같은 모델을 사용하더라도 Random한 Subset을 이용하기 때문에 다른 특성을 갖게 된다.
+-  각 Sample set이 다른 모델에 영향을 끼치지 않기 때문에 모델을 병렬적으로 학습하게된다.
+
+<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113221901649.png" alt="image-20240113221901649" style="zoom:50%;" />
+
+-  Bagging의 장점
+
+   -  오버피팅 감소
+      -  Training sample의 숫자가 적거나 반대로 모델이 복잡한 경우에 발생하는 오버피팅 문제에 대해 각 샘플을 병렬적으로 사용하기 때문에 성능이 좋다.
+   -  분산감소
+      -  각 모델이 독립적으로 학습되기 때문에, Bagging은 전체 모델의 분산을 감소시킨다. 따라서 일반화 능력이 향상된다.	
+
+   <br>
+
+   <br>
+
+## Boosting
+
+-  Bagging하고 다르게 순차적으로 동작한다.
+-  밑의 그림에서 볼 수 있다시피 먼저 Classifier-1을 통해서 예측을 수행한다.
+   -  이때 Classifier-1의 결과인 샘플의 중요도인 weights를 다음 학습에 쓰게된다.
+   -  이전 Classifier의 결과를 현재 Classifier의 결과를 향상하는데 사용하게 된다.
+
+
+
+<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113222740073.png" alt="image-20240113222740073" style="zoom:50%;" />
+
+<br>
+
+<br>
+
+*  **Weak Classifier의 Cascading**
+
+   -  Cascading은 Boosting의 한 형태로, 성능이 낮은 Weak Classifier들을 순차적으로 결합하여 성능을 향상시키는 방법이다,
+   -  *그렇다면 Weak Classifier란 뭘까?*
+      -  Bias가 높은 Classifier를 뜻한다.
+      -  모델 자체가 단순해서 즉 Strong Classifier에 비해 성능이 낮아서 혼자서는 무엇을 하기 어려운 모델이다.
+   -  *그렇다면 Cascading은 무엇일까?*
+      -  Weak Classifier를 순차적으로 학습하고 예측하여 모델의 성능을 향상시킨다.
+      -  첫 번째 Classifier로 예측 후, 틀린 부분 집합에 대해 다음 Classifier를 학습하고 예측한다.
+   -  이러한 Weak Classifier를 Cascading을 하면 연속적으로 Classifier의 성능을 높일 수 있다.
+
+   -  그림에서 볼 수 있다시피 단순한 모델을 선형적으로 학습을 하여 Classifier의 성능을 높이게 된다.
+
+   <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113223609138.png" alt="image-20240113223609138" style="zoom:50%;" />
+
+   
+
+<br>
+
+<br>
+
+
+
+## Adaboost
+
+-  대표적인 Boosting 알고리즘으로 Adaboost를 뽑을 수 있다.
+-  Adaboost는 base classifier에 의해서 오분류된 sample에 의해 보다 높은 가중치를 두어 다음 학습에 사용할 수 있다.
+-  이런방식의 장점은 간단하게 구현이 가능하며 특정한 학습 알고리즘에 구애받지 않는다는 점이다.
+-  그림에서 볼 수있는 것처럼 오분류된 sample에 높은 가중치를 두어 다음 Classifier는 어려운 error를 해결하는데 특화된 모델로 동작하게 된다.
+   -  이러한 연속적인 Classifier의 동작으로 최종적으로 우수한 결과를 제공한다.
+
+<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113223933285.png" alt="image-20240113223933285" style="zoom:50%;" />
+
+<br>
+
+<br>
+
+## Random Forest
+
+-  Bagging과 Boosting을 활용한 대표적인 알고리즘으로 Random Forest모델을 뽑을 수 있다.
+-  Random Forest는 decision tree의 집합이다.
+-  Bagging
+   -  서로 다르게 학습된 decision tree의 결정으로 예측이 수행되기 때문에 자체적으로 bagging을 통해 학습한다.
+   -  다양성을 증가시키기 위해 서로 다른 데이터 부분집합에 대해 트리를 학습한다는 말이다.
+
+-  Boosting
+   -  매 노드에서 결정이 이뤄지기 때문에 자체적으로 Boosting을 실행한다.
+   -  대표적으로 gradient boosting machine(GBM) 방식이 유명하다.
+
+<br>
+
+<br>
+
+## 모델 성능 평가
+
+-  Accuracy(정확도)
+   -  정확도는 모델이 전체 데이터에서 얼마나 맞추었는지를 나타내는 지표이다. 
+   
+-  confusion matrix (혼동행렬) 
+   -  혼동 행렬은 모델이 각각의 클래스를 어떻게 예측했는지를 보여주는 표이다.
+      -  **True Positive (TP):** 양성으로 예측했는데 맞춘 경우
+      -  **True Negative (TN):** 음성으로 예측했는데 맞춘 경우
+      -  **False Positive (FP):** 양성으로 예측했는데 틀린 경우 (실제는 음성) 
+      -  **False Negative (FN):** 음성으로 예측했는데 틀린 경우 (실제는 양성)
+   
+-  다음 표를 살펴보면 조금 더 이해하기가 쉽다.
+   -  혼동행렬을 통해 Accuracy, F1 Precision, Recall등을 구할 수 있다.
+
+   <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113225328838.png" alt="image-20240113225328838" style="zoom:50%;" />
+
+-  Unbalanced 데이터 세트의 경우 **accuracy(정확도)**이외에도 **Precision(정밀도),** **Recall(재현율)**, **F1(정밀도와 재현율의 조화평균)** 등을 동시에 보아야 모델 성능을 제대로 측정 할 수 있다.
+
+<br>
+
+<br>
+
+**ROC Curve**
+
+-  서로 다른 Classifier의 성능을 측정하는데 사용하는 곡선이다.
+-  TPR(True positive Rates), TNR(Ture negetive Rates)
+-  가로축은 FPR인데 이는 1에서 TPR값을 뺀 값이다. 세로축은 Recall값을 의미한다.
+   -  왼쪽 상단으로 갈 수록 성능이 좋다고 할 수 있다.
+
+<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113230357473.png" alt="image-20240113230357473" style="zoom:50%;" />
+
+-  모델의 설명력에 맞게 각 성능 지표의 중요성을 모델마다 잘 판단해야한다.
+
+<br>
+
+<br>
+
+## Applications using SL
+
+-  R-CNN (Region-based Convolutional Neural Network)
+   -  SL을 사용하는 딥러닝 모델이다
+      -  R-CNN은 Selective Search (SL)라고 불리는 객체 후보 영역을 찾는 기술을 사용한다. SL은 이미지에서 가능성 있는 객체의 위치를 추정하여 이들 위치를 후보로 선택하는 방식이다.
+
+<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113230913864.png" alt="image-20240113230913864" style="zoom:50%;" />
+
+-  CNN, LSTM등은 SL의 대표적인 예시이다.
+   -   이 모델들은 훈련 데이터셋이 주어진 상태에서 입력과 출력 간의 관계를 학습합니다. CNN은 이미지 분류와 같은 작업에서 사용되고, LSTM은 시퀀스 데이터 처리에 적합하다.
+-  Semantic segmentation(의미적 분할)
+   -  자율주행 task이다.
+   -  영상을 구성하는 pixel에 대한 classification 문제이다.
+-  Face recognition(얼굴 인식)
+-  Face detection(얼굴 감지)
+-  Super resolution(고해상도화)
+
+<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113231704606.png" alt="image-20240113231704606" style="zoom:50%;" />
