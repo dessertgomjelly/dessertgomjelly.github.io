@@ -213,11 +213,13 @@ sidebar:
 
 
 
-# *CHAPTER 4. Linear Classification*
+# *CHAPTER 5. Advanced Classification*
 
 <br>
 
 <br>
+
+
 
 ## Margin
 
@@ -238,6 +240,8 @@ sidebar:
 <br>
 
 <br>
+
+
 
 ## Support Vector Machine
 
@@ -266,6 +270,8 @@ sidebar:
 <br>
 
 <br>
+
+
 
 ## Hard Margin SVM
 
@@ -296,6 +302,8 @@ sidebar:
 
 
 
+
+
 ## ANN(Arifical neural network)
 
 -  Non-linear classification model
@@ -309,6 +317,8 @@ sidebar:
 
 
 <br>
+
+
 
 #### Activation functions
 
@@ -326,11 +336,15 @@ sidebar:
 
 <br>
 
+
+
 ## Multilayer perceptron model (MLP)
 
 -  Neural Network를 여러 개의 층으로 쌓은 것을 의미한다.
 
    <br>
+
+
 
 ### For Example : XOR
 
@@ -352,3 +366,21 @@ sidebar:
 
    <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113175847816.png" alt="image-20240113175847816" style="zoom:99%;" />
 
+<br>
+
+<br>
+
+
+
+# *CHAPTER 5. Ensemble*
+
+<br>
+
+<br>
+
+
+
+## Ensemble Learning
+
+-  Ensemble Learning은 이미 사용하고 있거나 개발한 알고리즘의 간단한 확장이다. 
+-  Supervised learning task에서 성능을 올릴 수 있는 방법이다.
