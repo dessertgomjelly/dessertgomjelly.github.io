@@ -135,7 +135,8 @@ sidebar:
 ##  Hinge Loss
 
 -  각 샘플에 대해 모델의 예측과 실제 레이블 간의 여유(margin)를 고려하는 분류 모델에서 사용되는 손실 함수 중 하나이다. 다음 수식을 살펴보자
--  $Hinge Loss(w,b,x_i,y_i*)=max(0,1−*y_i⋅(w⋅x_i+b))$
+-  $Hinge Loss(w,b,x_i,y_i)=max(0,1−y_i⋅(w⋅x_i+b))$
+-  
    -  *w*는 가중치(weight) 벡터,
    -  *b*는 편향(bias),
    -  *xi*는 입력 데이터의 특성(feature) 벡터,
