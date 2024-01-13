@@ -2,13 +2,13 @@
 layout: single
 title: "[LG Aimers] 4-2. Supervised learning (classification/regression)"
 categories: LG_Aimers
-tag: [AI, 인공지능, Machine Learning,Classification]
+tag: [AI, 인공지능, Machine Learning, Classification]
 use_math: true #수학 공식 가능하게
 sidebar:
     nav: "counts"
-
-
 ---
+
+
 
 <style>
   body {
