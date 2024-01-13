@@ -193,7 +193,6 @@ sidebar:
 
 <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113165107432.png" alt="image-20240113165107432" style="zoom:50%;" />
 
-
 <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113165335784.png" alt="image-20240113165335784" style="zoom:50%;" />
 
 -  A or not 에 대한 파라미터부터 C or not에 대한 파라미터까지 벡터로 정의한다면 다음과 같이 Score값의 형태가 나온다.
@@ -201,6 +200,7 @@ sidebar:
 
 <br>
 <br>
+
 
 
 # *CHAPTER 4. Advanced Classification*
@@ -307,7 +307,7 @@ sidebar:
 
 <br>
 
-### Activation functions
+**Activation functions**
 
 -  초기에는 시그모이드 함수를 사용했지만, 깊이있는 학습에 도움이 되지 않는다고 알려져있다.
 
@@ -332,7 +332,7 @@ sidebar:
 
 
 
-### For Example : XOR
+**For Example : XOR**
 
 -  XOR 문제는 어떠한 하나의 Hyper plane을 그어도 효과적으로 분류 할 수 없게 된다. 그럼 어떻게 해결할 수 있을까?
 
