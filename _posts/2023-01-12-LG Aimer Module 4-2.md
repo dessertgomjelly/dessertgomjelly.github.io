@@ -18,10 +18,6 @@ sidebar:
 
 
 
-
-
-
-
 **[공지사항]** [해당 내용은 LG에서 주관하는 LG Amiers : AI 전문가 과정 4기 교육 과정입니다.] 
 [LG AI](https://www.lgaimers.ai/)
 {: .notice--danger}
@@ -190,6 +186,10 @@ sidebar:
    <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113164709798.png" alt="image-20240113164709798" style="zoom:50%;" />
 
 
+
+<br>
+
+<br>
 
 
 
