@@ -189,11 +189,10 @@ Multiclass classification
 -  Binary classification 문제를 Multiclass classification 문제로 확장 할 수가 있다. 이것을 **One-VS-All** 방식으로 이해 할 수가 있다.
 -  그림에서 볼 수 있듯이 3개의 Hyper plane을 그어서 Multiclass classification문제를 Binary classification문제로 풀 수 있게끔 할 수 있다.
 
- <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113165107432.png" alt="image-20240113165107432" style="zoom:50%;" />
+<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113165107432.png" alt="image-20240113165107432" style="zoom:50%;" />
 
 
-
-  <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113165335784.png" alt="image-20240113165335784" style="zoom:50%;" />
+<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113165335784.png" alt="image-20240113165335784" style="zoom:50%;" />
 
 -  A or not 에 대한 파라미터부터 C or not에 대한 파라미터까지 벡터로 정의한다면 다음과 같이 Score값의 형태가 나온다.
    -  이렇게 얻게된 Score값들에 시그모이드 함수를 사용하게되면 확률값으로 매핑할 수가 있게 된다.
@@ -201,10 +200,10 @@ Multiclass classification
 <br>
 <br>
 
+
 # *CHAPTER 4. Advanced Classification*
 
 <br>
-
 <br>
 
 
@@ -256,7 +255,6 @@ Multiclass classification
 
 
 <br>
-
 <br>
 
 
@@ -279,6 +277,8 @@ Multiclass classification
 
 <br>
 
+
+
 #### SVM Primal problem
 
 -  *||w||*는<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113172957598.png" alt="image-20240113172957598" style="zoom:50%;" /> 과 같은 수식을 따른다. 그렇게 때문에 편의를 위해 제곱을 하고 결론적으로는 $||w||^2$을 최소화하는 것과 동일하다고 말할 수 있다.
@@ -287,7 +287,6 @@ Multiclass classification
 <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113173322737.png" alt="image-20240113173322737" style="zoom:50%;" />
 
 <br>
-
 <br>
 
 
@@ -305,7 +304,7 @@ Multiclass classification
    <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113173827993.png" alt="image-20240113173827993" style="zoom:50%;" />
 
 
-
+<br>
 <br>
 
 
@@ -323,7 +322,6 @@ Multiclass classification
    <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113174423468.png" alt="image-20240113174423468" style="zoom:50%;" />
 
 <br>
-
 <br>
 
 
@@ -332,7 +330,7 @@ Multiclass classification
 
 -  Neural Network를 여러 개의 층으로 쌓은 것을 의미한다.
 
-   <br>
+<br>
 
 
 
@@ -357,7 +355,6 @@ Multiclass classification
    <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113175847816.png" alt="image-20240113175847816" style="zoom:99%;" />
 
 <br>
-
 <br>
 
 
@@ -365,7 +362,6 @@ Multiclass classification
 # *CHAPTER 5. Ensemble*
 
 <br>
-
 <br>
 
 
