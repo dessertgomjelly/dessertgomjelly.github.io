@@ -184,6 +184,8 @@ sidebar:
 <br>
 <br>
 
+
+
 ## Multiclass classification
 
 -  Binary classification 문제를 Multiclass classification 문제로 확장 할 수가 있다. 이것을 **One-VS-All** 방식으로 이해 할 수가 있다.
