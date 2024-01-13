@@ -41,7 +41,7 @@ sidebar:
 
 <br>
 
-# *CHAPTER 3. Linear classification*
+# CHAPTER 3. Linear classification
 
 <br>
 <br>
@@ -61,8 +61,6 @@ sidebar:
 <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240112211324966.png" alt="image-20240112211324966" style="zoom:50%;" />
 
 -  Linear model 이 갖는 여러 장점 즉, 단순하며 해석 가능성이 있고 다양한 환경에서 일반적으로 안정적인 성능을 제공할 수가 있다.
-
-
 
 <br>
 
@@ -99,8 +97,6 @@ sidebar:
 
 <br>
 
-
-
 -  h(x)가 0보다 큰 구역, 작은 구역을 정의 하게 되는데, x가 0보다 크면 sign 함수에 의해 1, x가 0보다 작으면 -1 이 된다.
 
 <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113154818815.png" alt="image-20240113154818815" style="zoom:50%;" />
@@ -135,9 +131,9 @@ sidebar:
 <br>
 <br>
 
-## Hinge Loss
 
 
+##  Hinge Loss
 
 -  각 샘플에 대해 모델의 예측과 실제 레이블 간의 여유(margin)를 고려하는 분류 모델에서 사용되는 손실 함수 중 하나이다. 다음 수식을 살펴보자
 -  $Hinge Loss(**w**,*b*,**x***i*,*y**i*)=max(0,1−*y**i*⋅(**w**⋅**x***i*+*b*))$
@@ -154,10 +150,6 @@ sidebar:
 
 <br>
 <br>
-
-
-
-
 
 ## Cross-entropy Loss
 
@@ -205,9 +197,7 @@ sidebar:
 <br>
 <br>
 
-
-
-# *CHAPTER 4. Advanced Classification*
+# CHAPTER 4. Advanced Classification
 
 <br>
 <br>
@@ -285,7 +275,7 @@ sidebar:
 
 
 
-*SVM Primal problem*
+**SVM Primal problem**
 
 -  *norm w*는<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/_posts/{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113172957598.png" alt="image-20240113172957598" style="zoom:50%;" /> 과 같은 수식을 따른다. 그렇게 때문에 편의를 위해 제곱을 하고 결론적으로는 이를 제곱한것에 최소화하는 것과 동일하다고 말할 수 있다.
 -  또한 위에서 말했듯이 제약조건 $y(w^Tx+b)>=1$ , 이 두가지가 SVM의 Primal problem이다.!!
