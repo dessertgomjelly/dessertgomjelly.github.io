@@ -41,10 +41,9 @@ sidebar:
 
 <br>
 
-# *CHAPTER 3. Linear Classification*
+# *CHAPTER 3. Linear classification*
 
 <br>
-
 <br>
 
 ## Linear Classification
@@ -88,7 +87,8 @@ sidebar:
        -  Gradient decent algorithm을 사용한다.
    
 
-<br><br>
+<br>
+<br>
 
 ## Linear classification model
 
@@ -105,8 +105,7 @@ sidebar:
 
 <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113154818815.png" alt="image-20240113154818815" style="zoom:50%;" />
 
-<bR>
-
+<br>
 <br>
 
 ## Hypothesis class : which clssifier?
@@ -134,7 +133,6 @@ sidebar:
 -  하지만 Zero-One Loss는 불연속성과 미분 불가능성 때문에 경사 하강법과 같은 최적화 알고리즘에서 사용하기 어려울 수 있다. 이러한 문제를 해결하기 위하여 classification에서 hinge Loss 를 사용한다.
 
 <br>
-
 <br>
 
 
@@ -155,7 +153,6 @@ sidebar:
 
 
 <br>
-
 <br>
 
 ## Cross-entropy Loss
@@ -171,7 +168,6 @@ sidebar:
 -  즉, 크로스 엔트로피는 두 확률 분포 간의 "차이"를 측정하는데, 이 거리가 작을수록 모델의 예측이 좋다고 판단된다. 이 학습의 목표는 이 크로스 엔트로피를 최소화하여 모델을 더 정확하게 만드는 것이다.
 
 <br>
-
 <br>
 
 #### Sigmoid 
@@ -185,13 +181,8 @@ sidebar:
 
    <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113164709798.png" alt="image-20240113164709798" style="zoom:50%;" />
 
-
-
 <br>
-
 <br>
-
-
 
 ## Multiclass classification
 
@@ -208,10 +199,7 @@ sidebar:
    -  이렇게 얻게된 Score값들에 시그모이드 함수를 사용하게되면 확률값으로 매핑할 수가 있게 된다.
 
 <br>
-
 <br>
-
-
 
 # *CHAPTER 4. Advanced Classification*
 
