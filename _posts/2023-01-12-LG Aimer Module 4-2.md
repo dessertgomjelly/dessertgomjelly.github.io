@@ -173,13 +173,13 @@ sidebar:
 #### Sigmoid 
 
 -  시그모이드 함수를 이용하면 score값을 매핑 할 수가 있다.
-
 -  밑의 슬라이드를 보면 쉽게 이해가 된다.
 
    -  sigmoid함수에 따라 +방향으로 증가하게 된다면 1에 근사하게 되고 -방향으로 간다면 0에 근사하게 된다. 0에 근사하게 된다면 1/2 값을 갖게 된다.
    -  Score 실수값을 0부터 1사이의 값으로 매핑 할 수가 있는데 이를 **로지스틱 모델**이라고 한다.
 
-   <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113164709798.png" alt="image-20240113164709798" style="zoom:50%;" />
+
+<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113164709798.png" alt="image-20240113164709798" style="zoom:50%;" />
 
 <br>
 <br>
