@@ -170,7 +170,7 @@ sidebar:
 <br>
 <br>
 
-#### Sigmoid 
+**Sigmoid** 
 
 -  시그모이드 함수를 이용하면 score값을 매핑 할 수가 있다.
 -  밑의 슬라이드를 보면 쉽게 이해가 된다.
@@ -184,7 +184,9 @@ sidebar:
 <br>
 <br>
 
-Multiclass classification
+## Multiclass classification
+
+
 
 -  Binary classification 문제를 Multiclass classification 문제로 확장 할 수가 있다. 이것을 **One-VS-All** 방식으로 이해 할 수가 있다.
 -  그림에서 볼 수 있듯이 3개의 Hyper plane을 그어서 Multiclass classification문제를 Binary classification문제로 풀 수 있게끔 할 수 있다.
