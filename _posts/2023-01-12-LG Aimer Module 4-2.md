@@ -216,7 +216,7 @@ sidebar:
 
 <br>
 
-<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113170436442.png" alt="image-20240113170436442" style="zoom:50%;" />
+<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113170436442.png" alt="image-20240113170436442" style="zoom:20%;" />
 
 -  그림에서와 같이 hyper plane과 가장 가까운 positive sample과 negetive sample을 기준으로 점선을 긋는다.
 -  Hyper plane과 이 둘 점선의 위치가 가장 동일한 구간이 최대 margin을 확보할 수있는 최적화 방식이다.
@@ -239,7 +239,7 @@ sidebar:
 -  Support Vector Machine에서는 다양한 최적화 방법을 사용한다.
    -  **Hard margin SVM**
       -  그림과 같이 Hyper plane과 서포트 벡터 사이의 공간에 어떠한 sample도 존재하지않는다.
-      -  <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113171308971.png" alt="image-20240113171308971" style="zoom:50%;" />
+      -  <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113171308971.png" alt="image-20240113171308971" style="zoom:20%;" />
    -  **Soft margin SVM**
       -  hard margin SVM과 달리 어느 정도의 error를 용인한다.
    -  **Nonlinear transform & kernel trick**
@@ -281,7 +281,7 @@ sidebar:
 -  *norm w*는<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113172957598.png" alt="image-20240113172957598" style="zoom:50%;" /> 과 같은 수식을 따른다. 그렇게 때문에 편의를 위해 제곱을 하고 결론적으로는 이를 제곱한것에 최소화하는 것과 동일하다고 말할 수 있다.
 -  또한 위에서 말했듯이 제약조건 $y(w^Tx+b)>=1$ , 이 두가지가 SVM의 Primal problem이다.!!
 
-<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113173322737.png" alt="image-20240113173322737" style="zoom:50%;" />
+<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113173322737.png" alt="image-20240113173322737" style="zoom:20%;" />
 
 <br>
 <br>
