@@ -1,9 +1,9 @@
 ---
 
 layout: single
-title: "[LG Aimers] 4-1. 지도학습(분류/회귀)"
+title: "[LG Aimers] 4-1. Supervised learning (classification/regression)"
 categories: LG_Aimers
-tag: [AI, 인공지능, Machine Learning, Linear Regression]
+tag: [AI, 인공지능, Machine Learning, Regression]
 use_math: true #수학 공식 가능하게
 sidebar:
     nav: "counts"

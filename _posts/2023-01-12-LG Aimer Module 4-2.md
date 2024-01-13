@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "[LG Aimers] 4-2. 지도학습(분류/회귀)"
+title: "[LG Aimers] 4-2. Supervised learning (classification/regression)"
 categories: LG_Aimers
-tag: [AI, 인공지능, Machine Learning, Linear Regression]
+tag: [AI, 인공지능, Machine Learning,Classification]
 use_math: true #수학 공식 가능하게
 sidebar:
     nav: "counts"
@@ -66,4 +66,156 @@ sidebar:
 <img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-12-LG Aimer Module 4-2/image-20240112211324966.png" alt="image-20240112211324966" style="zoom:50%;" />
 
 -  Linear model 이 갖는 여러 장점 즉, 단순하며 해석 가능성이 있고 다양한 환경에서 일반적으로 안정적인 성능을 제공할 수가 있다.
+
+
+
+<br>
+
+<br>
+
+## Linear classification framework
+
+-  밑의 그림처럼 우리는 *h(x)*에 대하여 (2,0)이 들어갔을때 -1이 출력 될 것을 기대한다면 다음과 같은 과정을 따른다.
+
+<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-12-LG Aimer Module 4-2/image-20240113153605442.png" alt="image-20240113153605442" style="zoom:50%;" />
+
+-  Linear classification의 절차
+   
+   -   1.  어떠한 예측 변수를 사용할것인가?
+   -   2.  어떠한 손실 함수를 설정 할 것인가?
+   
+           -  Linear regression의 경우 MSE를 사용하지만
+   
+           -  Linear galssification의 경우 Zero-one loss, Hinge loss, Cross-entropy loss를 사용한다.
+   -   3.  어떻게 파라미터를 최적화 할까?
+   
+       -  Gradient decent algorithm을 사용한다.
+   
+
+<br><br>
+
+## Linear classification model
+
+-  $h(x) = w_0 + w_1x_1+w_2x_2+w_2x_2$
+   -  먼저 입력 변수와 파라미터의 곱으로 score를 계산한다. 이때 $w0$는 offset 이다.
+      -  offset이란 상수항이다. 회귀 모델이 독립 변수가 0일 때의 기본값을 나타낸다.
+-  score 값을 계산 한 이후에는 그 출력에 sign함수를 적용하게 된다. 
+
+<br>
+
+
+
+-  h(x)가 0보다 큰 구역, 작은 구역을 정의 하게 되는데, x가 0보다 크면 sign 함수에 의해 1, x가 0보다 작으면 -1 이 된다.
+
+<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-12-LG Aimer Module 4-2/image-20240113154818815.png" alt="image-20240113154818815" style="zoom:50%;" />
+
+<bR>
+
+<br>
+
+## Hypothesis class : which clssifier?
+
+-  우리의 목적으로 되돌아와보자면 우리의 문제는 parameter w를 학습하는 것이다. w가 바뀜에 따라 샘플들의 판별 결과 또한 바뀌게 된다.
+-  다음 수식 처럼 sign함수에 따른 결과가 바뀌게 되면 positive sample과 negetive sample의 결과가 뒤바뀌게 된다.
+
+<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-12-LG Aimer Module 4-2/image-20240113155340025.png" alt="image-20240113155340025" style="zoom:50%;" />
+
+**그렇다면 Classification 문제에서 어떻게 Error를 판별할 수 있을까?**
+
+-  하나의 예시로 Zero-One Loss를 생각 할 수 있다.
+   -  이 losss는 내부의 logic을 판별하여 맞으면 0 틀리면 1을 출력하는 함수이다.
+
+<br>
+
+#### Zero-One Loss
+
+-  Zero-One Loss 는 내부의 logic을 판별하여 맞으면 0 틀리면 1을 출력하는 함수이다.
+
+-  $Loss([0,2],1,[0.5,1]) = 1[sign([0.5,1] * [0,2]) != 1] = 0$
+   -  다음 수식을 살펴보자, $Loss([0,2],1,[0.5,1]) = 1$ 이 부분이 Zero- One Loss function이다. 하지만 내부의 값 둘을 내적한 것이 1이 아님을 알게 된다. $[0.5,1] * [0,2]) != 1$ 이다.  
+   -  따라서 false, 0이 된다.
+
+-  하지만 Zero-One Loss는 불연속성과 미분 불가능성 때문에 경사 하강법과 같은 최적화 알고리즘에서 사용하기 어려울 수 있다. 이러한 문제를 해결하기 위하여 classification에서 hinge Loss 를 사용한다.
+
+<br>
+
+<br>
+
+
+
+## Hinge Loss
+
+-  각 샘플에 대해 모델의 예측과 실제 레이블 간의 여유(margin)를 고려하는 분류 모델에서 사용되는 손실 함수 중 하나이다. 다음 수식을 살펴보자
+-  $Hinge Loss(**w**,*b*,**x***i*,*y**i*)=max(0,1−*y**i*⋅(**w**⋅**x***i*+*b*))$
+   -  *w*는 가중치(weight) 벡터,
+   -  *b*는 편향(bias),
+   -  *xi*는 입력 데이터의 특성(feature) 벡터,
+   -  *y*i*는 실제 레이블,
+   -  $y_i*(w*x_i+b)$는 모델의 예측과 실제 레이블 간의 여유(margin)를 나타낸다.
+   -  이 수식에서는 0과 margin 사이의 max 값을 찾는 Loss이다. margin이 1보다 작으면 max값을 통해 손실 함수를 갖게 되고 margin이 1보다 크면 음수값이므로 max값은 0을 선택하게 되어 Loss는 0이된다.
+   -  <img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-12-LG Aimer Module 4-2/image-20240113162902934.png" alt="image-20240113162902934" style="zoom:50%;" />
+-  결론적으로 margin이 크면 손실이 0이된다. 
+
+
+
+<br>
+
+<br>
+
+## Cross-entropy Loss
+
+-  Cross-entropy Loss는 Classification모델에서 가장 많이 사용되는 손실 함수이다.
+
+-  <img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-12-LG Aimer Module 4-2/image-20240113163455866.png" alt="image-20240113163455866" style="zoom:50%;" />
+
+   -  *y*는 실제 레이블의 확률 분포이다. (예: 실제로 고양이인 경우 [0, 1])
+
+   -  *y^*는 모델의 예측 확률 분포이다. (예: 모델이 고양이라고 예측한 경우 [0.2, 0.8])
+
+-  즉, 크로스 엔트로피는 두 확률 분포 간의 "차이"를 측정하는데, 이 거리가 작을수록 모델의 예측이 좋다고 판단된다. 이 학습의 목표는 이 크로스 엔트로피를 최소화하여 모델을 더 정확하게 만드는 것이다.
+
+<br>
+
+<br>
+
+#### Sigmoid 
+
+-  시그모이드 함수를 이용하면 score값을 매핑 할 수가 있다.
+
+-  밑의 슬라이드를 보면 쉽게 이해가 된다.
+
+   -  sigmoid함수에 따라 +방향으로 증가하게 된다면 1에 근사하게 되고 -방향으로 간다면 0에 근사하게 된다. 0에 근사하게 된다면 1/2 값을 갖게 된다.
+   -  Score 실수값을 0부터 1사이의 값으로 매핑 할 수가 있는데 이를 **로지스틱 모델**이라고 한다.
+
+   <img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-12-LG Aimer Module 4-2/image-20240113164709798.png" alt="image-20240113164709798" style="zoom:50%;" />
+
+
+
+
+
+## Multiclass classification
+
+-  Binary classification 문제를 Multiclass classification 문제로 확장 할 수가 있다. 이것을 **One-VS-All** 방식으로 이해 할 수가 있다.
+-  그림에서 볼 수 있듯이 3개의 Hyper plane을 그어서 Multiclass classification문제를 Binary classification문제로 풀 수 있게끔 할 수 있다.
+
+ <img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-12-LG Aimer Module 4-2/image-20240113165107432.png" alt="image-20240113165107432" style="zoom:50%;" />
+
+
+
+  <img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/images/2023-01-12-LG Aimer Module 4-2/image-20240113165335784.png" alt="image-20240113165335784" style="zoom:50%;" />
+
+-  A or not 에 대한 파라미터부터 C or not에 대한 파라미터까지 벡터로 정의한다면 다음과 같이 Score값의 형태가 나온다.
+   -  이렇게 얻게된 Score값들에 시그모이드 함수를 사용하게되면 확률값으로 매핑할 수가 있게 된다.
+
+<br>
+
+<br>
+
+
+
+# *CHAPTER 4. Linear Classification*
+
+<br>
+
+<br>
 
