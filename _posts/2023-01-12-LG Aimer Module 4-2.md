@@ -17,7 +17,6 @@ sidebar:
 </style>
 
 
-
 **[공지사항]** [해당 내용은 LG에서 주관하는 LG Amiers : AI 전문가 과정 4기 교육 과정입니다.] 
 [LG AI](https://www.lgaimers.ai/)
 {: .notice--danger}
@@ -155,7 +154,9 @@ sidebar:
 
 -  Cross-entropy Loss는 Classification모델에서 가장 많이 사용되는 손실 함수이다.
 
--  <img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/_posts/{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113163455866.png" alt="image-20240113163455866" style="zoom:50%;" />
+-  <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113163455866.png" alt="image-20240113163455866" style="zoom:50%;" />
+
+   
 
    -  *y*는 실제 레이블의 확률 분포이다. (예: 실제로 고양이인 경우 [0, 1])
 
@@ -175,7 +176,7 @@ sidebar:
    -  Score 실수값을 0부터 1사이의 값으로 매핑 할 수가 있는데 이를 **로지스틱 모델**이라고 한다.
 
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/_posts/{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113164709798.png" alt="image-20240113164709798" style="zoom:50%;" />
+<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113164709798.png" alt="image-20240113164709798" style="zoom:50%;" />
 
 <br>
 <br>
@@ -187,9 +188,9 @@ sidebar:
 -  Binary classification 문제를 Multiclass classification 문제로 확장 할 수가 있다. 이것을 **One-VS-All** 방식으로 이해 할 수가 있다.
 -  그림에서 볼 수 있듯이 3개의 Hyper plane을 그어서 Multiclass classification문제를 Binary classification문제로 풀 수 있게끔 할 수 있다.
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/_posts/{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113165107432.png" alt="image-20240113165107432" style="zoom:50%;" />
+<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113165107432.png" alt="image-20240113165107432" style="zoom:50%;" />
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/_posts/{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113165335784.png" alt="image-20240113165335784" style="zoom:50%;" />
+<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113165335784.png" alt="image-20240113165335784" style="zoom:50%;" />
 
 -  A or not 에 대한 파라미터부터 C or not에 대한 파라미터까지 벡터로 정의한다면 다음과 같이 Score값의 형태가 나온다.
    -  이렇게 얻게된 Score값들에 시그모이드 함수를 사용하게되면 확률값으로 매핑할 수가 있게 된다.
@@ -206,7 +207,7 @@ sidebar:
 
 ## Margin
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/_posts/{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113170150805.png" alt="image-20240113170150805" style="zoom:50%;" />
+<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113170150805.png" alt="image-20240113170150805" style="zoom:50%;" />
 
 -  다음과 같은 그림에서 Hyper plane을 어떻게 긋느냐에 따라 new data의 분류가 정해지게 되며 성능 또한 달라진다.
 -  이러한 문제를 해결 하는 방법은 SVM에서 중요한 Margin이라는 개념이다.
@@ -215,7 +216,7 @@ sidebar:
 
 <br>
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/_posts/{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113170436442.png" alt="image-20240113170436442" style="zoom:50%;" />
+<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113170436442.png" alt="image-20240113170436442" style="zoom:50%;" />
 
 -  그림에서와 같이 hyper plane과 가장 가까운 positive sample과 negetive sample을 기준으로 점선을 긋는다.
 -  Hyper plane과 이 둘 점선의 위치가 가장 동일한 구간이 최대 margin을 확보할 수있는 최적화 방식이다.
@@ -238,13 +239,13 @@ sidebar:
 -  Support Vector Machine에서는 다양한 최적화 방법을 사용한다.
    -  **Hard margin SVM**
       -  그림과 같이 Hyper plane과 서포트 벡터 사이의 공간에 어떠한 sample도 존재하지않는다.
-      -  <img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/_posts/{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113171308971.png" alt="image-20240113171308971" style="zoom:50%;" />
+      -  <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113171308971.png" alt="image-20240113171308971" style="zoom:50%;" />
    -  **Soft margin SVM**
       -  hard margin SVM과 달리 어느 정도의 error를 용인한다.
    -  **Nonlinear transform & kernel trick**
       -  SVM의 Linear한 환경에서 사용할 수 있다는 단점을 극복하기 위해 만들어졌다. 
       -  2차원의 sample을 좀 더 고차원으로 맵핑하는 함수를 이용한다.
-      -  <img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/_posts/{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113171735209.png" alt="image-20240113171735209" style="zoom:50%;" />
+      -  <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113171735209.png" alt="image-20240113171735209" style="zoom:50%;" />
 
 
 
@@ -263,13 +264,13 @@ sidebar:
    -  최종적으로 $y$와$(w^Tx+b)$를 곱하면 모든 샘플에 대해서 1보다 크거나 같은 경우가 나온다.
    -  이를 SVM에서의 Constraint(제약조건)이라고 말하게 된다.
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/_posts/{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113171942233.png" alt="image-20240113171942233" style="zoom:50%;" />
+<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113171942233.png" alt="image-20240113171942233" style="zoom:50%;" />
 
 -  다시 Margin으로 돌아와서 마진은 SVM에서 다음과 같다.
    -  positive와 negetive의 거리가 같기 때문에 *2/||w||* 를 최대화 하는 것이 목표이다.
    -  이 말은 즉 *||w||* 를 최소화 하는 것과 똑같은 말이다.
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/_posts/{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113172541220.png" alt="image-20240113172541220" style="zoom:50%;" />
+<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113172541220.png" alt="image-20240113172541220" style="zoom:50%;" />
 
 <br>
 
@@ -277,10 +278,10 @@ sidebar:
 
 **SVM Primal problem**
 
--  *norm w*는<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/_posts/{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113172957598.png" alt="image-20240113172957598" style="zoom:50%;" /> 과 같은 수식을 따른다. 그렇게 때문에 편의를 위해 제곱을 하고 결론적으로는 이를 제곱한것에 최소화하는 것과 동일하다고 말할 수 있다.
+-  *norm w*는<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113172957598.png" alt="image-20240113172957598" style="zoom:50%;" /> 과 같은 수식을 따른다. 그렇게 때문에 편의를 위해 제곱을 하고 결론적으로는 이를 제곱한것에 최소화하는 것과 동일하다고 말할 수 있다.
 -  또한 위에서 말했듯이 제약조건 $y(w^Tx+b)>=1$ , 이 두가지가 SVM의 Primal problem이다.!!
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/_posts/{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113173322737.png" alt="image-20240113173322737" style="zoom:50%;" />
+<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113173322737.png" alt="image-20240113173322737" style="zoom:50%;" />
 
 <br>
 <br>
@@ -295,7 +296,7 @@ sidebar:
 -  ANN 또한 다음 그림에서 볼 수 있다시피 x와 파라미터의 선형결합을 통해 구한 Score값을 이용하게 된다. 하지만 ANN은 Non-linear한 구조를 가지고 있다. 그러한 연산이 Activation function에 의해서 이뤄지게 된다.
 -  Score값을 Activation function의 입력으로 쓰면서 시그모이드와 함수와 같이 non-linear한 맵핑한 결과 만들어 내게 된다.
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/_posts/{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113173827993.png" alt="image-20240113173827993" style="zoom:50%;"/>
+<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113173827993.png" alt="image-20240113173827993" style="zoom:50%;"/>
 
 <br>
 
@@ -311,7 +312,7 @@ sidebar:
 
    -  따라서 그래디언트 값이 1로 유지되는 ReLU가 가장 많이 활용된다.
 
-   <img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/_posts/{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113174423468.png" alt="image-20240113174423468" style="zoom:50%;" />
+   <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113174423468.png" alt="image-20240113174423468" style="zoom:50%;" />
 
 <br>
 <br>
@@ -330,7 +331,7 @@ sidebar:
 
 -  XOR 문제는 어떠한 하나의 Hyper plane을 그어도 효과적으로 분류 할 수 없게 된다. 그럼 어떻게 해결할 수 있을까?
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/_posts/{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113175021486.png" alt="image-20240113175021486" style="zoom:50%;" />
+<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113175021486.png" alt="image-20240113175021486" style="zoom:50%;" />
 
 -  다음 슬라이드를 보면 쉽게 이해할 수 있다.
    -  (x1, x2)가 (0,0) 이라고 할때, w와 b가 나타나있으므로 각각 y1,y2를 구할 수가 있다.
@@ -338,13 +339,13 @@ sidebar:
 
 
 
-<img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/_posts/{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113175627788.png" alt="image-20240113175627788" style="zoom:99%;" />
+<img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113175627788.png" alt="image-20240113175627788" style="zoom:99%;" />
 
 
 
 -  최종적으로 구한 답이다.
 
-   <img src="/Users/dessert_gomjelly/Desktop/깃허브블로그/dessertgomjelly.github.io/_posts/{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113175847816.png" alt="image-20240113175847816" style="zoom:99%;" />
+   <img src="{{site.url}}/images/2023-01-12-LG Aimer Module 4-2/image-20240113175847816.png" alt="image-20240113175847816" style="zoom:99%;" />
 
 <br>
 <br>
