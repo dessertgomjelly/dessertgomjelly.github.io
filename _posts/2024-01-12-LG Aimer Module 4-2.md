@@ -40,6 +40,8 @@ sidebar:
 
 <br>
 
+
+
 # CHAPTER 3. Linear classification
 
 <br>
