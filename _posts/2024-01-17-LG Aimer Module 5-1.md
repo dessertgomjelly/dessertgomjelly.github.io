@@ -291,7 +291,7 @@ sidebar:
 
 ### Tanh Activation
 
--  **수식:** $ ( \tanh(x) = 2 \cdot \sigma(2x) - 1 )$
+-  **수식:** $ \tanh(x) = 2 \cdot \sigma(2x) - 1$
 -  특징:
    -  [-1, 1] 범위로 수축.
    -  Sigmoid의 확장으로 [-1, 1] 범위로 변환하며, Zero-centered 특성을 가진다.
@@ -310,7 +310,7 @@ sidebar:
 
 ### ReLU Activation
 
--  **수식:** $( f(x) = \max(0, x) )$
+-  **수식:** $ f(x) = \max(0, x) $
 -  특징:
    -  Saturated 되지 않음 (양쪽 영역에서 그레디언트 소멸 문제 해결).
    -  계산 효율적.
