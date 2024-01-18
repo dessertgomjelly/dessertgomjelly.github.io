@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "[LG Aimers] 5-1. 딥러닝(Deep Learning)"
+title: "[LG Aimers] 5-2. 딥러닝(Deep Learning)  Convolution Neural Networks"
 categories: LG_Aimers
-tag: [AI, 인공지능, Deep Learning]
+tag: [AI, 인공지능, Deep Learning, CNN]
 use_math: true #수학 공식 가능하게
 sidebar:
     nav: "counts"
