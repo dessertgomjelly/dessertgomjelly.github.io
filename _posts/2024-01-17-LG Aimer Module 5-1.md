@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[LG Aimers] 5-1. 딥러닝(Deep Learning)"
+title: "[LG Aimers] 5-1. 딥러닝 (Deep Learning)"
 categories: LG_Aimers
 tag: [AI, 인공지능, Deep Learning]
 use_math: true #수학 공식 가능하게
