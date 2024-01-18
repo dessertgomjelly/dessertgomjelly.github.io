@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "[LG Aimers] 5-2. 딥러닝 (Convolution Neural Networks)"
+title: "[LG Aimers] 5-1. 딥러닝(Deep Learning)"
 categories: LG_Aimers
-tag: [AI, 인공지능, Deep Learning, CNN]
+tag: [AI, 인공지능, Deep Learning]
 use_math: true #수학 공식 가능하게
 sidebar:
     nav: "counts"
@@ -66,14 +66,14 @@ sidebar:
 
 -  만약에 X, O 를 구분 하기 위해 어떻게 해야하나 생각해보자.
 
-<img src="{{site.url}}/image-20240118185039618.png" alt="image-20240118185039618" style="zoom:50%;" />
+<img src="{{site.url}}/images/2024-01-18-LG Aimer Module 5-2/image-20240118185039618.png" alt="image-20240118185039618" style="zoom:50%;" />
 
 <br>
 
 -  딥러닝이나 기타 머신러닝 알고리즘의 입력을 줄 때 하나의 숫자들로 이루어진 2차원 배열로 주게 된다.
    -  하얀색 pixel 을 1로 하고 , 검정색을 0으로 한다면 다음과 같이 표시된다.
 
-<img src="{{site.url}}/image-20240118185141665.png" alt="image-20240118185141665" style="zoom:50%;" />
+<img src="{{site.url}}/images/2024-01-18-LG Aimer Module 5-2/image-20240118185141665.png" alt="image-20240118185141665" style="zoom:50%;" />
 
 <br>
 
@@ -81,7 +81,7 @@ sidebar:
    -  이에 착안해서 특정 class에 존재 할 수 있는 특정 패턴을 정의하고 패턴이 주어진 이미지에 있는지 판단하게 된다.
    -  이 패턴들이 주어진 이미지 상에 어느 위치에 나타나는지 얼마나 강하게 일어났는지에 따라 구분하게 된다.
 
-<img src="{{site.url}}/image-20240118185344782.png" alt="image-20240118185344782" style="zoom:50%;" />
+<img src="{{site.url}}/images/2024-01-18-LG Aimer Module 5-2/image-20240118185344782.png" alt="image-20240118185344782" style="zoom:50%;" />
 
 <br>
 
@@ -90,14 +90,14 @@ sidebar:
       2.  곱한 픽셀들을 모두 더한다.
       3.  총 픽셀의 개수만큼 나눈다.
 
-<img src="{{site.url}}/image-20240118185758844.png" alt="image-20240118185758844" style="zoom:50%;" />
+<img src="{{site.url}}/images/2024-01-18-LG Aimer Module 5-2/image-20240118185758844.png" alt="image-20240118185758844" style="zoom:50%;" />
 
 <br>
 
 -  최종적으로 입력 이미지에 가능한 모든 위치에 오버랩 시킨다면 해당 패턴의 위치와 정도를 가지고 **Activation map(활성화 지도)** 를 얻을 수 있다.
    -  이러한 연산을 convolution 연산이라고 한다.
 
-<img src="{{site.url}}/image-20240118185956613.png" alt="image-20240118185956613" style="zoom:50%;" />
+<img src="{{site.url}}/images/2024-01-18-LG Aimer Module 5-2/image-20240118185956613.png" alt="image-20240118185956613" style="zoom:50%;" />
 
 <br>
 
@@ -110,18 +110,18 @@ sidebar:
 -  다음 그림처럼 세 개의 채널로 이루어진 입력 이미지가 있을 때 특정한 3 by 3 필터는 각 입력 채널에 각각 대응하는 하나의 컨벌루션 필터를 이루게 된다.
    -  각 채널에 대응하는 필터를 각각 컨벌루션 연산을 한 뒤에 최종적으로 모두 더하게 된다.
 
-<img src="{{site.url}}/image-20240118190213405.png" alt="image-20240118190213405" style="zoom:50%;" />
+<img src="{{site.url}}/images/2024-01-18-LG Aimer Module 5-2/image-20240118190213405.png" alt="image-20240118190213405" style="zoom:50%;" />
 
 -  좀 더 자세한 동작 과정을 살펴보자
 
    -  32 x 32 x 3 image (height x width x depth)에 5 x 5 x 3 필터를 씌운다면 즉, 컨벌루션 연산을 한다면
    -  28 x 28 x 1 Activation map을 얻게 된다.
 
-   <img src="{{site.url}}/image-20240118193543105.png" alt="image-20240118193543105" style="zoom:50%;" />
+   <img src="{{site.url}}/images/2024-01-18-LG Aimer Module 5-2/image-20240118193543105.png" alt="image-20240118193543105" style="zoom:50%;" />
 
 -  이 후에 다음 필터와 컨벌루션 연산을 통해 또 다른 Activation map을 얻게 된다.
 
-<img src="{{site.url}}/image-20240118193951952.png" alt="image-20240118193951952" style="zoom:50%;" />
+<img src="{{site.url}}/images/2024-01-18-LG Aimer Module 5-2/image-20240118193951952.png" alt="image-20240118193951952" style="zoom:50%;" />
 
 <br>
 
@@ -134,7 +134,7 @@ sidebar:
 -  3채널 이미지와 filter 3개가 주어졌다면 각채널과 대응 하는 필터 3개가 컨벌루션 연산을 하게 된다.
    -  Activation map은 필터의 개수에 해당하는 3개가 만들어 지게 된다.
 
-<img src="{{site.url}}/image-20240118210303463.png" alt="image-20240118210303463" style="zoom:50%;" />
+<img src="{{site.url}}/images/2024-01-18-LG Aimer Module 5-2/image-20240118210303463.png" alt="image-20240118210303463" style="zoom:50%;" />
 
 <br>
 
@@ -147,7 +147,7 @@ sidebar:
 -  특정한 사이즈의 이미지 패치를  2 by 2 라고 한다면 2 by 2 에 대응하는 픽셀중 가장 큰 크기의 output 을 적게 된다.
 -  max pooling의 Output이미지는 2 by 2 영역에서 값을 하나만 뽑기 때문에 최종적으로 가로세로가 반으로 줄게 된다.
 
-<img src="{{site.url}}/image-20240118210831442.png" alt="image-20240118210831442" style="zoom:50%;" />
+<img src="{{site.url}}/images/2024-01-18-LG Aimer Module 5-2/image-20240118210831442.png" alt="image-20240118210831442" style="zoom:50%;" />
 
 <br>
 
@@ -159,7 +159,7 @@ sidebar:
    -  기본적으로 convolution 연산은 앞에서 Fully Connected Neural Network 에서 봤었던 선형결합을 통해서 일어나는 연산이다. 이러한 선형 연산이후에 sigmoid, tanh, ReLU 등의 활성 함수를 통과시켜줌으로써 유연하고 다양한 패턴을 표현하게끔 만들어준다.
 -  ReLU 활성화 함수를 통해 양수값은 그대로 음수값은 0인 결과를 만들어 내게 된다.
 
-<img src="{{site.url}}/image-20240118211241949.png" alt="image-20240118211241949" style="zoom:50%;" />
+<img src="{{site.url}}/images/2024-01-18-LG Aimer Module 5-2/image-20240118211241949.png" alt="image-20240118211241949" style="zoom:50%;" />
 
 <br>
 
@@ -168,7 +168,7 @@ sidebar:
 -  최종적으로 convolution 연산에서는 기본적으로 선형 결합의 가중치를 적용해서 가중합을 구하게 되는 convolution operation을 먼저 적용해주고 ReLu를 통과 한후 이미지를 조금 더 축약하도록 하는 Max pooling을 적용해 주게 된다.
    -  딥러닝에서는 (컨벌루션, ReLu, Pooing) 층을 여러개 쌓는다.
 
-<img src="{{site.url}}/image-20240118211456561.png" alt="image-20240118211456561" style="zoom:50%;" />
+<img src="{{site.url}}/images/2024-01-18-LG Aimer Module 5-2/image-20240118211456561.png" alt="image-20240118211456561" style="zoom:50%;" />
 
 <br>
 
@@ -185,15 +185,15 @@ sidebar:
    -  이러한  Output activation map을 한줄 vector로 만들면 다음과 같이 만들어진다.
    -  2x2 x 3 = 12개의 차원으로 만들어진다.
 
-   <img src="{{site.url}}/image-20240118212208503.png" alt="image-20240118212208503" style="zoom:50%;" />
+   <img src="{{site.url}}/images/2024-01-18-LG Aimer Module 5-2/image-20240118212208503.png" alt="image-20240118212208503" style="zoom:50%;" />
 
 -  학습 과정을 통해 fully-connected layer의 가중치가 특정한 값들로 최적의 값으로 도출이 된다.
 
-<img src="{{site.url}}/image-20240118212451159.png" alt="image-20240118212451159" style="zoom:50%;" />
+<img src="{{site.url}}/images/2024-01-18-LG Aimer Module 5-2/image-20240118212451159.png" alt="image-20240118212451159" style="zoom:50%;" />
 
 -  최종적으로 원하는 이미지를 가중치를 기반으로 계산하여 분류를 수행하게 된다.
 
-   <img src="{{site.url}}/image-20240118212624540.png" alt="image-20240118212624540" style="zoom:50%;" />
+   <img src="{{site.url}}/images/2024-01-18-LG Aimer Module 5-2/image-20240118212624540.png" alt="image-20240118212624540" style="zoom:50%;" />
 
 <br>
 
@@ -204,7 +204,7 @@ sidebar:
    3.  파라미터들이 gradient계산을 통해 학습이 진행된다. 
        -  여기서 파라미터들은 컨벌루션 단계의 필터에 대한 계수를 말한다.
 
-<img src="{{site.url}}/image-20240118212757608.png" alt="image-20240118212757608" style="zoom:50%;" />
+<img src="{{site.url}}/images/2024-01-18-LG Aimer Module 5-2/image-20240118212757608.png" alt="image-20240118212757608" style="zoom:50%;" />
 
 <br>
 
@@ -254,7 +254,7 @@ sidebar:
 -  각각의 convolution layer에서 사용하는 convolution filter의 가로, 세로 size를 무조건 3 by 3으로만 한다.
    -  3 by 3이라는 작은 필터에서 나오는 단점은 layer를 굉장히 깊이 쌓음으로써 커버한다.
 
-<img src="{{site.url}}/image-20240118213911011.png" alt="image-20240118213911011" style="zoom:50%;" />
+<img src="{{site.url}}/images/2024-01-18-LG Aimer Module 5-2/image-20240118213911011.png" alt="image-20240118213911011" style="zoom:50%;" />
 
 <br>
 
@@ -268,4 +268,4 @@ sidebar:
 -  ResNet 아키텍처는 잔여 연결을 이용해 입력과 잔여 매핑을 더하는 구조로 구성된다.
    -  여러 층의 합성곱과 ReLU 활성화 함수를 쌓아 깊은 신경망을 형성한다.
 
-<img src="{{site.url}}/image-20240118214457495.png" alt="image-20240118214457495" style="zoom:50%;" />
+<img src="{{site.url}}/images/2024-01-18-LG Aimer Module 5-2/image-20240118214457495.png" alt="image-20240118214457495" style="zoom:50%;" />
