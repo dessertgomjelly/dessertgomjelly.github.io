@@ -144,12 +144,74 @@ sidebar:
    -  바로 Memory 요구량이다.
       -  <img src="{{site.url}}/images/2024-01-22-LG Aimer Module 5-4/image-20240122223326657.png" alt="image-20240122223326657" style="zoom:50%;" />
 
-
-
-
-
-
-
 <br>
 
 <br>
+
+## Transfomer: Block-Based Model
+
+-  Transfomer 모델이 전체적으로 어떻게 구성되어 있을까?
+
+<img src="{{site.url}}/images/2024-01-22-LG Aimer Module 5-4/image-20240123161428747.png" alt="image-20240123161428747" style="zoom:50%;" />
+
+1.  
+    Multi-Head Attention
+
+    -  **입력 시퀀스:** 예를 들어, "I go home"이라는 세 개의 단어로 이루어진 입력 시퀀스가 있다고 가정합니다. 각 단어에 해당하는 벡터가 입력으로 주어진다.
+
+    -  Query, Key, Value 생성 : 각 단어 벡터는 선형 변환을 통해 Query($Q$), Key($K$), Value($V$)로 변환됩니다. 선형 변환에 사용되는 가중치 행렬은 각각 $W_q$, $W_k$, $W_v$이다. 따라서, 각 단어 벡터 $x_i$에 대해 다음과 같이 변환된다:
+       -  <img src="{{site.url}}/images/2024-01-22-LG Aimer Module 5-4/image-20240123162110641.png" alt="image-20240123162110641" style="zoom:50%;" />
+       -  여기서 $Q_i$, $K_i$, $V_i$는 각각 $i$번째 단어에 대한 Query, Key, Value 벡터를 나타냅다.
+
+    -  **Self Attention 계산:** 계산된 $Q$, $K$, $V$ 벡터를 사용하여 self attention을 계산한다. 
+       -  <img src="{{site.url}}/images/2024-01-22-LG Aimer Module 5-4/image-20240123162147463.png" alt="image-20240123162147463" style="zoom:50%;" />
+
+    -  Multi-Head Attention : Multi-Head Attention은 위의 과정을 여러 개의 head로 병렬적으로 수행한다. 각 head는 독립적으로 학습되는 $W_q$, $W_k$, $W_v$를 가지고 있다. 각 head의 결과를 합치기 위해 최종 출력은 각 head의 결과를 연결(concatenate)하고 선형 변환을 적용하여 얻는다.
+       -  <img src="{{site.url}}/images/2024-01-22-LG Aimer Module 5-4/image-20240123162226739.png" alt="image-20240123162226739" style="zoom:50%;" />
+
+    
+
+2.  Add & Norm
+
+    -  Skip connection : 스킵 연결은 층을 건너뛰어 원래 입력을 층의 출력에 직접 더하는 방식으로 동작한다. 이렇게 함으로써 기존의 입력 신호를 다음 층으로 직접 전달함으로써 그라디언트 전파를 돕고, 정보 손실을 줄여 모델의 학습을 안정화시킬 수 있다.
+    -  쉽게 말하면, Add & Norm에서의 "Add" 부분은 스킵 연결을 통해 기존 입력 정보를 보존하고, "Norm" 부분은 출력을 정규화하여 안정적인 학습을 돕는 구조이다.
+
+3.  Feed Forward
+    -   이는 정보의 전달이 입력에서 출력으로 한 방향으로만 진행되는 구조를 갖고 있다. 각 층의 뉴런은 이전 층의 모든 뉴런과 연결되어 있으며, 각 연결에는 가중치가 할당되어 있다.
+
+4.  Add & Norm
+
+
+
+
+
+### For example
+
+1. **입력 문장 임베딩:**
+   -  "나는 집에 간다"라는 문장을 임베딩하여 각 단어에 대한 벡터 표현을 얻습니다.
+2. **Query, Key, Value 생성:**
+   -  각 단어 벡터는 Query, Key, Value로 변환됩니다. 이를 위해 각각의 단어 벡터에 대해 다른 가중치 행렬 $W_q$, $W_k$, $W_v$를 사용합니다.
+      -  $Q_{나는}$ = $W_q$ * "나는" 벡터
+      -  $K_{나는}$ = $W_k$ * "나는" 벡터
+      -  $V_{나는}$ = $W_v$ * "나는" 벡터
+   -  위의 과정을 "집에"와 "간다"에 대해서도 수행합니다.
+3. **Attention Score 계산:**
+   -  각 단어에 대한 Query, Key를 사용하여 attention score를 계산합니다. 주로 dot-product attention을 사용합니다.
+      -  $\text{Attention Score}*{나는, 나는}$ = $Q*{나는} \cdot K_{나는}^T$
+      -  $\text{Attention Score}*{집에, 나는}$ = $Q*{집에} \cdot K_{나는}^T$
+      -  $\text{Attention Score}*{간다, 나는}$ = $Q*{간다} \cdot K_{나는}^T$
+4. **Softmax 및 Weighted Sum:**
+   -  Attention Score에 softmax 함수를 적용하여 각 단어의 attention weight를 계산합니다.
+   -  이를 사용하여 Value에 가중합을 수행하여 최종 출력을 얻습니다.
+      -  $A_{나는}$ = $\text{softmax}(\text{Attention Score}*{나는, 나는}, \text{Attention Score}*{집에, 나는}, \text{Attention Score}_{간다, 나는})$
+      -  $\text{Output}*{나는}$ = $A*{나는} \cdot V_{나는}$
+      -  $\text{Output}*{집에}$ = $A*{집에} \cdot V_{집에}$
+      -  $\text{Output}*{간다}$ = $A*{간다} \cdot V_{간다}$
+5. **Multi-Head Attention:**
+   -  멀티헤드 어텐션은 여러 개의 head를 사용하여 다양한 관점에서 정보를 추출합니다.
+   -  각 head에서 위의 과정을 독립적으로 수행하고, 결과를 합칩니다.
+6. **출력 결합:**
+   -  각 head의 결과를 연결(concatenate)하고, 이를 통해 최종적인 멀티헤드 어텐션의 출력을 얻습니다.
+      -  $\text{Final Output}$ = $\text{Concat}(\text{Output}*{나는}, \text{Output}*{집에}, \text{Output}_{간다}, \ldots)$
+
+이렇게 멀티헤드 어텐션을 통해 입력 문장 "나는 집에 간다"에 대한 다양한 관점에서의 정보를 추출하고, 이를 조합하여 "I go home"과 같은 최종적인 번역을 얻을 수 있습니다.
