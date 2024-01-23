@@ -2,16 +2,19 @@
 layout: single
 title: "[LG Aimers] 5-5. Self-Supervised Learning and Large-Scale Pre-Trained Models"
 categories: LG_Aimers
-tag: [AI, 인공지능, Deep Learning]
+tag: [AI, 인공지능, Deep Learning, BERT, GPT]
 use_math: true #수학 공식 가능하게
 sidebar:
     nav: "counts"
-
-
-
-
-
 ---
+
+<style>
+  body {
+    font-size: 16px; /* 폰트 사이즈 조절 */
+  }
+</style>
+
+
 
 
 
