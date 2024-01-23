@@ -1,0 +1,38 @@
+---
+layout: single
+title: "[LG Aimers] 5-5. Self-Supervised Learning and Large-Scale Pre-Trained Models"
+categories: LG_Aimers
+tag: [AI, 인공지능, Deep Learning]
+use_math: true #수학 공식 가능하게
+sidebar:
+    nav: "counts"
+
+
+
+
+
+---
+
+
+
+
+
+**[공지사항]** [해당 내용은 LG에서 주관하는 LG Amiers : AI 전문가 과정 4기 교육 과정입니다.]  강의를 듣고 이해한 내용을 바탕으로 직접 필기한 내용입니다. 
+[LG AI](https://www.lgaimers.ai/)
+{: .notice--danger}
+
+<br>
+<br>
+
+# **5-5. 딥러닝(Deep Learning)**
+
+-  교수 : KAIST 주재걸 교수 
+-  학습목표
+   -  Neural Networks의 한 종류인 딥러닝(Deep Learning)에 대한 기본 개념과 대표적인 모형들의 학습원리를 배우게 됩니다.
+   -  이미지와 언어모델 학습을 위한 딥러닝 모델과 학습원리를 배우게 됩니다. 
+
+
+
+<br>
+
+<br>
