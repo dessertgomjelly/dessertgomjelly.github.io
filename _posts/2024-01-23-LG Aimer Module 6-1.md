@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[LG Aimers] 6. B2B 마켓팅"
+title: "[LG Aimers] 6. B2B Marketing"
 categories: LG_Aimers
 tag: [AI, 인공지능, Deep Learning, CNN]
 use_math: true #수학 공식 가능하게
