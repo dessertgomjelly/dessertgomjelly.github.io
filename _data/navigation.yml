@@ -9,7 +9,7 @@ main:
   - title: "검색"
     url: /search/
   - title: "About me"
-    url: https://github.com/dessertgomjelly
+    url: /about/
 
 
 
