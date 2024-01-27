@@ -11,6 +11,15 @@ main:
   - title: "About me"
     url: /about/
 
+side:
+   - title: LG Aimers
+     children:
+       - title: "LG Aimers 4기"
+         url: /categories/LG_Aimers/
+   - title: Algorithm 
+     childern:
+       - title: "알고리즘"
+         url: /categories/Algorithm/
 
 
 docs:
@@ -27,15 +36,7 @@ counts:
   - title: "Tag"
     use: true
 
-side:
-   - title: LG Aimers
-     children:
-       - title: "LG Aimers 4기"
-         url: /categories/LG_Aimers/
-   - title: Algorithm 
-     childern:
-       - title: "알고리즘"
-         url: /categories/Algorithm/
+
 
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
