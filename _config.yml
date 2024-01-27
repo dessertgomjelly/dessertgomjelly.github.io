@@ -277,4 +277,6 @@ defaults:
       toc: true 
       toc_sticky: true
       author_profile: false # 게시글 선택시 왼쪽 프로필 없애기
+      sidebar:
+        nav: "side"
 date_format: "%y-%m-%d"
