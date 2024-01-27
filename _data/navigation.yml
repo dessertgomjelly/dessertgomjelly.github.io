@@ -35,6 +35,7 @@ side:
    - title: Algorithm 
      childern:
        - title: "알고리즘"
+         url: /categories/Algorithm/
 
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
