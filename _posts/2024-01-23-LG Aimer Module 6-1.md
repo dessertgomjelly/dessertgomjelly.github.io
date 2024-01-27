@@ -20,7 +20,10 @@ sidebar:
     font-size: 16px; /* 폰트 사이즈 조절 */
   }
 </style>
-
+```
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9824239872883416"
+     crossorigin="anonymous"></script>
+```
 
 
 
