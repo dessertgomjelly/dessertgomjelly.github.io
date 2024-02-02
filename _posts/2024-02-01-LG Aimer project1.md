@@ -18,13 +18,13 @@ sidebar:
 </style>
 
 
-**[공지사항] [해당 내용은 LG에서 주관하는 LG Aimers: AI 전문가 과정 4기 교육 과정입니다.]**
+**[공지사항] [해당 내용은 LG에서 주관하는 LG Aimers: AI 전문가 과정 4기 교육 과정입니다.]**{: .notice--danger}
 
-한 달간의 해커톤 과정을 기록해보겠습니다.
+한 달간의 해커톤 과정을 기록해보겠습니다.{: .notice--danger}
 
-[LG Aimers AI 공식 홈페이지 바로가기](https://www.lgaimers.ai/)
+[LG Aimers AI 공식 홈페이지 바로가기](https://www.lgaimers.ai/){: .notice--danger}
 
-[MQL 데이터 기반 B2B 영업기회 창출 예측 모델 개발 교육과정](https://lgaimers.elice.io/courses/85878)
+[MQL 데이터 기반 B2B 영업기회 창출 예측 모델 개발 교육과정](https://lgaimers.elice.io/courses/85878){: .notice--danger}
 
 {: .notice--danger}
 
