@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[LG Aimers] MQL 데이터 기반 B2B 영업기회 창출 예측 모델 개발"
+title: "[LG Aimers] 해커톤 과정 MQL B2B 영업기회 창출 예측 모델 "
 categories: LG_Aimers
 tag: [AI, 인공지능]
 use_math: true #수학 공식 가능하게
@@ -18,15 +18,15 @@ sidebar:
 </style>
 
 
-**[공지사항]** [해당 내용은 LG에서 주관하는 LG Amiers : AI 전문가 과정 4기 교육 과정입니다.]  한달간의 해커톤 과정을 기록해보겠습니다. 
+**[공지사항] [해당 내용은 LG에서 주관하는 LG Aimers: AI 전문가 과정 4기 교육 과정입니다.]**
 
-[LG AI](https://www.lgaimers.ai/) 
+한 달간의 해커톤 과정을 기록해보겠습니다.
 
-[MQL 데이터 기반 B2B 영업기회 창출 예측 모델 개발](https://lgaimers.elice.io/courses/85878)
+[LG Aimers AI 공식 홈페이지 바로가기](https://www.lgaimers.ai/)
+
+[MQL 데이터 기반 B2B 영업기회 창출 예측 모델 개발 교육과정](https://lgaimers.elice.io/courses/85878)
 
 {: .notice--danger}
-
-
 
 # 데이터셋 소개
 
