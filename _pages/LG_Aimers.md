@@ -1,7 +1,7 @@
 ---
 title: "LG Aimers 4기"
 layout: archive
-permalink: /blog
+permalink: /LG Aimers/
 ---
 
 {% assign posts = site.categories.blog %}
