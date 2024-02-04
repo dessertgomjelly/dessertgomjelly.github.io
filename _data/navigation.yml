@@ -36,7 +36,15 @@ counts:
   - title: "Tag"
     use: true
 
-
+sidebar-category:
+  - title: "카테고리"
+    children:
+      - title: "LG Aimers 4기"
+        url: "/LG Aimers"
+      - title: "알고리즘"
+        url:  /CategoryB
+      - title: "Python"
+        url:  /CategoryC
 
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
