@@ -22,31 +22,31 @@ layout: single
 
 ## 📚 Striving to become a developer.
 
--  **관심 분야**
+-  #### **관심 분야**
+
    -  **Interested in Data Science, AI, and SW Engineering.**
 
 <br>
 
 <br>
 
--  **학교 및 전공**
+-  #### **학교 및 전공**
 
-   -  상명대학교 융합전자공학부 & 컴퓨터과학 전공 
+   -  **상명대학교 융합전자공학부 & 컴퓨터과학 전공 **
 
-   -  상명대학교 AI + X 마이크로전공
-
-<br>
+   -  **상명대학교 AI + X 마이크로전공**
 
 <br>
 
--  데이터 및 AI 분야 활동
+<br>
 
-   -  AI + X 마이크로 전공 (기초, 중급, 고급) 과정 수료
-      -  프로젝트 진행
+-  #### 데이터 및 AI 분야 활동
+
+   -  **AI + X 마이크로 전공 (기초, 중급, 고급) 과정 수료**
 
    <br>
 
-   -  데이터 청년 캠퍼스 수료  : [소상공인 창업비서 모델](https://github.com/dessertgomjelly/Data-youth-campus)
+   -  **데이터 청년 캠퍼스 수료  : [소상공인 창업비서 모델](https://github.com/dessertgomjelly/Data-youth-campus)**
 
       -  [🏆 상명대학교 프로젝트 평가 우수상](https://github.com/dessertgomjelly/Data-youth-campus/blob/main/Awards/awards1.jpeg)
 
@@ -54,12 +54,12 @@ layout: single
 
    <br>
 
-   -  AI 관련 프로젝트 진행 
+   -  **AI 관련 프로젝트 진행 **
       -  [깃허브 바로가기](https://github.com/dessertgomjelly)
 
    <br>
 
-   -  LG Aimers : AI 전문가 과정 
+   -  **LG Aimers : AI 전문가 과정 **
       -  [Part1.] 수료 [블로그 바로가기](https://dessertgomjelly.github.io/categories/#lg-aimers)
       -  [Part2.] 해커톤 대회 진행중
 
@@ -67,19 +67,21 @@ layout: single
 
 <br>
 
--  SW 엔지니어링
-   -  BackEnd Development 공부중
-   -  SQL 개발자 자격증 
-   -  캡스톤 디자인 프로젝트 (예정)
+-  #### SW 엔지니어링
+
+   -  **BackEnd Development 공부중**
+   -  **SQL 개발자 자격증 취득**
+   -  **캡스톤 디자인 프로젝트 (예정)**
 
  <br>
 
 
 
--  그 외 활동
-   -  주요 CS 과목 공부
-   -  코딩 테스트 및 알고리즘 공부
-   -  개발 블로그
+-  #### 그 외 활동
+
+   -  **주요 CS 과목 공부**
+   -  **코딩 테스트 및 알고리즘 공부**
+   -  **개발 블로그 작성**
 
 
 
