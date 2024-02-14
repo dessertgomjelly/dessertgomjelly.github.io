@@ -96,11 +96,9 @@ layout: single
 
 <br>
 
+ 
 
-
-# 📽️ My Engineering Blog 
-
-
+# My Engineering Blog 
 
 -  [LG_Aimers : AI 전문가 과정](https://dessertgomjelly.github.io/categories/#lg-aimers) 
 -  [알고리즘으로 단단해지기](https://dessertgomjelly.github.io/categories/#algorithm) 
