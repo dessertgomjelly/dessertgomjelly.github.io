@@ -83,6 +83,8 @@ layout: single
 -  [알고리즘으로 단단해지기](https://dessertgomjelly.github.io/categories/#algorithm) 
 -  [프로젝트 개발 노트](https://dessertgomjelly.github.io/categories/#project)
 
+... 등
+
 <br>
 
 <br>
