@@ -10,9 +10,9 @@ layout: single
 
 
 
-## 안녕하세요 개발자를 꿈꾸는 문성준입니다.
+## 안녕하세요 저는 개발자를 꿈꾸는 문성준입니다.^^
 
-<img src="{{site.url}}/images/about/image-20240214141531328.png" alt="image-20240214141531328" style="zoom:50%;" />
+<img src="{{site.url}}/images/about/image-20240214141531328.png" alt="image-20240214141531328" style="zoom:30%;" />
 
 <br>
 
@@ -115,7 +115,7 @@ layout: single
 
 <br>
 
-<h2 style="border-bottom: 1px solid #d8dee4; color: #282d33;"> 🏅 Stats </h1>
+<h2 style="border-bottom: 1px solid #d8dee4; color: #282d33;"> 🏅 Stats
 <div align="left">
   <img src="https://github-readme-stats.vercel.app/api?username=dessertgomjelly&show_icons=true&theme=graywhite" alt="Anurag's GitHub stats" />
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dessertgomjelly&layout=compact&bg_color=180,00000000,&title_color=000000&text_color=000000" />
