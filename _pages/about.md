@@ -75,6 +75,20 @@ layout: single
 
 <br>
 
+
+
+# My Engineering Blog 
+
+-  [LG_Aimers : AI 전문가 과정](https://dessertgomjelly.github.io/categories/#lg-aimers) 
+-  [알고리즘으로 단단해지기](https://dessertgomjelly.github.io/categories/#algorithm) 
+-  [프로젝트 개발 노트](https://dessertgomjelly.github.io/categories/#project)
+
+<br>
+
+<br>
+
+
+
 # 🛠️ Things I code with 
 
 <div align=left>
@@ -97,12 +111,6 @@ layout: single
 <br>
 
  
-
-# My Engineering Blog 
-
--  [LG_Aimers : AI 전문가 과정](https://dessertgomjelly.github.io/categories/#lg-aimers) 
--  [알고리즘으로 단단해지기](https://dessertgomjelly.github.io/categories/#algorithm) 
--  [프로젝트 개발 노트](https://dessertgomjelly.github.io/categories/#project)
 
 <br>
 
