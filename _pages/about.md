@@ -98,12 +98,12 @@ layout: single
 
 
 
-# 📽️ My Engineering Blog
+# 📽️ My Engineering Blog 
 
--  [LG_Aimers : AI 전문가 과정](https://dessertgomjelly.github.io/categories/#lg-aimers)
 
--  [알고리즘으로 단단해지기](https://dessertgomjelly.github.io/categories/#algorithm)
 
+-  [LG_Aimers : AI 전문가 과정](https://dessertgomjelly.github.io/categories/#lg-aimers) 
+-  [알고리즘으로 단단해지기](https://dessertgomjelly.github.io/categories/#algorithm) 
 -  [프로젝트 개발 노트](https://dessertgomjelly.github.io/categories/#project)
 
 <br>
@@ -127,6 +127,5 @@ layout: single
   <a href="https://www.instagram.com/dessert_gomjelly/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=Instagram&logoColor=white&link=https://www.instagram.com/hye_inisfree/"/></a>
   <a href="mailto:msj12910@naver.com"><img src="https://img.shields.io/badge/Mail-d14836?style=flat-square&logo=Gmail&logoColor=white&link=msj1291@naver.com"/></a>
 </p>
-
 
 
