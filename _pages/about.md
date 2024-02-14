@@ -8,7 +8,9 @@ layout: single
 
 <br>
 
-# 안녕하세요 개발자를 꿈꾸는 문성준입니다.
+
+
+## 안녕하세요 개발자를 꿈꾸는 문성준입니다.
 
 
 <div align= "center">
@@ -18,47 +20,72 @@ layout: single
 
 <br>
 
-| **구분**                           | **내용**                                                     |
-| ---------------------------------- | ------------------------------------------------------------ |
-| **관심 분야**                      | Data Science, AI, SW Engineering                             |
-| **학교 및 전공**                   | - 학교: 상명대학교                                           |
-|                                    | - 학부: 융합전자공학부 & 컴퓨터과학 전공                     |
-|                                    | - 마이크로전공: AI + X                                       |
-|                                    |                                                              |
-| **AI + X 마이크로 전공 과정 수료** | - 기초, 중급, 고급                                           |
-| **데이터 및 AI 분야 활동**         | - 데이터 청년 캠퍼스 수료                                    |
-|                                    | - [상명대학교 프로젝트 평가 우수상](https://github.com/dessertgomjelly/Data-youth-campus/blob/main/Awards/awards1.jpeg) |
-|                                    | - [한국정책학회 빅데이터 분석 분야 프로젝트 평가 우수상](https://github.com/dessertgomjelly/Data-youth-campus/blob/main/Awards/awards2.jpeg) |
-|                                    | - [AI 영상처리 관련 프로젝트 진행 바로가기](https://github.com/dessertgomjelly) |
-|                                    |                                                              |
-| **SW 엔지니어링 활동**             | - BackEnd Development 공부중                                 |
-|                                    | - SQL 개발자 자격증 공부중                                   |
+## 📚 Striving to become a developer.
+
+-  **관심 분야**
+   -  **Interested in Data Science, AI, and SW Engineering.**
+
+<br>
+
+<br>
+
+-  **학교 및 전공**
+
+   -  상명대학교 융합전자공학부 & 컴퓨터과학 전공 
+
+   -  상명대학교 AI + X 마이크로전공
+
+<br>
+
+<br>
+
+-  데이터 및 AI 분야 활동
+
+   -  AI + X 마이크로 전공 (기초, 중급, 고급) 과정 수료
+      -  프로젝트 진행
+
+   <br>
+
+   -  데이터 청년 캠퍼스 수료  : [소상공인 창업비서 모델](https://github.com/dessertgomjelly/Data-youth-campus)
+
+      -  [🏆 상명대학교 프로젝트 평가 우수상](https://github.com/dessertgomjelly/Data-youth-campus/blob/main/Awards/awards1.jpeg)
+
+      -  [🏆 한국정책학회 빅데이터 분석 분야 프로젝트 평가 우수상](https://github.com/dessertgomjelly/Data-youth-campus/blob/main/Awards/awards2.jpeg)
+
+   <br>
+
+   -  AI 관련 프로젝트 진행 
+      -  [깃허브 바로가기](https://github.com/dessertgomjelly)
+
+   <br>
+
+   -  LG Aimers : AI 전문가 과정 
+      -  [Part1.] 수료 [블로그 바로가기](https://dessertgomjelly.github.io/categories/#lg-aimers)
+      -  [Part2.] 해커톤 대회 진행중
+
+<br>
+
+<br>
+
+-  SW 엔지니어링
+   -  BackEnd Development 공부중
+   -  SQL 개발자 자격증 
+   -  캡스톤 디자인 프로젝트 (예정)
+
+ <br>
 
 
 
-| **관심 분야**    | Data Science, AI, SW Engineering         |
-| ---------------- | ---------------------------------------- |
-| **학교 및 전공** | - 학교: 상명대학교                       |
-|                  | - 학부: 융합전자공학부 & 컴퓨터과학 전공 |
-|                  | - 마이크로전공: AI + X                   |
+-  그 외 활동
+   -  주요 CS 과목 공부
+   -  코딩 테스트 및 알고리즘 공부
+   -  개발 블로그
 
 
 
-| **데이터 및 AI 분야 활동** |                                                              |
-| -------------------------- | ------------------------------------------------------------ |
-|                            | - 데이터 청년 캠퍼스 수료                                    |
-|                            | - [상명대학교 프로젝트 평가 우수상](https://github.com/dessertgomjelly/Data-youth-campus/blob/main/Awards/awards1.jpeg) |
-|                            | - [한국정책학회 빅데이터 분석 분야 프로젝트 평가 우수상](https://github.com/dessertgomjelly/Data-youth-campus/blob/main/Awards/awards2.jpeg) |
-|                            | - [AI 관련 프로젝트 진행](https://github.com/dessertgomjelly) |
+<br>
 
-
-
-| SW 엔지니어링 활동 |                              |
-| :----------------- | ---------------------------- |
-|                    | - BackEnd Development 공부중 |
-|                    | - SQL 개발자 자격증          |
-
-
+<br>
 
 
 
@@ -80,8 +107,13 @@ layout: single
 <br>
 <br>
 
-
 ​    
+
+<br>
+
+<br>
+
+
 
  ## 📽️ [My Engineering Blog](https://dessertgomjelly.github.io/)
 
@@ -91,9 +123,11 @@ layout: single
 
 ["김영한의 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술" 복습 노트](https://dessertgomjelly.github.io/categories/#spring)
 
-[프로젝트](https://dessertgomjelly.github.io/categories/#project)
+[프로젝트 개발 과정을 담은](https://dessertgomjelly.github.io/categories/#project)
 
 
+
+<br>
 
 <br>
 
@@ -104,7 +138,10 @@ layout: single
 </div>
 
 
-</div>
+<br>
+
+<br>
+
 <h3 align="center"> 🗣️Follow Me </h3>
 <p align="center">
   <a href="https://www.instagram.com/dessert_gomjelly/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=Instagram&logoColor=white&link=https://www.instagram.com/hye_inisfree/"/></a>
