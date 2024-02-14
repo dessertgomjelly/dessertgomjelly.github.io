@@ -12,7 +12,9 @@ layout: single
 
 ## 안녕하세요 저는 개발자를 꿈꾸는 문성준입니다.^^
 
-<img src="{{site.url}}/images/about/image-20240214141531328.png" alt="image-20240214141531328" style="zoom:30%;" />
+<div style="text-align:center;">
+  <img src="{{site.url}}/images/about/image-20240214141531328.png" alt="image-20240214141531328" style="zoom:30%;" />
+</div>
 
 <br>
 
