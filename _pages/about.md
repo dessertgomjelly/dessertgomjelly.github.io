@@ -15,7 +15,6 @@ layout: single
 <div style="text-align:center;">
   <img src="{{site.url}}/images/about/image-20240214141531328.png" alt="image-20240214141531328" style="zoom:30%;" />
 </div>
-
 <br>
 
 <br>
