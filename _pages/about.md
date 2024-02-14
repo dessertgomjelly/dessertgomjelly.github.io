@@ -77,7 +77,6 @@ layout: single
 
 # 🛠️ Things I code with 
 
-
 <div align=left>
 <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
 <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
@@ -90,8 +89,6 @@ layout: single
 <img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white">
 <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
-<br>
-<br>
 
 ​    
 
@@ -103,11 +100,11 @@ layout: single
 
 # 📽️ My Engineering Blog
 
-[LG_Aimers : AI 전문가 과정](https://dessertgomjelly.github.io/categories/#lg-aimers)
+-  [LG_Aimers : AI 전문가 과정](https://dessertgomjelly.github.io/categories/#lg-aimers)
 
-[알고리즘으로 단단해지기](https://dessertgomjelly.github.io/categories/#algorithm)
+-  [알고리즘으로 단단해지기](https://dessertgomjelly.github.io/categories/#algorithm)
 
-[프로젝트 개발 노트](https://dessertgomjelly.github.io/categories/#project)
+-  [프로젝트 개발 노트](https://dessertgomjelly.github.io/categories/#project)
 
 <br>
 
