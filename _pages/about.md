@@ -117,7 +117,9 @@ layout: single
 
 
 
- ## 📽️ [My Engineering Blog](https://dessertgomjelly.github.io/)
+ ## 📽️ My Engineering Blog
+
+
 
 [LG Aimers: AI전문가과정](https://dessertgomjelly.github.io/categories/#lg-aimers)
 
