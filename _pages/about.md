@@ -97,19 +97,15 @@ layout: single
 
 <br>
 
+
+
 # 📽️ My Engineering Blog
 
-<br>
-
-[LG Aimers: AI전문가과정](https://dessertgomjelly.github.io/categories/#lg-aimers)
+[LG_Aimers : AI 전문가 과정](https://dessertgomjelly.github.io/categories/#lg-aimers)
 
 [알고리즘으로 단단해지기](https://dessertgomjelly.github.io/categories/#algorithm)
 
-["김영한의 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술" 복습 노트](https://dessertgomjelly.github.io/categories/#spring)
-
-[프로젝트 개발 과정을 담은](https://dessertgomjelly.github.io/categories/#project)
-
-
+[프로젝트 개발 노트](https://dessertgomjelly.github.io/categories/#project)
 
 <br>
 
