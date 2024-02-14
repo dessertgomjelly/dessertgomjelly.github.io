@@ -12,10 +12,8 @@ layout: single
 
 ## 안녕하세요 개발자를 꿈꾸는 문성준입니다.
 
+<img src="{{site.url}}/images/about/image-20240214141531328.png" alt="image-20240214141531328" style="zoom:50%;" />
 
-<div align= "center">
-    <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=180&text=👋🏻%20Hello%20World,%20I'm%20Sung%20Joon%20Moon%20&animation=twinkling&fontColor=000000&fontSize=35" 
-</div>
 <br>
 
 <br>
