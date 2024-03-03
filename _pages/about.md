@@ -49,8 +49,8 @@ layout: single
    -  [깃허브 바로가기](https://github.com/dessertgomjelly)
 
 -  LG Aimers : AI 전문가 과정 
-   -  [Part1.] 수료 [블로그 바로가기](https://dessertgomjelly.github.io/categories/#lg-aimers)
-   -  [Part2.] 해커톤 대회 진행중
+   -  [Phase.] 수료 [블로그 바로가기](https://dessertgomjelly.github.io/categories/#lg-aimers)
+   -  [Phase.] [해커톤 대회 수료](https://github.com/dessertgomjelly/LG-Aimers-Hackathon)
 
 <br>
 
