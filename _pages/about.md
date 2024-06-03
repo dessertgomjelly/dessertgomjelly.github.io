@@ -10,7 +10,7 @@ layout: single
 
 
 
-## 안녕하세요 저는 개발자를 꿈꾸는 문성준입니다.^^
+## 안녕하세요 저는 SW 엔지니어를 꿈꾸는 문성준입니다.^^
 
 <div style="text-align:center;">
   <img src="{{site.url}}/images/about/image-20240214141531328.png" alt="image-20240214141531328" style="zoom:30%;" />
@@ -23,13 +23,13 @@ layout: single
 
 ### **관심 분야**
 
--  **Interested in Data Science, AI, and SW Engineering.**
+-  **Interested in  SW Engineering & Data Science &  AI**
 
 <br>
 
 ### **학교 및 전공**
 
--  상명대학교 융합전자공학부 & 컴퓨터과학 전공 
+-  상명대학교 컴퓨터과학 전공 & 융합전자공학부 
 
 -  상명대학교 AI + X 마이크로전공
 
@@ -38,6 +38,10 @@ layout: single
 ### 데이터 및 AI 분야 활동
 
 -  AI + X 마이크로 전공 (기초, 중급, 고급) 과정 수료
+
+-  특허 출원
+
+   -  [특허] 토론 내용의 감정 및 논리성 AI 분석 및 피드백
 
 -  데이터 청년 캠퍼스 수료  : [소상공인 창업비서 모델](https://github.com/dessertgomjelly/Data-youth-campus)
 
@@ -50,7 +54,10 @@ layout: single
 
 -  LG Aimers : AI 전문가 과정 
    -  [Phase.] 수료 [블로그 바로가기](https://dessertgomjelly.github.io/categories/#lg-aimers)
+
    -  [Phase.] [해커톤 대회 수료](https://github.com/dessertgomjelly/LG-Aimers-Hackathon)
+
+      
 
 <br>
 
@@ -58,7 +65,10 @@ layout: single
 
 -  BackEnd Development 공부중
 -  SQL 개발자 자격증 취득
--  캡스톤 디자인 프로젝트 (예정)
+-  캡스톤 디자인 프로젝트 
+   -  이미지 생성 AI를 이용한 "HandTracking  to Image"
+   -  반려 동물 산책 어플
+
 
  <br>
 
@@ -83,45 +93,6 @@ layout: single
 -  [프로젝트 개발 노트](https://dessertgomjelly.github.io/categories/#project)
 
 ... 등
-
-<br>
-
-<br>
-
-# 🛠️ Things I code with 
-
-<div align=left>
-<img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
-<img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
-<img src="https://img.shields.io/badge/OpenJDK-437291?style=for-the-badge&logo=OpenJDK&logoColor=white"/>
-<img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=C&logoColor=white"/>
-<img src="https://img.shields.io/badge/c++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white">
-<img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
-<img src="https://img.shields.io/badge/mongoDB-47A248?style=for-the-badge&logo=MongoDB&logoColor=white">
-<img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
-<img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white">
-<img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
-<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
-
-​    
-
-<br>
-
-<br>
-
- 
-
-<br>
-
-<br>
-
-<h2 style="border-bottom: 1px solid #d8dee4; color: #282d33;"> 🏅 Stats
-<div align="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=dessertgomjelly&show_icons=true&theme=graywhite" alt="Anurag's GitHub stats" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dessertgomjelly&layout=compact&bg_color=180,00000000,&title_color=000000&text_color=000000" />
-</div>
-
-
 
 <br>
 
