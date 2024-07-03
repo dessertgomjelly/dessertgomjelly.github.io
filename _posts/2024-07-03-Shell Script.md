@@ -223,7 +223,7 @@ echo a + b = $(expr $a + $b)
 a=100
 b=50
 
-expr $a \ g* $b
+expr $a \* $b
 ```
 
 <br>
