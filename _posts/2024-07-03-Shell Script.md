@@ -16,11 +16,13 @@ sidebar:
 
 
 
-**[LINUX STUDY]** [kkk1m](https://github.com/kkk1m) & [dessertgomjelly](https://github.com/dessertgomjelly)
-
-{: .notice--danger}
+**[LINUX STUDY]** [kkk1m](https://github.com/kkk1m) & [dessertgomjelly](https://github.com/dessertgomjelly) {: .notice--danger}
 
 
+
+<br>
+
+<br>
 
 # 쉘 스크립트 란?
 
@@ -111,7 +113,7 @@ echo 명령어 - echo $PATH →  환경변수 보기 - echo $0 , echo $SHELL →
 
 # 기본 실행 방법 (Tutorial)
 
-1. 파일 생성
+1.파일 생성
 
 ```bash
 ➜  ~ cd Desktop #Desktop 들어가기
@@ -120,23 +122,23 @@ echo 명령어 - echo $PATH →  환경변수 보기 - echo $0 , echo $SHELL →
 ➜ vim test1.sh #test1 이라는 파일 생성
 ```
 
-<img src="{{site.url}}/images/2024-07-03-Shell Script/Untitled.png" style="zoom:60%;" />
+<img src="{{site.url}}/images/2024-07-03-Shell Script/Untitled.png" style="zoom:40%;" />
 
 <br>
 
 
 
-2.  기본 스트립트 작성
+2.기본 스트립트 작성
 
 -  i로 insert모드에 진입, ESC눌러 일반모드, :wq 를 통해 저장 및 종
 
-<img src="{{site.url}}/images/2024-07-03-Shell Script/Untitled 1.png" style="zoom:60%;" />
+<img src="{{site.url}}/images/2024-07-03-Shell Script/Untitled 1.png" style="zoom:40%;" />
 
 <br>
 
 
 
-3.  권한부여 및 실행
+3.권한부여 및 실행
 
 ```bash
 ➜ chmod +x test1.sh #파일에 실행 권한 부여
@@ -146,7 +148,7 @@ test1.sh
 ➜  ./test1.sh #스크립트 실행
 ```
 
-<img src="{{site.url}}/images/2024-07-03-Shell Script/Untitled 2.png" style="zoom:60%;" />
+<img src="{{site.url}}/images/2024-07-03-Shell Script/Untitled 2.png" style="zoom:40%;" />
 
 
 
@@ -202,7 +204,7 @@ expr $a + $b
 echo a + b = $(expr $a + $b)
 ```
 
-<img src="{{site.url}}/images/2024-07-03-Shell Script/Untitled 3.png" style="zoom:60%;" />
+<img src="{{site.url}}/images/2024-07-03-Shell Script/Untitled 3.png" style="zoom:40%;" />
 
 
 
@@ -353,7 +355,7 @@ do
 done
 ```
 
-<img src="{{site.url}}/images/2024-07-03-Shell Script/Untitled 4.png" style="zoom:60%;" />
+<img src="{{site.url}}/images/2024-07-03-Shell Script/Untitled 4.png" style="zoom:40%;" />
 
 <br>
 
@@ -444,8 +446,6 @@ done
 https://gr-st-dev.tistory.com/236
 
 https://techbukket.com/blog/shell-script-guide
-
-→ 4가지 예시 있음
 
 https://losskatsu.github.io/os-kernel/bash/#11-사용법
 
