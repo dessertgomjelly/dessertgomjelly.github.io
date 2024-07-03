@@ -2,7 +2,6 @@
 layout: single
 title: "[Linux] Shell Script" 
 categories: Linux
-use_math: true #수학 공식 가능하게
 sidebar:
     nav: "counts"
 ---
