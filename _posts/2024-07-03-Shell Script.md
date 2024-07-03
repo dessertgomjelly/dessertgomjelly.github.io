@@ -13,7 +13,7 @@ sidebar:
 </style>
 
 
-**[LINUX STUDY]** 
+**[LINUX STUDY]** Shell Script 개념 및 사용법 공동 작업 문서
  [kkk1m](https://github.com/kkk1m) & [dessertgomjelly](https://github.com/dessertgomjelly) 
 {: .notice--danger}
 
