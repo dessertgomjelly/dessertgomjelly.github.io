@@ -14,9 +14,11 @@ sidebar:
 </style>
 
 
+**[LINUX STUDY]** 
+ [kkk1m](https://github.com/kkk1m) & [dessertgomjelly](https://github.com/dessertgomjelly) 
+{: .notice--danger}
 
 
-**[LINUX STUDY]** [kkk1m](https://github.com/kkk1m) & [dessertgomjelly](https://github.com/dessertgomjelly) {: .notice--danger}
 
 
 
