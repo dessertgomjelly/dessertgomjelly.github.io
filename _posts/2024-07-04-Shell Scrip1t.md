@@ -19,9 +19,7 @@ sidebar:
 
 <br>
 
-
-
-# 커널 소스 다운받기
+## 커널 소스
 
 https://www.kernel.org/ 에 접속하면 HTTP 링크가 있다.
 
@@ -38,7 +36,7 @@ https://www.kernel.org/ 에 접속하면 HTTP 링크가 있다.
 
 <br>
 
-# 1. 커널 버전 확인
+## 1. 커널 버전 확인
 
 -  먼저 내가 사용중인 커널의 버전을 확인한다.
 
@@ -56,7 +54,7 @@ uname -r #사용 중인 커널 버전 확인
 
 <br>
 
-# 2. 커널 소스 다운로드
+## 2. 커널 소스 다운로드
 
 -  미러 사이트에서 원하는 커널의 버전을 다운받는다.
    -  네트워크가 가능한 환경에서 터미널에서 wget 명령어를 통해 다운 받는다.
@@ -86,7 +84,7 @@ wget "<https://mirrors.edge.kernel.org/pub/linux/kernel/v3.x/[linux-3.17.4.tar.x
 
 <br>
 
-# 3. tar 압축 풀기
+## 3. tar 압축 풀기
 
 -  이제 해당 tar 파일의 압축을 풀어준다.
 
@@ -100,7 +98,7 @@ tar -xvf linux-3.17.4.tar.xz
 
 <br>
 
-# 4. 작업 폴더 이동하기
+## 4. 작업 폴더 이동하기
 
 ```bash
 cd linux-3.17.4/
@@ -112,7 +110,7 @@ cd linux-3.17.4/
 
 <br>
 
-# 5-1. 컴파일 작업 준비하기(CLI)
+## 5-1. 컴파일 작업 준비하기(CLI)
 
 -  커널 컴파일(빌드) 는 크게 2가지 방법이 존재한다. CLI를 이용하여 하는 방법과 GUI로 하는 방법이 있다.
    -  두 방법 모두 별도의 라이브러리 설치가 필요하다.
@@ -122,9 +120,7 @@ cd linux-3.17.4/
 
 <br>
 
-
-
-### Red Hat 기반 배포판 
+**[Red Hat 기반 배포판]** 
 
 ```bash
 sudo yum install ncurses-devel
@@ -153,8 +149,6 @@ make menuconfig #ncurses 라이브러리가 필요
 
 <br>
 
-
-
 ## 5-2. 컴파일 작업 준비하기(GUI)
 
 ```bash
@@ -176,8 +170,6 @@ yum -y install gcc gcc-c++ qt qt-devel
 <br>
 
 <br>
-
-
 
 ## 6. 컴파일
 
@@ -217,17 +209,13 @@ make install;
 
 <br>
 
-
-
-
-
-# appendix
+## appendix
 
 <br>
 
 
 
-## GRUB 설정 업데이트
+#### GRUB 설정 업데이트
 
 -  대부분의 경우, `make install` 명령어는 GRUB 설정 파일을 자동으로 업데이트한다. 하지만 이를 수동으로 확인하고 업데이트하는 것이 좋다.
 
@@ -249,9 +237,7 @@ sudo grep -i 'menuentry ' /boot/grub2/grub.cfg
 
 <br>
 
-
-
-## 새 커널을 부팅 로더에 추가
+#### 새 커널을 부팅 로더에 추가
 
 /etc/default/grub
 
