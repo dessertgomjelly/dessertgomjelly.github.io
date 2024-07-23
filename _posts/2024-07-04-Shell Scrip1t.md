@@ -1,4 +1,5 @@
 ---
+published: true
 layout: single
 title: "[Linux] Shell Script" 
 categories: Linux
