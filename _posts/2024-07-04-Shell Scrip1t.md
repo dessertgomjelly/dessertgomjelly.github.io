@@ -1,7 +1,7 @@
 ---
 published: true
 layout: single
-title: "[Linux] Shell Script" 
+title: "[Linux] CentOS 커널 변경하기" 
 categories: Linux
 sidebar:
     nav: "counts"
@@ -14,28 +14,6 @@ sidebar:
   }
 </style>
 
-
-
-**[LINUX STUDY]** Shell Script 개념 및 사용법 공동 작업 문서
- [kkk1m](https://github.com/kkk1m) & [dessertgomjelly](https://github.com/dessertgomjelly) 
-{: .notice--danger}
-
-
-
-
-
-<br>
-
-<br>
-
-# 쉘 스크립트 란?
-
--  Shell Script는 유닉스 또는 리눅스 시스템에서 명령어를 자동화하는 데 사용 되는 텍스트 파일이다.
--  여러 개의 쉘 명령어와 스크립트 언어로 작성된 명령어들이 순차적으로 실행되도록 작성된 스크립트이다.
-
-```
- 터미널에 입력했던 여러 명령어들을 하나의 스크립트 파일에 나열하여, 스크립트 파일이 자동으로 실행 함으로 효율적이면서 간편하게 작업 처리를 할 수 있는 것이다.
-```
 
 <br>
 
@@ -52,11 +30,9 @@ https://www.kernel.org/ 에 접속하면 HTTP 링크가 있다.
 
 <br>
 
-| [HTTP] | https://www.kernel.org/pub/ |
-| ------ | --------------------------- |
-|        |                             |
+[HTTP]  https://www.kernel.org/pub/
 
-<img src="{{site.url}}/images/2024-07-04-KernelUpdate/1.png" style="zoom:40%;" />
+<img src="{{site.url}}/images/2024-07-03-Shell Script/1k.png" style="zoom:40%;" />
 
 <br>
 
@@ -72,7 +48,7 @@ uname -r #사용 중인 커널 버전 확인
 
 <br>
 
-<img src="{{site.url}}/images/2024-07-04-KernelUpdate/2.png" style="zoom:40%;" />
+<img src="{{site.url}}/images/2024-07-03-Shell Script/2k.png" style="zoom:40%;" />
 
 
 
@@ -104,7 +80,7 @@ wget "<https://mirrors.edge.kernel.org/pub/linux/kernel/v3.x/[linux-3.17.4.tar.x
 
 
 
-<img src="{{site.url}}/images/2024-07-04-KernelUpdate/3.png" style="zoom:40%;" />
+<img src="{{site.url}}/images/2024-07-03-Shell Script/3k.png" style="zoom:40%;" />
 
 <br>
 
@@ -156,7 +132,7 @@ sudo yum install ncurses-devel
 
 
 
-<img src="{{site.url}}/images/2024-07-04-KernelUpdate/4.png" style="zoom:40%;" />
+<img src="{{site.url}}/images/2024-07-03-Shell Script/4k.png" style="zoom:40%;" />
 
 make menuconfig 명령어를 입력하면 (ncurses-devel) 라이브러리 설치가 필요하다고 나온다.
 
@@ -171,7 +147,7 @@ cd /usr/src/linux-3.17.4
 make menuconfig #ncurses 라이브러리가 필요
 ```
 
-<img src="{{site.url}}/images/2024-07-04-KernelUpdate/5.png" style="zoom:40%;" />
+<img src="{{site.url}}/images/2024-07-03-Shell Script/5k.png" style="zoom:40%;" />
 
 <br>
 
@@ -235,9 +211,15 @@ make install;
 
 시간이 굉장히 오래 걸린다…
 
+
+
 <br>
 
 <br>
+
+
+
+
 
 # appendix
 
@@ -293,9 +275,9 @@ GRUB_DEFAULT=0
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg  # RHEL/CentOS 7 이상
 ```
 
-------
 
-<img src="{{site.url}}/images/2024-07-04-KernelUpdate/6.png" style="zoom:40%;" />
+
+<img src="{{site.url}}/images/2024-07-03-Shell Script/6k.png" style="zoom:40%;" />
 
 부팅 시 새로운 커널이 선택되는 것을 알수있다.
 
