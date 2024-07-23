@@ -78,7 +78,7 @@ wget "<https://mirrors.edge.kernel.org/pub/linux/kernel/v3.x/[linux-3.17.4.tar.x
 
 
 
-<img src="{{site.url}}/images/2024-07-03-Shell Script/3k.png" style="zoom:40%;" />
+<img src="{{site.url}}/images/2024-07-03-Shell Script/3k.png" style="zoom:60%;" />
 
 <br>
 
@@ -128,7 +128,7 @@ sudo yum install ncurses-devel
 
 
 
-<img src="{{site.url}}/images/2024-07-03-Shell Script/4k.png" style="zoom:40%;" />
+<img src="{{site.url}}/images/2024-07-03-Shell Script/4k.png" style="zoom:70%;" />
 
 make menuconfig 명령어를 입력하면 (ncurses-devel) 라이브러리 설치가 필요하다고 나온다.
 
@@ -143,7 +143,7 @@ cd /usr/src/linux-3.17.4
 make menuconfig #ncurses 라이브러리가 필요
 ```
 
-<img src="{{site.url}}/images/2024-07-03-Shell Script/5k.png" style="zoom:40%;" />
+<img src="{{site.url}}/images/2024-07-03-Shell Script/5k.png" style="zoom:55%;" />
 
 <br>
 
@@ -215,7 +215,7 @@ make install;
 
 
 
-#### GRUB 설정 업데이트
+#### **GRUB 설정 업데이트**
 
 -  대부분의 경우, `make install` 명령어는 GRUB 설정 파일을 자동으로 업데이트한다. 하지만 이를 수동으로 확인하고 업데이트하는 것이 좋다.
 
@@ -237,7 +237,7 @@ sudo grep -i 'menuentry ' /boot/grub2/grub.cfg
 
 <br>
 
-#### 새 커널을 부팅 로더에 추가
+#### **새 커널을 부팅 로더에 추가**
 
 /etc/default/grub
 
@@ -253,9 +253,7 @@ GRUB_DEFAULT=0
 
 <br>
 
-
-
-## 변경사항 저장
+#### **변경사항 저장**
 
 ```bash
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg  # RHEL/CentOS 7 이상
@@ -263,7 +261,7 @@ sudo grub2-mkconfig -o /boot/grub2/grub.cfg  # RHEL/CentOS 7 이상
 
 
 
-<img src="{{site.url}}/images/2024-07-03-Shell Script/6k.png" style="zoom:40%;" />
+<img src="{{site.url}}/images/2024-07-03-Shell Script/6k.png" style="zoom:60%;" />
 
 부팅 시 새로운 커널이 선택되는 것을 알수있다.
 
